@@ -19,13 +19,13 @@ AlleJahreWiederXaGlobal = {
 AlleJahreWiederXaAkkorde = \chords {
   \set chordChanges = ##t
   d4. d8 d4 a:7 d2 a2:7 d4 d8 d8 a4:7 d4 a2. r4
-  d4 d g d g2 g4 g d4 d8 d a4 a d2. r4
+  d4 d g d d2 a2 d4 d8 d a4 a d2. r4
 }
 
 AlleJahreWiederXaTextStropheEins = \lyricmode { \set stanza = #"1. "
 Al- le Jah- re wie- der
-kommt das Chris- tus- kind.
-Auf die Er- de nie- der,
+kommt das Chris- tus- kind
+auf die Er- de nie- der,
 wo wir Men- schen sind.
 }
 
@@ -52,12 +52,12 @@ AlleJahreWiederXaStrophen =
 \hspace #0.1 \column { \line { \bold "3." \column {
   "Steht auch mir zur Seite"
   "still und unerkannt,"
-  "daß es treu mich leite"
+  "dass es treu mich leite"
   "an der lieben Hand."
 }}}
 \hspace #0.1 \column { \line { \bold "4." \column {
   "Sagt den Menschen allen,"
-  "daß ein Vater ist,"
+  "dass ein Vater ist,"
   "dem sie wohlgefallen,"
   "der sie nicht vergisst."
 }}}
