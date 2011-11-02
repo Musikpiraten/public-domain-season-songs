@@ -83,7 +83,7 @@ harmonies = \new ChordNames \chordmode {
         \column {
           "Dann stell ich den Teller raus," 
           "Niklaus legt gewiss was drauf."
-          \bold "Refrain:" "Lustig, lustig ..."
+          \bold "Refrain:" "Lustig, lustig…"
         }
       }
       \hspace #0.1 
@@ -91,7 +91,7 @@ harmonies = \new ChordNames \chordmode {
         \column {
           "Wenn ich schlaf, dann träume ich:" 
           "Jetzt bringt Niklaus was für mich."
-          \bold "Refrain:" "Lustig, lustig ..."
+          \bold "Refrain:" "Lustig, lustig…"
         }
       }
     }
@@ -101,7 +101,7 @@ harmonies = \new ChordNames \chordmode {
         \column {
           "Wenn ich aufgestanden bin,"
           "lauf ich schnell zum Teller hin."
-          \bold "Refrain:" "Lustig, lustig ..."
+          \bold "Refrain:" "Lustig, lustig…"
         }
       }
       \hspace #0.1 
@@ -109,7 +109,7 @@ harmonies = \new ChordNames \chordmode {
         \column {
           "Niklaus ist ein guter Mann," 
           "dem man nicht genug danken kann."
-          \bold "Refrain:" "Lustig, lustig ..."
+          \bold "Refrain:" "Lustig, lustig…"
         }
       }
     }

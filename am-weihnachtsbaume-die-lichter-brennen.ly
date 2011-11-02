@@ -48,7 +48,7 @@ AvoiceAA = \relative c'{
     e4 r8 \bar "|." 
 }% end of last bar in partorvoice
 
-      ApartAverseA = \lyricmode { \set stanza = " 1. " Am Weih -- nachts -- baume  die Lich -- ter  bren -- nen,  wie glänzt er fest -- lich,  lieb und mild, als spräch' er: 'Wollt ihr in mir er -- ken -- nen  ge -- treu -- er  Hoff -- nung  stil -- les  Bild!' }
+      ApartAverseA = \lyricmode { \set stanza = " 1. " Am Weih -- nachts -- baume  die Lich -- ter  bren -- nen,  wie glänzt er fest -- lich,  lieb und mild, als spräch' er: „Wollt ihr in mir er -- ken -- nen  ge -- treu -- er  Hoff -- nung  stil -- les  Bild!“ }
 theChords = \chordmode { 
     c2.. f4 c2. d2:m g4 c2. f2/c g4 c2. f4 f4:m g4:4 c4 }%%end of chordlist 
 

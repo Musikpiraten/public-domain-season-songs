@@ -11,13 +11,13 @@
     maintainer = "Matt Corks, David Herrmann"
     maintainerEmail = "mvcorks@alumni.uwaterloo.ca"
     lastupdated = "2011/Nov/17"
-    title = "Herbei, o ihr Gläub'gen - Adeste Fideles"
+    title = "Herbei, o ihr Gläub'gen – Adeste Fideles"
     poet = \markup {
-    	    \column{"Deutsch: Friedrich Heinrich Ranke (1798-1876)"
-    	    	    "Latein: John Francis Wade (1711 - 1786)"    	    	    
+    	    \column{"Deutsch: Friedrich Heinrich Ranke (1798–1876)"
+    	    	    "Latein: John Francis Wade (1711–1786)"
     	    	}
     	    }
-    composer = "John Francis Wade (1711 - 1786)"
+    composer = "John Francis Wade (1711–1786)"
     tagline = ##f
 }
 
@@ -155,7 +155,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
       	      	      "Du König der Ehren, Herrscher der Heerscharen,"
       	      	      "verschmähst nicht, zu ruhn in Marien Schoß,"
       	      	      "du wahrer Gott von Ewigkeit geboren."
-      	      	      \concat{ \bold "Refrain: " "O lasset uns anbeten..."}
+      	      	      \concat{ \bold "Refrain: " "O lasset uns anbeten…"}
         }
       }
       \hspace #0.1 
@@ -164,7 +164,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
       	      	     "Kommt, singet dem Herren, singt ihm, Engelchöre!"
       	      	     "Frohlocket, frohlocket, ihr Seligen:"
       	      	     "Ehre sei Gott im Himmel und auf Erden!"
-      	      	     \concat{ \bold "Refrain: " "O lasset uns anbeten..."}
+      	      	     \concat{ \bold "Refrain: " "O lasset uns anbeten…"}
         }
       }
        \hspace #0.1 
@@ -173,7 +173,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
       	      	     "Ja, dir, der du heute Mensch für uns geboren,"
       	      	     "Herr Jesu, sei Ehre und Preis und Ruhm,"
       	      	     "dir, fleischgewordnes Wort des ewgen Vaters!"
-      	      	     \concat{ \bold "Refrain: " "O lasset uns anbeten..."}
+      	      	     \concat{ \bold "Refrain: " "O lasset uns anbeten…"}
         }
       }
     }
@@ -184,7 +184,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
       	      	      "En grege relicto, humiles ad cunas"
       	      	      "Vocati pastores approperant."
       	      	      "Et nos ovanti gradu festinemus:"
-      	      	      \concat{\bold "Refrain: " "Venite adoremus..."}
+      	      	      \concat{\bold "Refrain: " "Venite adoremus…"}
         }
       }
       \hspace #0.1 
@@ -193,7 +193,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
       	      	     "Aeterni Parentis splendorem aeternum"
       	      	     "Velatum sub carne videbimus."
       	      	     "Deum infantem, pannis involutum,"
-      	      	      \concat{\bold "Refrain: " "Venite adoremus..."}
+      	      	      \concat{\bold "Refrain: " "Venite adoremus…"}
         }
       }
        \hspace #0.1 
@@ -202,7 +202,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
       	      	     "Pro nobis egenum et foeno cubantem"
       	      	     "Piis foveamus amplexibus."
       	      	     "Sic nos amantem quis non redamaret?"
-      	      	     \concat{\bold "Refrain: " "Venite adoremus..."}
+      	      	     \concat{\bold "Refrain: " "Venite adoremus…"}
         }
       }
     }
