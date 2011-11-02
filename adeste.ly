@@ -95,9 +95,9 @@ verbalat = \context Lyrics = "verbalat" \lyricmode {
 	\set stanza = #"lat: 1."
     A4 -- des2 -- te,4 fi -- del2 -- es,
     Lae4 -- ti4 tri -- um -- phan2 -- tes,4
-    Ven4 -- i2 -- te,4 ven-- i2 -- te4 in Beth2.. -- le8 -- hem.1
+    Ven4 -- i2 -- te,4 ven -- i2 -- te4 in Beth2.. -- le8 -- hem.1
     Na2 -- tum4 vi -- de2 -- te
-    Reg4 -- em ang-- el-- or2 -- um.4
+    Reg4 -- em ang -- el -- or2 -- um.4
     Ven -- i -- te a -- dor -- e2 -- mus,4
     Ven -- i -- te a -- dor -- e2 -- mus,4
     Ven -- i -- te a -- dor -- e2 -- mus,
