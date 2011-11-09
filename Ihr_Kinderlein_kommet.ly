@@ -5,8 +5,6 @@
   title="Ihr Kinderlein kommet"
   composer="Musik: Johann Abraham Peter Schulz (1794)"
   poet="Text: Christoph von Schmid (1798)"
-  %arranger = "Satz: Th. Wesenigk"
-  copyright = "Gemeinfrei. Kann beliebig vervielfältigt und weitergegeben werden."
   tagline = ""
 }
 
@@ -59,11 +57,11 @@ Text=\lyricmode {
 }
 
 
-\markup { \smaller
+\markup {
   \fill-line {
-    \hspace #0.1 % Linker Rand
+    \hspace #0.1 % Spalte vom linken Rand wegbewegen
+    % Kann entfernt werden, wenn wenig Platz auf der Seite ist
     \column {
-      \line { \column { " " } } % Leerzeile wg. Abstand ^^
       \line { \bold "2."
         \column {
           "Oh seht in der Krippe, im nächtlichen Stall,"
