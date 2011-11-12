@@ -2,7 +2,7 @@
 % \version "2.12.3"
 
 \paper {
-  #(set-paper-size "a5")
+  #(set-paper-size "a4")
 }
 
 \layout {
