@@ -57,11 +57,12 @@ Text=\lyricmode {
 }
 
 
-\markup {
+\markup { \smaller
   \fill-line {
     \hspace #0.1 % Spalte vom linken Rand wegbewegen
     % Kann entfernt werden, wenn wenig Platz auf der Seite ist
     \column {
+      \hspace #1.0
       \line { \bold "2."
         \column {
           "Oh seht in der Krippe, im nächtlichen Stall,"
@@ -88,8 +89,11 @@ Text=\lyricmode {
           "Stimmt freudig zum Jubel der Engel mit ein!"
         }
       }
-      \line { \column { " " } }
-      \line { \bold "5."
+    }
+    \hspace #0.1
+    \column {
+      \hspace #1.0
+    \line { \bold "5."
         \column {
           "Oh betet „Du liebes, du göttliches Kind,"
           "was leidest du alles für unsere Sünd’"
