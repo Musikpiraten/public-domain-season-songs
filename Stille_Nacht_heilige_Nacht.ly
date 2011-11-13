@@ -1,20 +1,16 @@
-% Dieses Notenblatt wurde erstellt von Peter Crighton [http://www.petercrighton.de]
-%
-% Kontakt: PeteCrighton@googlemail.com
+﻿\version "2.12.3"
 
-\version "2.12.3"
+\include "default.ly"
+
 \header {
-  title = "Stille Nacht, heilige Nacht"
-  poet = "Text: Joseph Mohr (1816)"
-  composer = "Melodie: Franz Xaver Gruber (1818)"
+  title="Stille Nacht, heilige Nacht"
+  composer="Musik: Franz Xaver Gruber (1818)"
+  poet="Text: Joseph Mohr (1816)"
+  tagline = ""
 }
-\layout {
-  indent = #0
-}
-akkorde = \chordmode {
-  d1. a2.:7 d  g d g d a:7 d d4. a:7 d2.
-}
-melodie = \relative c' {
+
+
+Melodie=\relative c' {
   \clef "treble"
   \time 6/8
   \key d\major
@@ -25,7 +21,13 @@ melodie = \relative c' {
   cis'4 cis8 e8. d16 cis8 | \slurSolid d4.( fis4.) |
   d8.( a16) fis8 a8. g16 e8 | d4. (d4) r8 \bar "|."
 }
-text = \lyricmode {
+
+
+Akkorde= \chordmode {
+  d1. a2.:7 d  g d g d a:7 d d4. a:7 d2.
+}
+
+Text=\lyricmode {
   \set stanza = "1."
   Stil -- le Nacht, hei -- li -- ge Nacht!
   Al -- les schläft, ein -- sam wacht
@@ -34,45 +36,46 @@ text = \lyricmode {
   \unset ignoreMelismata schlaf in himm -- li -- scher Ruh,
   schlaf -- in himm -- li -- scher Ruh.
 }
-\score {
+
+
+\score{
   <<
-    \new ChordNames { \akkorde }
-    \new Voice = "Lied" { \melodie }
-    \new Lyrics \lyricsto "Lied" { \text }
+    \new ChordNames {\Akkorde}
+    \new Voice = "Melodie" {
+      \autoBeamOff
+      \clef violin
+      \key d\major
+      \time 6/8
+      \Melodie
+    }
+    \new Lyrics = Strophe \lyricsto Melodie \Text
   >>
+  %\midi{}
 }
+
 \markup {
     \column {
       \line {
 	\bold "2."
         \column {
-          "Stille Nacht, heilige Nacht!"
-	  "Gottes Sohn, o wie lacht"
-	  "Lieb aus deinem göttlichen Mund"
-	  "Da uns schlägt die rettende Stund,"
-	  "Christ, in deiner Geburt,"
-	  "Christ, in deiner Geburt."
-	}
-	\bold "3."
-        \column {
 	  "Stille Nacht, heilige Nacht!"
 	  "Hirten erst kundgemacht,"
 	  "Durch der Engel Halleluja."
 	  "Tönt es laut von fern und nah:"
-	  "Christ, der Retter ist da,"
-	  "Christ, der Retter ist da."
+	  "Christ, der Retter, ist da,"
+	  "Christ, der Retter, ist da."
+	}
+	\bold "3."
+        \column {
+	  "Stille Nacht, heilige Nacht!"
+	  "Gottes Sohn, o wie lacht"
+	  "Lieb aus deinem göttlichen Mund,"
+	  "Da uns schlägt die rettende Stund,"
+	  "Christ, in deiner Geburt,"
+	  "Christ, in deiner Geburt."
         }
     }
   }
 }
 
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Peter Crighton
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
-  }
-}
+ % some settings % vim: sw=2 et
