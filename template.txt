@@ -32,7 +32,7 @@ Text=\lyricmode {
       \clef violin
       \key [Tonart]
       \time [Takt]
-      \Melodie
+      \Melodie \bar "|."
     }
     \new Lyrics = Strophe \lyricsto Melodie \Text
   >>
