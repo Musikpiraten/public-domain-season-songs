@@ -1,21 +1,16 @@
-% Dieses Notenblatt wurde erstellt von Peter Crighton [http://www.petercrighton.de] 
-%
-% Kontakt: PeteCrighton@googlemail.com
+﻿\version "2.12.3"
 
-\version "2.12.3"
+\include "default.ly"
+
 \header {
-  title = "Oh du fröhliche"
-  poet = \markup { \column { "Text: " } \column { "Str. 1 Johannes Daniel Falk (1816)""Str. 2 & 3 Heinrich Holzschuher (1829)" } }
-  composer = "Melodie: Sizilien (vor 1788)"
+  title="O du fröhliche"
+  composer="Musik: Sizilien (vor 1788)"
+  poet=\markup { \column { "Text: " } \column { "Str. 1 Johannes Daniel Falk (1816)""Str. 2 & 3 Heinrich Holzschuher (1829)" } }
+  tagline = ""
 }
-\layout {
-  indent = #0
-}
-akkorde = \chordmode {
-  d2 g d1 d2 g d1 d2 a b1:m fis2:m e a1
-  a a:7 d1*2 b1:m g2 a d a d1
-}
-melodie = \relative c' {
+
+
+Melodie=\relative c' {
   \clef "treble"
   \time 4/4
   \key d\major
@@ -28,48 +23,58 @@ melodie = \relative c' {
   d4( cis) b( a) | d b a g |
   fis2 e | d1 \bar "|."
 }
-text = \lyricmode {
+
+
+Akkorde= \chordmode {
+	\germanChords
+  d2 g d1 d2 g d1 d2 a b1:m fis2:m e a1
+  a a:7 d1*2 b1:m g2 a d a d1
+}
+
+Text=\lyricmode {
   \set stanza = "1."
-  Oh du fröh -- li -- che, __ oh du se -- li -- ge, __
+  O du fröh -- li -- che, o du se -- li -- ge,
   gna -- den -- brin -- gen -- de Weih -- nachts -- zeit!
   Welt ging ver -- lo -- ren, Christ ist ge -- bo -- ren:
-  Freu -- e, __ freu -- e dich, oh Chri -- sten -- heit!
+  Freu -- e, freu -- e dich, oh Chri -- sten -- heit!
 }
-\score {
+
+
+
+\score{
   <<
-    \new ChordNames { \akkorde }
-    \new Voice = "Lied" { \melodie }
-    \new Lyrics \lyricsto "Lied" { \text }
+    \new ChordNames {\Akkorde}
+    \new Voice = "Melodie" {
+      \autoBeamOff
+      \clef violin
+      \key d\major
+      \time 4/4
+      \Melodie
+    }
+    \new Lyrics = Strophe \lyricsto Melodie \Text
   >>
+  %\midi{}
 }
+
 \markup {
     \column {
       \line {
 	\bold "2."
         \column {
-          "Oh du fröhliche, oh du selige,"
+          "O du fröhliche, o du selige,"
 	  "gnadenbringende Weihnachtszeit!"
 	  "Christ ist erschienen, uns zu versühnen:"
-	  "Freue, freue dich, oh Christenheit!"
+	  "Freue, freue dich, o Christenheit!"
 	}
 	\bold "3."
         \column {
-          "Oh du fröhliche, oh du selige,"
+          "O du fröhliche, o du selige,"
 	  "gnadenbringende Weihnachtszeit!"
 	  "Himmlische Heere jauchzen dir Ehre:"
-	  "Freue, freue dich, oh Christenheit!"
+	  "Freue, freue dich, o Christenheit!"
         }
       }
   }
 }
 
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Peter Crighton
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
-  }
-}
+ % some settings % vim: sw=2 et
