@@ -26,7 +26,7 @@ Melodie=\relative c' {
   a2 e'4      | % 11
   fis e8 e d d      | % 12
   a'4
-  a a8 a      | % 13
+  fis a,8 a      | % 13
   b4 e cis      | % 14
   d2
 }
