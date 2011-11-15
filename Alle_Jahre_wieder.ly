@@ -10,14 +10,16 @@
 }
 
 AlleJahreWiederXaGlobal = {
+	
   \key d \major
+  \autoBeamOff
 }
 
 
 AlleJahreWiederXaAkkorde = \chords {
   \set chordChanges = ##t
-  d4. d8 d4 a:7 d2 a2:7 d4 d8 d8 a4:7 d4 a2. r4
-  d4 d g d d2 a2 d4 d8 d a4 a d2. r4
+  d4. d8 d4 a:7 d2 a2:7 d4 d8 d8 a4:7 d4 a1
+  d4 d g d g1 d4 d8 d a4 a d1
 }
 
 AlleJahreWiederXaTextStropheEins = \lyricmode { \set stanza = #"1. "
@@ -28,7 +30,7 @@ AlleJahreWiederXaTextStropheEins = \lyricmode { \set stanza = #"1. "
 }
 
 AlleJahreWiederXaMelodie = \relative c'' { \AlleJahreWiederXaGlobal
-  a4. h8 a4 g | fis2 e | d4 e8( fis) g4 fis | e2. r4 | fis4 a h a | d2 cis4( h) | a g8( fis) g4 a | fis2. r4 \bar "|."
+  a4. h8 a4 g | fis2 e | d4 e8[ fis] g4 fis | e2. r4 | fis4 a h a | d2 cis4( h) | a g8[ fis] g4 a | fis2. r4 \bar "|."
 }
 
 AlleJahreWiederXa = \score {<<
