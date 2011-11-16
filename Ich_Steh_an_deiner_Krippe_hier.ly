@@ -1,10 +1,19 @@
 \version "2.12.3"
+
+
 \include "deutsch.ly"
 
+  \header {
+    title = "Ich steh an deiner Krippe hier"
+    composer = "Musik: Johann Sebastian Bach"
+    poet = "Text: Paul Gerhardt"
+    opus = "BWV 469"
+  }
 
-snotes = \relative c'' {
+
+Melodie = \relative c'' {
   \partial 4
-  a4
+  g4
   c d es c
   b4. as8 g4 \breathe b
   es,4. d8 es4 f
@@ -18,67 +27,9 @@ snotes = \relative c'' {
   es b c b
   as4. b8 g4 \breathe g
   a h c8[ es] d[ c]
-  \partial 2.
+  %%%% BEFEHL FUER ZAEHLZEIT SKIPPEN!!!!
   h2 c4\fermata
   \bar "|."
-}
-
-anotes = \relative c' {
-  \partial 4
-  es8[ f]
-  g4 f es8[ f] g[ es]
-  f[ d] es[ f] es4 \breathe b
-  c4. d8 c4 d8[ c]
-  d2 d4 \breathe es8[ f]
-  g4 f es8[ f] g[ es]
-  f[ d] es[ f] es4 \breathe b
-  c4. d8 c4 d8[ c]
-  d2 d4 \breathe es8[ f]
-  g[ as] b[ g] as4 es
-  f4. d8 es4 \breathe g8[ f]
-  es[ f] g[ f] es4 es
-  es d es \breathe es
-  f g g as
-  \partial 2.
-  g4. f8 es4\fermata
-}
-
-tnotes = \relative c' {
-  \partial 4
-  c4
-  g g c c
-  f,4. b8 b4 \breathe g
-  g g c8[ b] as[ c]
-  c2 h4 \breathe c
-  g g c c
-  f,4. b8 b4 \breathe g
-  g g c8[ b] as[ c]
-  c2 h4 \breathe b
-  b es es4. b8
-  c4 b b \breathe b
-  c b as b8[ g]
-  c4 b b \breathe c
-  c d c f8[ es]
-  \partial 2.
-  d2 c4 \fermata
-}
-
-bnotes = \relative c {
-  \partial 4
-  \repeat unfold 2 {
-    c8[ d]
-    es[ d] c[ h] c[ d] es[ c]
-    d[ b] c[ d] es4 \breathe es8[ d]
-    c[ g'] c[ b] as[ g] as4
-    g2 g,4 \breathe }
-  g'8[ f]
-  es[ f] g[ es] as4. g8
-  f8[ es] d[ f] es4 \breathe es8[ d]
-  c[ d] es[ d] es[ d] g[ es]
-  f4 b, es c
-  f8[ es] f[ d] es4 f
-  \partial 2.
-  g g, c\fermata
 }
 
 choraltextone = \lyricmode {
@@ -114,73 +65,40 @@ choraltextnine = \lyricmode {
   dich und all dei -- ne Freu -- den.
 }
 
-spart = {
-  \new Staff <<
-    \new Voice = "s" {
-      \key g \minor
+Akkorde= \chordmode {
+g4 c1:m b2/d es
+c:m as
+g:sus4 g
+c1:m b2/d es
+c:m as
+g:sus4 g4 r
+es2 as4 es/g
+f:m b:7 es2
+es as4 es/g
+f:m b:7 es c:m
+f g:7/f c:m/es f:m6
+g2 c
+}
+
+
+
+
+\score{
+  <<
+    \new ChordNames {\Akkorde}
+    \new Voice = "Melodie" {
       \autoBeamOff
-      \snotes
+      \clef violin
+      \key c \minor
+      \time 4/4
+      \Melodie \bar "|."
     }
-    \new Lyrics \lyricsto "s" \choraltextone
-    \new Lyrics \lyricsto "s" \choraltextfour
-    \new Lyrics \lyricsto "s" \choraltextnine
+    \new Lyrics = Strophe \lyricsto Melodie \choraltextone
+    \new Lyrics = Strophe \lyricsto Melodie \choraltextfour
+    \new Lyrics = Strophe \lyricsto Melodie \choraltextnine
   >>
-  
+  %\midi{}
 }
 
 
-
-\bookpart {
-  
-  \header {
-    title = "Ich steh an deiner Krippe hier"
-    composer = "Musik: Johann Sebastian Bach"
-    poet = "Text: Paul Gerhardt"
-    opus = "BWV 469"
-  }
-  
-  #(set-global-staff-size 19)
-
-  \score {
-    \new ChoirStaff <<
-      \new Staff <<
-        \key g \minor
-        \new Voice = "s" {
-          \autoBeamOff
-          \voiceOne
-          \snotes
-        }
-        \new Voice = "a" {
-          \autoBeamOff
-          \voiceTwo
-          \anotes
-        }
-        \new Lyrics \lyricsto "s" \choraltextone
-        \new Lyrics \lyricsto "s" \choraltextfour
-        \new Lyrics \lyricsto "s" \choraltextnine
-      >>
-      
-      \new Staff <<
-        \key g \minor
-        \clef bass
-        \new Voice = "t" {
-          
-          \autoBeamOff
-          \voiceOne
-          \tnotes
-        }
-        
-        \new Voice = "b" {
-          \autoBeamOff
-          \voiceTwo
-          \bnotes
-        }
-      >>
-      
-    >>
-  }
-}
-          
-  
-
-  
+ % some settings % vim: sw=2 et

@@ -30,9 +30,19 @@ Melodie= {
 }
 
 
-%Akkorde= \chordmode {
-%  [Akkorde]
-%}
+Akkorde= \chordmode {
+  f2. c c f
+  f4. f:7 b2. f4./c c:7
+  f2.
+  c4. f
+  g4:m c8:7 f4.
+  c4. f
+  g4:m c8:7 f4.
+  f f:7
+  b2.
+  f4./c c:7
+  f2.
+}
 
 Text=\lyricmode {
 	Sü- ßer die Glo- cken nie klin- gen, als zu der Weih- nachts- zeit; "'s ist" als ob En- ge- lein sin- gen wie- der von Frie- den
@@ -43,7 +53,7 @@ Text=\lyricmode {
 
 \score{
   <<
-%    \new ChordNames {\Akkorde}
+    \new ChordNames {\Akkorde}
     \new Voice = "Melodie" {
       \autoBeamOff
       \clef treble
