@@ -1,17 +1,17 @@
-% Dieses Notenblatt wurde erstellt von Peter Crighton [http://www.petercrighton.de] 
-%
-% Kontakt: PeteCrighton@googlemail.com
 
 \version "2.12.3"
+
+\include "default.ly"
+
 \header {
   title = "Macht hoch die Tür"
   poet = "Text: Georg Weissel (1623)"
-  composer = "Melodie: Freylinghausensches Gesangbuch (1704)"
+  composer = "Musik: Freylinghausensches Gesangbuch (1704)"
+  tagline = ""
 }
-\layout {
-  indent = #0
-}
-akkorde = \chordmode {
+
+
+Akkorde = \chordmode {
   r4 es1. as2. bes
   as es bes es
   bes es c:m bes
@@ -21,7 +21,8 @@ akkorde = \chordmode {
   c:m f:m bes1.
   as2. bes es1*5/4
 }
-melodie = \relative c' {
+
+Melodie = \relative c' {
   \clef "treble"
   \time 6/4
   \key es\major
@@ -35,7 +36,8 @@ melodie = \relative c' {
   es,2 es4 as2 g4 | f2.~ f2 bes4 |
   as2 g4 f( es) f | es2.~ es2 \bar "|."
 }
-text = \lyricmode {
+
+Text = \lyricmode {
   \set stanza = "1."
   Macht hoch die Tür, die Tor __ macht weit;
   es kommt der Herr der Herr -- lich -- keit,
@@ -46,13 +48,18 @@ text = \lyricmode {
   Ge -- lo -- bet sei mein Gott, __
   mein Schöp -- fer reich von Rat. __
 }
+
+
 \score {
   <<
-    \new ChordNames \transpose es c { \akkorde }
-    \new Voice = "Lied" \transpose es c { \melodie }
-    \new Lyrics \lyricsto "Lied" { \text }
+    \new ChordNames \transpose es c { \Akkorde }
+    \new Voice = "Lied" \transpose es c { \Melodie }
+    \new Lyrics \lyricsto "Lied" { \Text }
   >>
+  %\midi {\context {  \Score  tempoWholesPerMinute = #(ly:make-moment 100 4)  } }
 }
+
+
 \markup {
   \fill-line {
     \hspace #0.1
@@ -116,16 +123,5 @@ text = \lyricmode {
       }
     }
     \hspace #0.1
-  }
-}
-
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Peter Crighton
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
   }
 }
