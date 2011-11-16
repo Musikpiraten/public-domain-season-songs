@@ -18,7 +18,7 @@ snotes = \relative c'' {
   es b c b
   as4. b8 g4 \breathe g
   a h c8[ es] d[ c]
-  \partial 2.
+  %\set Timing.measurePosition = #(ly:make-moment 1 4)
   h2 c4\fermata
   \bar "|."
 }
@@ -39,7 +39,7 @@ anotes = \relative c' {
   es[ f] g[ f] es4 es
   es d es \breathe es
   f g g as
-  \partial 2.
+  
   g4. f8 es4\fermata
 }
 
@@ -59,7 +59,7 @@ tnotes = \relative c' {
   c b as b8[ g]
   c4 b b \breathe c
   c d c f8[ es]
-  \partial 2.
+  
   d2 c4 \fermata
 }
 
@@ -77,7 +77,7 @@ bnotes = \relative c {
   c[ d] es[ d] es[ d] g[ es]
   f4 b, es c
   f8[ es] f[ d] es4 f
-  \partial 2.
+ 
   g g, c\fermata
 }
 

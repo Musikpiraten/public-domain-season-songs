@@ -27,7 +27,7 @@ Melodie = \relative c'' {
   es b c b
   as4. b8 g4 \breathe g
   a h c8[ es] d[ c]
-  %%%% BEFEHL FUER ZAEHLZEIT SKIPPEN!!!!
+  %\set Timing.measurePosition = #(ly:make-moment 1 4)
   h2 c4\fermata
   \bar "|."
 }
@@ -94,11 +94,47 @@ g2 c
       \Melodie \bar "|."
     }
     \new Lyrics = Strophe \lyricsto Melodie \choraltextone
-    \new Lyrics = Strophe \lyricsto Melodie \choraltextfour
-    \new Lyrics = Strophe \lyricsto Melodie \choraltextnine
+    %\new Lyrics = Strophe \lyricsto Melodie \choraltextfour
+    %\new Lyrics = Strophe \lyricsto Melodie \choraltextnine
   >>
   %\midi{}
 }
 
 
- % some settings % vim: sw=2 et
+\markup {
+  \hspace #0.1
+  \column {
+    \line {
+      \bold "4."
+      \column {
+        "Ich sehe dich mit Freuden an"
+  "und kann mich nicht satt sehen;"
+  "und weil ich nun nichts weiter kann,"
+  "bleib ich anbetend stehen."
+  "O dass mein Sinn ein Abgrund wär"
+  "und meine Seel ein weites Meer,"
+  "dass ich dich möchte fassen."       
+      }
+    }
+    \hspace #0.1
+    
+  }
+  
+  \hspace #0.1
+  \column {
+    \line {
+      \bold "9."
+      \column {
+        " Eins aber hoff ich, wirst du mir,"
+  "mein Heiland nicht versagen:"
+  "dass ich dich möge für und für"
+  "in, bei und an mir tragen."
+  "So lass mich doch dein Kripplein sein;"
+  "komm, komm und lege bei mir ein"
+  "dich und all deine Freuden."
+      }
+    }
+  }
+  \hspace #0.1
+}
+
