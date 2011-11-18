@@ -45,7 +45,7 @@ Akkorde= \chordmode {
 }
 
 Text=\lyricmode {
-	Sü- ßer die Glo- cken nie klin- gen, als zu der Weih- nachts- zeit; "'s ist" als ob En- ge- lein sin- gen wie- der von Frie- den
+	Sü- ßer die Glo- cken nie klin- gen, als zu der Weih- nachts- zeit; "’s ist" als ob En- ge- lein sin- gen wie- der von Frie- den
 	und Freud.  Wie sie ge- sun- gen in se- li- ger Nacht, wie sie ge- sun- gen in se- li- ger Nacht! Glo- cken mit hei- li- gem Klang,
 	klingt doch die Er- de ent- lang!
 }

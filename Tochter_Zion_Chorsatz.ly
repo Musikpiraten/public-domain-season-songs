@@ -124,7 +124,7 @@ zionthree = \lyricmode { \set stanza = "3. "
 	Ho -- si -- an -- na, Da -- vids Sohn,
 	sei ge -- grü -- ßet, Kö -- nig mild!
 	E -- wig steht dein Frie -- dens -- thron,
-	du des ew'-- gen Va -- ters Kind.
+	du des ew’-- gen Va -- ters Kind.
 }
 
 sapart = {

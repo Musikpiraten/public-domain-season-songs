@@ -11,8 +11,8 @@
     maintainerEmail = "hedavid@arcor.de"
     lastupdated = "2011/Nov/30"
     title = "Ich lag und schlief, da träumte mir"
-    poet = "Hoffmann von Fallersleben (1798-1872)"
-    composer = "Volksweise"
+    poet = "Text: Hoffmann von Fallersleben (1798-1872)"
+    composer = "Musik: Volksweise"
 
     tagline = \markup{
     	    \column{}}

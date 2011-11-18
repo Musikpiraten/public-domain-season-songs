@@ -15,8 +15,8 @@
 \header {
   title = "In dulci jubilo"
   subtitle = "lateinisch-deutsche Fassung"
-  poet = "Ursprungsfassung Heinrich Seuse zugeschrieben"
-  composer = "Weihnachtslied, 14. Jhd."
+  poet = "Text: Ursprungsfassung Heinrich Seuse zugeschrieben"
+  composer = "Musik: Weihnachtslied (14. Jhd.)"
   %% http://de.wikipedia.org/wiki/In_dulci_jubilo
 
   enteredby = "Sigrid Peuker"

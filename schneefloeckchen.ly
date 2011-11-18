@@ -2,8 +2,8 @@
 
 \header {
 	title = "Schneeflöckchen"
-	composer = "W. A. Mozart"
-        poet = "Hedwig Haberkern"
+	composer = "Musik: W. A. Mozart"
+        poet = "Text: Hedwig Haberkern"
 }
 
 \version "2.12.3"

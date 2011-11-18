@@ -24,8 +24,8 @@
 
 \header {
     title = "Der Heiland ist geboren"
-    composer = "Traditionell (Innsbruck 19. Jhdt.)"
-    poet = "Traditionell"
+    composer = "Musik: Traditionell (Innsbruck 19. Jhdt.)"
+    poet = "Text: Traditionell"
     }
 
 AvoiceAA = \relative c'{
@@ -59,8 +59,8 @@ AvoiceAA = \relative c'{
     c4( bes) g f2 \bar "|." 
 }% end of last bar in partorvoice
 
-      ApartAverseA = \lyricmode { \set stanza = " 1. " Der Hei -- land ist ge -- bo -- ren, freu dich, o Chri -- sten -- heit, Freut euch von Her -- zen, ihr Chri -- sten all', kommt her zum Kind -- lein in dem Stall, freut euch von Her -- zen, ihr Chri -- sten all',  kommt her zum Kind -- lein in dem Stall. }
-      ApartAverseB = \lyricmode { \set stanza = " 2. " sonst wär'n wir gar ver -- lor -- ren in al -- le E -- wig -- keit. __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ }
+      ApartAverseA = \lyricmode { \set stanza = " 1. " Der Hei -- land ist ge -- bo -- ren, freu dich, o Chri -- sten -- heit, Freut euch von Her -- zen, ihr Chri -- sten all’, kommt her zum Kind -- lein in dem Stall, freut euch von Her -- zen, ihr Chri -- sten all’,  kommt her zum Kind -- lein in dem Stall. }
+      ApartAverseB = \lyricmode { \set stanza = " 2. " sonst wär’n wir gar ver -- lor -- ren in al -- le E -- wig -- keit. __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ __ _ }
 
 \score { 
     << 
@@ -113,7 +113,7 @@ AvoiceAA = \relative c'{
 "Freu dich, o Christenheit,"
 "Das in dem Stall geboren,"
 "Hat Himmel und Erd erfreut."
-"|: Freut euch von Herzen, ihr Christen all,"
+"|: Freut euch von Herzen, ihr Christen all’,"
 "Kommt her zum Kindlein in dem Stall. :|"
 
         }
@@ -125,7 +125,7 @@ AvoiceAA = \relative c'{
           "Den Frieden sie verkünden!"
 "Freu dich, du Christenheit!"
 "Verzeihung aller Sünden"
-"Ist uns im Stall bereit't"
+"Ist uns im Stall bereit’t"
 "Refrain:"
 
         }

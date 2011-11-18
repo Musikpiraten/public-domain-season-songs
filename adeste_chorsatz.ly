@@ -3,13 +3,17 @@
 \include "default.ly"
 
 \header {
-    title = "Herbei, o ihr Gläub'gen – Adeste Fideles"
-    poet = \markup {
-    	    \column{"Deutsch: Friedrich Heinrich Ranke"
-    	    	    "Latein: John Francis Wade"
-    	    	}
-    	    }
-    composer = "John Francis Wade"
+    title = "Herbei, o ihr Gläub’gen – Adeste Fideles"
+	poet = \markup {
+		\line{
+			Text:
+			\column{
+				"Deutsch: Friedrich Heinrich Ranke"
+				"Latein: John Francis Wade"
+			}
+		}
+	}
+    composer = "Musik: John Francis Wade"
     tagline = ##f
 }
 
@@ -96,7 +100,7 @@ verbalat = \context Lyrics = "verbalat" \lyricmode {
 
 verbadeut = \context Lyrics = "verbadeut" \lyricmode {
 	\set stanza = #"dt.: 1."
-    Her4 -- bei,2 o4 ihr Gläu2 -- b'gen, 
+    Her4 -- bei,2 o4 ihr Gläu2 -- b’gen, 
     fröh4 -- lich4 tri -- um -- phie2 -- rend,4
     o4     kom2 -- met,4   o   kom2 -- met4 nach Beth2.. -- le8 -- hem.1
     Se2 -- het4 das4 Kind2 -- lein,2 

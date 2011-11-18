@@ -6,8 +6,8 @@
 
 \header{
   title = "Morgen kommt der Weihnachtsmann"
-  poet = "Hoffmann von Fallersleben (1798 bis 1874)"
-  composer = "Volksweise"
+  poet = "Text: Hoffmann von Fallersleben (1798–1874)"
+  composer = "Musik: Volksweise"
 }
 
 \layout { indent = #0 } 
@@ -43,8 +43,8 @@
   }
   \addlyrics { 
 	\set stanza = #"2. "
-	Bring' uns, lie -- ber Weih -- nachts -- mann,
-	Bring' auch mor -- gen, brin -- ge
+	Bring’ uns, lie -- ber Weih -- nachts -- mann,
+	Bring’ auch mor -- gen, brin -- ge
 	Mus -- ke -- tier und Gre -- na -- dier,
 	Zot -- tel -- bär und Pan -- ther -- tier,
 	Ross und E -- sel, Schaf und Stier,

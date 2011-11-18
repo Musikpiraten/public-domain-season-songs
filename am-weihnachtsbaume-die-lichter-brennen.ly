@@ -28,7 +28,7 @@ Akkorde= \chordmode {
 
 Text=\lyricmode {
     \set stanza = " 1. " Am Weih -- nachts -- baume  die Lich -- ter  bren -- nen,  wie glänzt er fest -- lich,  lieb und mild,
-    als spräch' er: „Wollt ihr in mir er -- ken -- nen  ge -- treu -- er  Hoff -- nung  stil -- les  Bild!“
+    als spräch’ er: „Wollt ihr in mir er -- ken -- nen  ge -- treu -- er  Hoff -- nung  stil -- les  Bild!“
 }
 
 
@@ -91,9 +91,9 @@ Text=\lyricmode {
         \bold "3."
         \column {
 "Zwei Engel sind hereingetreten,"
-"kein Auge hat sie kommen seh'n,"
+"kein Auge hat sie kommen seh’n,"
 "sie gehn zum Weihnachtstisch und beten,"
-"und wenden wieder sich und geh'n."
+"und wenden wieder sich und geh’n."
         }
       }
       \hspace #0.1

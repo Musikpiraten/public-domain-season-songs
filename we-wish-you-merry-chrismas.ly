@@ -4,8 +4,8 @@
 
 \header {
   title="We Wish You A Merry Christmas"
-  composer=""
-  poet="Text & Musik: Traditional aus England"
+  poet=""
+  composer="Text und Musik: Traditionell aus England"
   tagline = ""
 }
 
@@ -78,7 +78,7 @@ Text=\lyricmode {
          "Now bring us some figgy pudding,"
          "And bring some out here!"
          "Good tidings we bring"
-         "To you and your kin."
+         "To you and your kin;"
          "We wish you a merry Christmas "
          "And a happy New Year!"
        }
@@ -87,9 +87,9 @@ Text=\lyricmode {
      \line {
        \bold "4."
        \column {
-         "And we won't go until we get some"
-         "And we won't go until we get some"
-         "And we  won't go until we get some"
+         "And we won’t go until we get some"
+         "And we won’t go until we get some"
+         "And we won’t go until we get some"
          "So bring some out here!"
          "Glad tidings we bring"
          "To you and your kin;"

@@ -82,7 +82,7 @@ Text = \lyricmode {
         \bold "4."
         \column {
           "Macht hoch die Tür, die Tor macht weit,"
-          "eu'r Herz zum Tempel zubereit'."
+          "eu’r Herz zum Tempel zubereit’."
           "Die Zweiglein der Gottseligkeit"
           "steckt auf mit Andacht, Lust und Freud;"
           "so kommt der König auch zu euch,"

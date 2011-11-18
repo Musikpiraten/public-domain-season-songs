@@ -29,8 +29,8 @@
 
 \header {
     title = "Tochter Zion, freue dich"
-    composer = "G. F. Händel, 1747"
-    poet = "F. H. Ranke, 1823"
+    composer = "Musik: G. F. Händel (1747)"
+    poet = "Text: F. H. Ranke (1823)"
     }
 
 AvoiceAA = \relative c'{
@@ -61,7 +61,7 @@ AvoiceAA = \relative c'{
     bes1 ^\markup {\upright \bold  "d. c. al fine"} \bar "|."
 }% end of last bar in partorvoice
 
-      ApartAverseA = \lyricmode { \set stanza = " 1. " Toch  ter Zi -- on freu -- e Dich, ja- uch ze laut, Je -- ru -- sa -- lem Sieh, dein Kö nig kommt zu dir, ja er kommt, der Frie -- de fürst }
+      ApartAverseA = \lyricmode { \set stanza = " 1. " Toch -- ter Zi -- on freu -- e Dich, ja- uch ze laut, Je -- ru -- sa -- lem Sieh, dein Kö nig kommt zu dir, ja er kommt, der Frie -- de -- fürst. }
 
 \score {
     <<

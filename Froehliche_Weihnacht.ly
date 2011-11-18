@@ -10,8 +10,8 @@ Gesetzt von Beate Paland
 
 \header{
   title = "Fröhliche Weihnacht überall"
-  poet = "A. H. Hoffmann von Fallersleben (1798–1874)"
-  composer = "Aus England, 19. Jh."
+  poet = "Text: A. H. Hoffmann von Fallersleben (1798–1874)"
+  composer = "Musik: Aus England (19. Jh.)"
 }
 
 <<

@@ -4,7 +4,7 @@
 
 \version "2.12.3"
 \header {
-  title = "Morgen, Kinder, wird's was geben"
+  title = "Morgen, Kinder, wird’s was geben"
   poet = "Text: Martin Friedrich Philipp Bartsch (1795)"
   composer = "Melodie: Carl Gottlieb Hering (1809)"
 }
@@ -29,7 +29,7 @@ melodie = \relative c' {
 }
 text = \lyricmode {
   \set stanza = "1."
-  Mor -- gen, Kin -- der, wird's was ge -- ben,
+  Mor -- gen, Kin -- der, wird’s was ge -- ben,
   mor -- gen wer -- den wir uns freun;
   Ein -- mal wer -- den wir noch wach,
   hei -- ßa, dann ist Weih -- nachts -- tag!
@@ -58,7 +58,7 @@ wdh = \lyricmode {
           "schöner als bei frohen Tänzen"
           "ein geputzter Kronensaal!"
           "Wisst ihr noch vom vorgen Jahr,"
-          "wie's am Weihnachtsabend war?"
+          "wie’s am Weihnachtsabend war?"
         }
       }
       \hspace #0.1

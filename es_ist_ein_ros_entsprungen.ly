@@ -4,7 +4,7 @@
 
 \header {
   title = "Es ist ein Ros’ entsprungen"
-  composer = "Text & Musik: Michael Praetorius / Friedrich Layriz"
+  composer = "Text und Musik: Michael Praetorius / Friedrich Layriz"
   poet = ""
   tagline = ##f
 }

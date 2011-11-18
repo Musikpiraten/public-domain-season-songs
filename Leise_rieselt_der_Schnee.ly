@@ -5,7 +5,7 @@
 \header {
   title = "Leise rieselt der Schnee"
   poet = ""
-  composer = "Text & Musik: Eduard Ebel"
+  composer = "Text und Musik: Eduard Ebel"
 }
 
 

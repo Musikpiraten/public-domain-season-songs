@@ -61,7 +61,7 @@ Akkorde= \chordmode {
 Text=\lyricmode {
 	\set stanza = " 1. "
 	Dash -- ing  through the snow, in a one horse op -- en  sleigh,
-	o'er the fields we go, laugh -- ing  all the way;
+	o’er the fields we go, laugh -- ing  all the way;
 	Bells on bob -- tail  ring, mak -- ing  spir -- its  bright.
 	What fun it is to laugh and sing a sleigh -- ing  song to -- night.
 	Jin -- gle  bells, jin -- gle  bells, Jin -- gle  all the way;
@@ -91,7 +91,7 @@ Text=\lyricmode {
      \column {
       \line { \bold "2."
         \column {
-	"A day or two ago I thought I'd take a ride,"
+	"A day or two ago I thought I’d take a ride,"
 	"And soon Miss Fannie Bright was seated by my side."
 	"The horse was lean and lank, misfortune seemed his lot,"
 	"He got into a drifted bank and we got upsot."
@@ -112,10 +112,10 @@ Text=\lyricmode {
      \column {
       \line { \bold "4."
 	\column {
-	"Now the ground is white, go it while you're young,"
+	"Now the ground is white, go it while you’re young,"
 	"Take the girls tonight and sing this sleighing song."
 	"Just get a bobtailed bay, two-forty for his speed,"
-	"Then hitch him to an open sleigh, and crack! You'll take the lead."
+	"Then hitch him to an open sleigh, and crack! You’ll take the lead."
 	\bold "|:Refrain:|"
         }
       }

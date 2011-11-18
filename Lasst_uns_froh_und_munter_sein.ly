@@ -36,7 +36,7 @@ Akkorde= \chordmode {
 Text=\lyricmode {
 	\set stanza = #"1."
 	Lasst uns froh und mun -- ter sein
-	und uns recht von Her -- zen freu'n!
+	und uns recht von Her -- zen freu’n!
 	Lus -- tig, lus -- tig, tra -- la -- la -- la -- la,
 	bald ist Nik -- laus -- a -- bend da,
 	bald ist Nik -- laus -- a -- bend da!

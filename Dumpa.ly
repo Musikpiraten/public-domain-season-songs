@@ -2,8 +2,8 @@
 
 \header {
         title = "Es wird scho glei dumpa"
-  composer = "Franz Friedrich Kohl und Josef Reiter"
-  poet = "Anton Reidinger"
+  composer = "Musik: Franz Friedrich Kohl und Josef Reiter"
+  poet = "Text: Anton Reidinger"
 }
 
 \layout {
@@ -62,7 +62,7 @@
   Es wird scho glei dum -- pa, 
   Es wird scho glei Nåcht. 
   Drum kimm i zu dir her. 
-  Mei Hei -- land auf'd Wåcht.
+  Mei Hei -- land auf’d Wåcht.
   Will sin -- gen a Lia -- dl 
   dem Lieb -- ling, dem Kloan.
   Du magst ja nit schlåf -- en
@@ -72,7 +72,7 @@
 }
 \addlyrics{
   Ver -- giß hiaz. o Kin -- derl, dein Kum -- mer, dei Load
-  daß'd då -- da muaßt lei -- den im Ståll auf da Hoad.
+  daß’d då -- da muaßt lei -- den im Ståll auf da Hoad.
   Es ziern ja die Eng -- erl dei Lie -- ger -- statt aus.
   Möcht schö -- ner nit sein drin an Kön -- ig sein Haus.
 }

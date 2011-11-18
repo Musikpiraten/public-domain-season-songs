@@ -4,8 +4,8 @@
 
 \header {
   title="Still, still, still"
-  composer=""
-  poet="Text & Musik: Volkslied aus dem Salzburger Land (19. Jh.)"
+  poet=""
+  composer="Text und Musik: Volkslied aus dem Salzburger Land (19. Jh.)"
   tagline = ""
 }
 
@@ -29,10 +29,10 @@ f2 a:m d:m g:m c f c1 f c f f2 a:m d:m g:m c f2
 
 Text=\lyricmode {
   \set stanza = "1."
-	Still, Still, still, weil's Kind -- lein schla -- fen will.
+	Still, Still, still, weil’s Kind -- lein schla -- fen will.
 	Ma -- ri -- a tut es nie -- der -- sing -- en,
 	ih -- re keu -- sche Brust dar -- brin -- gen.
-	Still, still, still, weil's Kind -- lein schla -- fen will.
+	Still, still, still, weil’s Kind -- lein schla -- fen will.
 }
 
 
@@ -60,7 +60,7 @@ Text=\lyricmode {
   "Still, still, still weil’s Kindlein schlafen will."
 "Die Englein tun schön jubilieren,"
 "bei dem Kripplein musizieren."
-"Still, still, still weil's Kindlein schlafen will."
+"Still, still, still weil’s Kindlein schlafen will."
         }
       }
       \hspace #0.1

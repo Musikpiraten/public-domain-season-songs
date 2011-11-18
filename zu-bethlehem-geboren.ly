@@ -53,7 +53,7 @@ AvoiceAA = \relative c'{
     f2. \bar "|." 
 }% end of last bar in partorvoice
 
-      ApartAverseA = \lyricmode { \set stanza = " 1. " Zu Beth -- le -- hem ge -- bo -- ren ist uns ei -- ein Kin -- de -- lein, das hab' ich aus -- er -- ko -- ren, sein ei -- ei -- gen will ich sein, ei -- a, ei -- a sei -- ein ei -- ge -- en will ich sein. }
+      ApartAverseA = \lyricmode { \set stanza = " 1. " Zu Beth -- le -- hem ge -- bo -- ren ist uns ei -- ein Kin -- de -- lein, das hab’ ich aus -- er -- ko -- ren, sein ei -- ei -- gen will ich sein, ei -- a, ei -- a sei -- ein ei -- ge -- en will ich sein. }
 
 \score { 
     << 

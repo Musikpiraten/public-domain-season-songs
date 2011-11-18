@@ -83,13 +83,13 @@ bnotes = \relative c {
 
 choraltextone = \lyricmode {
   \set stanza = #"1. "
-  Ich steh' an dei -- ner Krip -- pen hier,
+  Ich steh’ an dei -- ner Krip -- pen hier,
   o Je -- su, du mein Le -- ben;
   ich kom -- me, bring und schen -- ke dir,
   was du mir hast ge -- ge -- ben.
   Nimm hin, es ist mein Geist und Sinn,
   Herz, Seel und Mut, nimm al -- les hin
-  und lass dir's wohl ge -- fal -- len.
+  und lass dir’s wohl ge -- fal -- len.
 }
 
 choraltextfour = \lyricmode {

@@ -11,8 +11,8 @@
     maintainerEmail = "hedavid@arcor.de"
     lastupdated = "2011/Nov/30"
     title = "Der Christbaum ist der schönste Baum"
-    poet = "Norddeutsches Volkslied"
-    composer = "Volksweise"
+    poet = "Text: Norddeutsches Volkslied"
+    composer = "Musik: Volksweise"
     footer = ""
 }
 

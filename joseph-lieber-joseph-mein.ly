@@ -25,8 +25,8 @@
 
 \header {
     title = "Joseph, lieber Joseph mein"
-    composer = "Traditionell"
-    poet = "Traditionell"
+    composer = "Text und Musik: Traditionell"
+%    poet = "Traditionell"
     }
 
 
@@ -51,7 +51,7 @@ AvoiceAA = \relative c'{
     f4. f4. \bar "|."\bar "|." 
 }% end of last bar in partorvoice
 
-      ApartAverseA = \lyricmode { \set stanza = " 1. " Jo -- seph,  lie -- ber  Jo -- seph  mein, hilf mir wieg'n mein Kin -- de -- lein,  Gott, der wird dein Loh -- ner  sein im Him -- mel -- reich,  der Jung -- frau  Sohn Ma -- ri -- a.  }
+      ApartAverseA = \lyricmode { \set stanza = " 1. " Jo -- seph,  lie -- ber  Jo -- seph  mein, hilf mir wieg’n mein Kin -- de -- lein,  Gott, der wird dein Loh -- ner  sein im Him -- mel -- reich,  der Jung -- frau  Sohn Ma -- ri -- a.  }
 theChords = \chordmode { f1 bes8 f1*11/8 bes8 f4. bes1. f2. c4. c:7 f2 }
 %%end of chordlist 
 
@@ -104,7 +104,7 @@ theChords = \chordmode { f1 bes8 f1*11/8 bes8 f4. bes1. f2. c4. c:7 f2 }
         \bold "2."
         \column {
 "Joseph, lieber Joseph mein,"
-"hilf mir wiegen mein Kindelein,"
+"hilf mir wieg’n mein Kindelein,"
 "Gott, der wird dein Lohner sein"
 "im Himmelreich, der Jungfrau Sohn Maria."
         }
@@ -125,9 +125,9 @@ theChords = \chordmode { f1 bes8 f1*11/8 bes8 f4. bes1. f2. c4. c:7 f2 }
       \line {
         \bold "3."
         \column {
-"Gerne, lieb' Maria mein,"
-"helf ich dir wieg'n das Kindelein."
-"dass Gott müss' mein Lohner sein"
+"Gerne, lieb’ Maria mein,"
+"helf ich dir wieg’n das Kindelein."
+"dass Gott müss’ mein Lohner sein"
 "im Himmelreich, der Jungfrau Sohn Maria."
         }
       }
@@ -135,10 +135,10 @@ theChords = \chordmode { f1 bes8 f1*11/8 bes8 f4. bes1. f2. c4. c:7 f2 }
       \line {
         \bold "5."
         \column {
-"Süßer Jesu, auserkor'n,"
-"weißt wohl, dass wir war'n verlor'n,"
+"Süßer Jesu, auserkor’n,"
+"weißt wohl, dass wir war’n verlor’n,"
 "still uns deines Vaters Zorn,"
-"dich hat gebor'n die reine Magd Maria."
+"dich hat gebor’n die reine Magd Maria."
 }
       }
     }

@@ -14,8 +14,8 @@
 
 \header {
   title = "En gardant ma bergerie"
-  poet = "Chanoine Toussaint Le Roy"
-  composer = "franz. Weihnachtslied, 16. Jhd."
+  poet = "Text: Chanoine Toussaint Le Roy"
+  composer = "Musik: franz. Weihnachtslied (16. Jhd.)"
   %%  aus der Grafschaft Maine, heute in der Region Pays de la Loire
 
   enteredby = "Sigrid Peuker"
@@ -51,7 +51,7 @@
   }
   \addlyrics {
 	\set stanza = #"1. "
-	En gar -- dant ma ber -- ge -- ri -- e, l'au -- tre nuit que je veil -- lais, j'ai sur la mi -- nuit ou -- i -- e u -- ne si plai -- san -- te voix.  
+	En gar -- dant ma ber -- ge -- ri -- e, l’au -- tre nuit que je veil -- lais, j’ai sur la mi -- nuit ou -- i -- e u -- ne si plai -- san -- te voix.  
 	\repeat volta 2 { Que je ne sau -- rais, quand je le vou -- drais, que je ne pour -- rais pas di -- }
 	\alternative {
 	   { re. } 
@@ -67,12 +67,12 @@
 
   \addlyrics { 
 	\set stanza = #"3. "
-	Cet -- te voix plai -- sante e bel -- le que si doux j'oy -- ais chan -- tant, ra -- con -- tait u -- ne nou -- vel -- le qui me ren -- dit si con -- tent. 
+	Cet -- te voix plai -- sante e bel -- le que si doux j’oy -- ais chan -- tant, ra -- con -- tait u -- ne nou -- vel -- le qui me ren -- dit si con -- tent. 
   } 
 
   \addlyrics { 
 	\set stanza = #"4. "
-	En Beth -- lé -- hem de Ju -- dé -- e, di -- sait el -- le main -- te -- nant, u -- ne vierge est ac -- cou -- ché -- e d'un tant a -- gré -- able en -- fant. 
+	En Beth -- lé -- hem de Ju -- dé -- e, di -- sait el -- le main -- te -- nant, u -- ne vierge est ac -- cou -- ché -- e d’un tant a -- gré -- able en -- fant. 
   } 
 
 \relative c' {
@@ -98,7 +98,7 @@
 
   \addlyrics {
 	\set stanza = #"1. "
-	En gar -- dant ma ber -- ge -- ri -- e, l'au -- tre nuit que je veil -- lais, j'ai sur la mi -- nuit ou -- i -- e u -- ne si plai -- san -- te voix. 
+	En gar -- dant ma ber -- ge -- ri -- e, l’au -- tre nuit que je veil -- lais, j’ai sur la mi -- nuit ou -- i -- e u -- ne si plai -- san -- te voix. 
 	\repeat volta 2 { Ne sau -- rais, quand je vou -- drais, ne le pour -- rais di -- }
 	\alternative {
 	   { re. } 
@@ -113,12 +113,12 @@
 
   \addlyrics { 
 	\set stanza = #"3. "
-Cet -- te voix plai -- sante e bel -- le que si doux j'oy -- ais chan -- tant, ra -- con -- tait u -- ne nou -- vel -- le qui me ren -- dit si con -- tent. 	
+Cet -- te voix plai -- sante e bel -- le que si doux j’oy -- ais chan -- tant, ra -- con -- tait u -- ne nou -- vel -- le qui me ren -- dit si con -- tent. 	
   } 
 
   \addlyrics { 
 	\set stanza = #"4. "
-	En Beth -- lé -- hem de Ju -- dé -- e, di -- sait el -- le main -- te -- nant, u -- ne vierge est ac -- cou -- ché -- e d'un tant a -- gré -- able en -- fant. 
+	En Beth -- lé -- hem de Ju -- dé -- e, di -- sait el -- le main -- te -- nant, u -- ne vierge est ac -- cou -- ché -- e d’un tant a -- gré -- able en -- fant. 
   } 
 
 \relative c' {
@@ -144,7 +144,7 @@ Cet -- te voix plai -- sante e bel -- le que si doux j'oy -- ais chan -- tant, r
 
   \addlyrics {
 	\set stanza = #"1. "
-	En gar -- dant ma ber -- ge -- ri -- e, l'au -- tre nuit que je veil -- lais, j'ai sur la mi -- nuit ou -- i -- e u -- ne si plai -- san -- te voix.  Que je
+	En gar -- dant ma ber -- ge -- ri -- e, l’au -- tre nuit que je veil -- lais, j’ai sur la mi -- nuit ou -- i -- e u -- ne si plai -- san -- te voix.  Que je
 	\repeat volta 2 { ne sau -- rais, je ne sau -- rais, quand je le vou -- drais, que ne pour -- rais di -- }
 	\alternative {
 	   { re. Que je } 
@@ -159,12 +159,12 @@ Cet -- te voix plai -- sante e bel -- le que si doux j'oy -- ais chan -- tant, r
 
   \addlyrics { 
 	\set stanza = #"3. "
-Cet -- te voix plai -- sante e bel -- le que si doux j'oy -- ais chan -- tant, ra -- con -- tait u -- ne nou -- vel -- le qui me ren -- dit si con -- tent. Que je
+Cet -- te voix plai -- sante e bel -- le que si doux j’oy -- ais chan -- tant, ra -- con -- tait u -- ne nou -- vel -- le qui me ren -- dit si con -- tent. Que je
   } 
 
   \addlyrics { 
 	\set stanza = #"4. "
-	En Beth -- lé -- hem de Ju -- dé -- e, di -- sait el -- le main -- te -- nant, u -- ne vierge est ac -- cou -- ché -- e d'un tant a -- gré -- able en -- fant.  Que_je
+	En Beth -- lé -- hem de Ju -- dé -- e, di -- sait el -- le main -- te -- nant, u -- ne vierge est ac -- cou -- ché -- e d’un tant a -- gré -- able en -- fant.  Que_je
   } 
 
 >>

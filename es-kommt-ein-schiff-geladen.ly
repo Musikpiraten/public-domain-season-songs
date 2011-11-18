@@ -5,8 +5,8 @@
 
 \header {
   title = "Es kommt ein Schiff geladen"
-  composer = "Traditionell"
-  poet = "Johannes Tauler und Daniel Sudermann"
+  composer = "Musik: Traditionell"
+  poet = "Text: Johannes Tauler und Daniel Sudermann"
   tagline = ""
 }
 
@@ -102,7 +102,7 @@ Akkorde = \chordmode {
         \column {
           "Der Anker haft’ auf Erden,"
           "da ist das Schiff am Land."
-          "Gott's Wort tut uns Fleisch werden,"
+          "Gott’s Wort tut uns Fleisch werden,"
           "der Sohn ist uns gesandt."
         }
       }

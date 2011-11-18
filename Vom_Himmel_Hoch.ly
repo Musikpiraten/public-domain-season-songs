@@ -7,7 +7,7 @@
 #(set-global-staff-size 17)
 
 \header {
-    title = "Vom Himmel hoch, da komm' ich her"
+    title = "Vom Himmel hoch, da komm’ ich her"
     composer = "Text und Musik: Martin Luther (1535)"
 }
 
@@ -29,10 +29,10 @@ melody = \relative c'' {
 }
 
 text = \lyricmode {
-    Vom Him- mel hoch, da komm' ich her,
-    ich bring' euch gu- te neu- e Mär,
-    der gu- ten Mär bring' ich so viel,
-    da- von ich sing'n und sa- gen will. 
+    Vom Him- mel hoch, da komm’ ich her,
+    ich bring’ euch gu- te neu- e Mär,
+    der gu- ten Mär bring’ ich so viel,
+    da- von ich sing’n und sa- gen will. 
 }
 
 harmonies = \chordmode {
