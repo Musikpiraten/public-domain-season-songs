@@ -1,15 +1,14 @@
 \version "2.12.3"
 
+\include "default.ly"
 
 \header {
-  title = "Es ist ein Ros entsprungen"
-  composer = "volkstümlich"
-  poet = "volkstümlich / Michael Praetorius / Friedrich Layriz"
+  title = "Es ist ein Ros’ entsprungen"
+  composer = "Musik: volkstümlich"
+  poet = "Text: M. Praetorius / F. Layriz"
+  tagline = ##f
 }
 
-\layout {
-  indent = #0
-}
 
 global = {
   \key f \major
@@ -24,7 +23,7 @@ melody = \relative c'' {
   c2 a
   bes a4 g~
   g f2 e4
-  f2 \breathe c'
+  f2 c'
   
   c4 c d c
   c2 a
@@ -73,7 +72,8 @@ chordNames = \chordmode {
 
 
 verseOne = \lyricmode {
-  \set stanza = "1. "Es ist ein Ros ent -- sprun -- gen
+  \set stanza = "1. "
+  Es ist ein Ros’ ent -- sprun -- gen
   aus ei -- ner Wur -- zel zart, 
   wie uns die Al -- ten sun -- gen,
   von Jes -- se kam die Art
@@ -100,40 +100,26 @@ verseOne = \lyricmode {
 
 \markup {
   \fill-line {
-    \hspace #0.1
     \column {
+      \hspace #0.1
       \line {
         \bold "2."
         \column {
-"Das Röslein, das ich meine, davon Jesaia sagt,"
-    "hat uns gebracht alleine Marie die reine Magd."
-    "Aus Gottes ewgem Rat"
-    "hat sie ein Kind geboren wohl zu der halben Nacht."          
+          "Das Röslein, das ich meine, davon Jesaia sagt,"
+          "hat uns gebracht alleine Marie die reine Magd."
+          "Aus Gottes ewgem Rat"
+          "hat sie ein Kind geboren wohl zu der halben Nacht."          
         }
       }
-    }
-    \hspace #0.1
-    \column {
+      \hspace #0.1
       \line {
         \bold "3."
         \column {
-"Das Blümelein so kleine, das duftet uns so süß,"
-    "mit seinem hellen Scheine vertreibt's die Finsternis:"
-    "Wahr' Mensch und wahrer Gott,"
-    "hilft uns aus allem Leide, rettet von Sünd und Tod."          
+          "Das Blümelein so kleine, das duftet uns so süß,"
+          "mit seinem hellen Scheine vertreibt’s die Finsternis:"
+          "Wahr’ Mensch und wahrer Gott,"
+          "hilft uns aus allem Leide, rettet von Sünd und Tod."          
         }
-      }
-    }
-    \hspace #0.1
-  }
-}
-
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Christian Schramm
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
       }
     }
   }

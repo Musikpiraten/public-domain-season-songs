@@ -1,13 +1,14 @@
 \version "2.12.3"
 
-#(set-global-staff-size 19)
+\include "default.ly"
 
 \header {
-  title = "Es ist ein Ros entsprungen"
-  composer = "volkstümlich"
-  arranger = "Michael Praetorius / Christian Schramm"
-  poet = "volkstümlich / Michael Praetorius / Friedrich Layriz"
+  title = "Es ist ein Ros’ entsprungen"
+  composer = "Text & Musik: Michael Praetorius / Friedrich Layriz"
+  poet = ""
+  tagline = ##f
 }
+
 global = {
   \key f \major
   \time 4/4
@@ -124,7 +125,7 @@ bass = \relative c {
 }
 
 verseOne = \lyricmode {
-  \set stanza = "1. "Es ist ein Ros ent -- sprun -- gen
+  \set stanza = "1. "Es ist ein Ros’ ent -- sprun -- gen
   aus ei -- ner Wur -- zel zart, 
   wie uns die Al -- ten sun -- gen,
   von Jes -- se kam die Art
@@ -137,7 +138,6 @@ verseOne = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = "sa" \with {
-      midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { "Sopran" "Alt" }
     } <<
       \new Voice = "soprano" { \voiceOne \soprano }
@@ -148,7 +148,6 @@ verseOne = \lyricmode {
     } \lyricsto "soprano" \verseOne
     \new Lyrics \lyricsto "alto" \verseOne
     \new Staff = "tb" \with {
-      midiInstrument = "choir aahs"
       instrumentName = \markup \center-column { "Tenor" "Bass" }
     } <<
       \clef bass
@@ -160,7 +159,7 @@ verseOne = \lyricmode {
     } \lyricsto "tenor" \verseOne
     \new Lyrics \lyricsto "bass" \verseOne
   >>
-  \layout { }
+  \layout { indent = #15 }
   \midi {
     \context {
       \Score
@@ -171,40 +170,25 @@ verseOne = \lyricmode {
 
 \markup {
   \fill-line {
-    \hspace #0.1
     \column {
       \line {
         \bold "2."
         \column {
-"Das Röslein, das ich meine, davon Jesaia sagt,"
-    "hat uns gebracht alleine Marie die reine Magd."
-    "Aus Gottes ewgem Rat"
-    "hat sie ein Kind geboren wohl zu der halben Nacht."          
+          "Das Röslein, das ich meine, davon Jesaia sagt,"
+          "hat uns gebracht alleine Marie die reine Magd."
+          "Aus Gottes ewgem Rat"
+          "hat sie ein Kind geboren wohl zu der halben Nacht."          
         }
       }
-    }
-    \hspace #0.1
-    \column {
+      \hspace #0.1
       \line {
         \bold "3."
         \column {
-"Das Blümelein so kleine, das duftet uns so süß,"
-    "mit seinem hellen Scheine vertreibt's die Finsternis:"
-    "Wahr' Mensch und wahrer Gott,"
-    "hilft uns aus allem Leide, rettet von Sünd und Tod."          
+          "Das Blümelein so kleine, das duftet uns so süß,"
+          "mit seinem hellen Scheine vertreibt’s die Finsternis:"
+          "Wahr’ Mensch und wahrer Gott,"
+          "hilft uns aus allem Leide, rettet von Sünd und Tod."          
         }
-      }
-    }
-    \hspace #0.1
-  }
-}
-
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Christian Schramm
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
       }
     }
   }
