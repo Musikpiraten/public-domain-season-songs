@@ -16,9 +16,8 @@
 upper = 
     \relative c' {
     \slurDown
-    \clef "treble"
+    \clef treble
     \key a\major
-    \override Staff.TimeSignature   #'style = #'numbered
     \time 4/4
     \partial 4 
     <e a>4
@@ -30,7 +29,7 @@ upper =
     << a'2 \\ { cis,4 (dis4) } >> <e gis> <dis fis>
     << { gis (a) } \\ { \stemUp e (e) } >> <e b'> <e cis'>
     << { gis2 (fis4.) } \\ { \stemUp e2 (dis4.) } >> << e8 \\ e8 >>
-    <e e>1
+    e1
     <e e'>2 << d'4 \\ {fis,8 [gis8]} >> \stemUp <a cis>4
     << {\stemDown \slurDown fis4 (gis)} \\ \stemUp d'2 >> <a cis>2
     <e b'>4 <e cis'> <fis a> <fis b>
@@ -54,9 +53,8 @@ upper =
 
 lower = 
     \relative c {
-    \clef "bass"
+    \clef bass
     \key a\major
-    \override Staff.TimeSignature   #'style = #'numbered
     \time 4/4
     \partial 4
     <a cis'>4
@@ -94,7 +92,6 @@ verbalat = \context Lyrics = "verbalat" \lyricmode {
     Ven -- i -- te a -- dor -- e2 -- mus,4
     Ven -- i -- te a -- dor -- e2 -- mus,
     Do2.. -- mi8 -- num.2.
-    _4
     }
 
 verbadeut = \context Lyrics = "verbadeut" \lyricmode {
@@ -107,7 +104,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
     O las -- set uns an -- be2 -- ten,4 
     o las -- set uns an -- be2 -- ten,4
     o las -- set uns an -- be2 -- "ten den"
-    König, den Herrn.
+    Kö2 -- nig,4. den Herrn.
     }
 
 
