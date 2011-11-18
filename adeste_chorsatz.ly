@@ -119,7 +119,7 @@ verbadeut = \context Lyrics = "verbadeut" \lyricmode {
     }
 
     \layout{ }
-    %\midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
 }
 \markup {
   \fill-line {
