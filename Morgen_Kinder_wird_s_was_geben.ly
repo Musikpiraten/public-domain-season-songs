@@ -6,7 +6,7 @@
 \header {
   title = "Morgen, Kinder, wird’s was geben"
   poet = "Text: Martin Friedrich Philipp Bartsch (1795)"
-  composer = "Melodie: Carl Gottlieb Hering (1809)"
+  composer = "Musik: Carl Gottlieb Hering (1809)"
 }
 \layout {
   indent = #0
