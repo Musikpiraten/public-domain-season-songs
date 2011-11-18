@@ -3,8 +3,9 @@
 
 \header {
 	title = "Tochter Zion, freue dich"
-	composer = "Musik: Georg Friedrich Händel (1685–1759)"
-	poet = "Text: Friedrich Heinrich Ranke (1798–1876)"
+	composer="Musik: Georg Friedrich Händel (1747)"
+	poet="Text: Friedrich Heinrich Ranke (1823)"
+	tagline=""
 	%opus =
 	% arranger =
 	}
@@ -116,7 +117,7 @@ zionone = \lyricmode { \set stanza = "1. "
 ziontwo = \lyricmode { \set stanza = "2. "
 	Ho -- si -- an -- na, Da -- vids Sohn,
 	sei ge -- seg -- net dei -- nem Volk!
-	Grün -- de nun dein e -- wges Reich,
+	Grün -- de nun dein e -- wig Reich,
 	Ho -- si -- an -- na in der Höh!
 }
 
@@ -124,7 +125,7 @@ zionthree = \lyricmode { \set stanza = "3. "
 	Ho -- si -- an -- na, Da -- vids Sohn,
 	sei ge -- grü -- ßet, Kö -- nig mild!
 	E -- wig steht dein Frie -- dens -- thron,
-	du des ew’-- gen Va -- ters Kind.
+	du des ew’ -- gen Va -- ters Kind.
 }
 
 sapart = {
