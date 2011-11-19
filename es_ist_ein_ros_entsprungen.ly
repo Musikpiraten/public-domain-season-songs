@@ -176,7 +176,7 @@ verseOne = \lyricmode {
         \column {
           "Das Röslein, das ich meine, davon Jesaia sagt,"
           "hat uns gebracht alleine Marie die reine Magd."
-          "Aus Gottes ewgem Rat"
+          "Aus Gottes ew’gem Rat"
           "hat sie ein Kind geboren wohl zu der halben Nacht."          
         }
       }

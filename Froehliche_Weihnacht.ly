@@ -81,7 +81,7 @@ TextDrei=\lyricmode {
   Fröh -- li -- che Weih -- nacht ü -- ber -- all!
   tö -- net durch die Lüf -- te fro -- her Schall.
   Was wir an -- dern ta -- ten, sei ge -- tan für dich,
-  daß be -- ken -- nen je -- der muss,
+  dass be -- ken -- nen je -- der muss,
   Christ -- kind kam für mich.
 }
 

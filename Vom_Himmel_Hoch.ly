@@ -74,7 +74,7 @@ harmonies = \chordmode {
             \hspace #0
             \line { 4. Er bringt euch alle Seligkeit, }
             \line {    Die Gott der Vater hat bereit, }
-            \line {    Daß ihr mit uns im Himmelreich }
+            \line {    Dass ihr mit uns im Himmelreich }
             \line {    Sollt leben nun und ewiglich. }
 
             \hspace #0
@@ -84,7 +84,7 @@ harmonies = \chordmode {
             \line {    Das alle Welt erhält und trägt. }
 
             \hspace #0
-            \line { 6. Des laßt uns alle frölich sein }
+            \line { 6. Des lasst uns alle frölich sein }
             \line {    Und mit den Hirten gehn hinein, }
             \line {    Zu sehn, was Gott uns hat beschert, }
             \line {    Mit seinem lieben Sohn verehrt. }
@@ -106,7 +106,7 @@ harmonies = \chordmode {
             \hspace #0
             \line { 9. Ach, Herr, du Schöpfer aller Ding, }
             \line {    Wie bist du worden so gering, }
-            \line {    Daß du da liegst auf dürrem Gras, }
+            \line {    Dass du da liegst auf dürrem Gras, }
             \line {    Davon ein Rind und Esel aß! }
 
             \hspace #0
