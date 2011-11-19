@@ -14,13 +14,11 @@
     poet = "Text: Norddeutsches Volkslied"
     composer = "Musik: Volksweise"
     footer = ""
+    tagline = ""
 }
 
-\layout {
-    indent = #0
-  }
-  
 \include "deutsch.ly"
+\include "default.ly"
 
 verseeins= \lyricmode {
 	\set stanza = #"1."
@@ -29,18 +27,16 @@ verseeins= \lyricmode {
 	Im Gar -- ten klein, im eng -- sten Raum,
 	wie lieb -- lich blüht der Wun -- der -- baum,
 	wenn sei -- ne Blümchen2 bren2 -- nen,4
-	wenn sei -- ne Blümchen2 bren2 -- nen,4 ja bren1 -- nen.
+	wenn sei -- ne Blümchen2 bren2 -- nen,4 ja bren1 -- nen.2.
 }
- 
 
-upper = 
+upper =
     \relative c' {
     \slurDown
     \clef "treble"
     \key g\major
-    \override Staff.TimeSignature   #'style = #'numbered
     \time 4/4
-    \partial 4 
+    \partial 4
     << {d4} \\ {d4}>>
     << {h'4 d, c' d,} \\ {g4 d fis d} >>
     << {d'4. c8 h4 a4} \\ {g4. g8 g4 fis4} >>
@@ -58,13 +54,11 @@ upper =
     << {h2} \\ {g2} >> r4
     \bar "|."
     }
-    
 
-lower = 
+lower =
     \relative c {
     \clef "bass"
     \key g\major
-    \override Staff.TimeSignature   #'style = #'numbered
     \time 4/4
     \partial 4
     << {h'4} \\ {g} >>
@@ -85,7 +79,7 @@ lower =
     \bar "|."
     }
 
-\score{ 
+\score{
     \context ChoirStaff {
         <<
         \new Staff { \upper }
@@ -95,10 +89,10 @@ lower =
     }
 
 \layout{ \context{
-           \Voice 
+           \Voice
         }
          \context{
-           \Staff  } 
+           \Staff  }
 	}
 
 
@@ -110,6 +104,7 @@ lower =
     }
 }
 \markup {
+   \fill-line{
     \hspace #0.1 
      \column {
       \line { \bold "2."
@@ -147,18 +142,5 @@ lower =
       }
     }
   \hspace #0.1 
-}
-
-
-\paper {
-}
-
-
-\markuplines {
-  \italic {"Der Notensatz basiert auf dem Satz aus „Das Buch der Weihnachtslieder“, 1896." 
-                    "Von David Herrmann in Lilypond gesetzt."
-            }
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
+  }
 }
