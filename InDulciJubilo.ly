@@ -5,10 +5,7 @@
 % *** Vorspann                                                 ***
 \version "2.12.3"
 \include "deutsch.ly"
-
-\paper {
-  #(set-paper-size "a4")
-}
+\include "default.ly"
 
 %#(set-default-paper-size "a5")
 #(set-global-staff-size 16)
@@ -17,33 +14,16 @@
 	title = "In dulci jubilo" 
  	composer = "Weihnachtslied, 14. Jhd." 	
  	poet = "traditionell" 
- 	copyright = "Gemeinfrei. Kann beliebig vervielfältigt und weitergegeben werden."
- 	tagline = ""
+  	tagline = ""
 }
 
 
 % ****************************************************************
 % *** Text und Melodie                                         ***
 % ****************************************************************
-
-dulciVerse= \lyricmode {
-	\set stanza = "1." In dul -- ci ju -- bi -- lo, 
-        nun sin -- get und seid froh! 
-        Uns -- res Her -- zens Won -- ne 
-        leit in prae -- se -- pi -- o 
-        und leuch -- tet als die Son -- ne 
-        ma -- tris in gre -- mi -- o, 
-        Al -- pha es et O, Al -- pha es et O.
-}
  
-dulciVoice = \new Staff {
-	\time 6/4
-	\key f \major
-	\clef treble
-	\relative c'         
+Melodie = \relative c'         
   { 	
-		\context Voice = "dulciMelody" {
-			\dynamicUp		
  % Type notes here 
 	\partial 4		
         f4
@@ -67,43 +47,45 @@ dulciVoice = \new Staff {
         a2 a4 g2 g4
         f2.( f2) 
 	\bar "|."
-	  } 
 	}
-}
 
-dulciHarmonies = \chordmode { \germanChords 
+Akkorde = \chordmode { \germanChords 
 	f4 r2. d2:m g4:m f2 b4 c2 a4:m d2.:m b2. f2 g4 c2. 
 	f2 b4 f2 g4:m d2.:m r2. g2:m c4 f2 c4 d2:m c4 f2. r2 b4 c2 g4:m
         a2. d2.:m g2:m c4 f2 c4 d2 g4:m a2.
         b2 g4:m c2 a4:m d2.:m c2. f2. g2:m c4 f2. r4 r4
 	}
 
+Text = \lyricmode {
+        \set stanza = "1." In dul -- ci ju -- bi -- lo, 
+        nun sin -- get und seid froh! 
+        Uns -- res Her -- zens Won -- ne 
+        leit in prae -- se -- pi -- o 
+        und leuch -- tet als die Son -- ne 
+        ma -- tris in gre -- mi -- o, 
+        Al -- pha es et O, Al -- pha es et O.
+}
 % ****************************************************************
 % *** Generierung                                              ***
 % ****************************************************************
 
-\score {
-	<<
-		\context ChordNames { \dulciHarmonies }
-		\dulciVoice
-		\context Lyrics = "ddulciMelody" \lyricmode { \lyricsto "dulciMelody" \dulciVerse }
-		
-	>>	
+\score{
+  <<
+    \new ChordNames {\Akkorde}
+    \new Voice = "Melodie" {
+      %      \autoBeamOff
+      \clef violin
+      \key f \major
+      \time 6/4
+      \Melodie
+    }
+    \new Lyrics = Strophe \lyricsto Melodie \Text
+  >>
+  %\midi{}
+}
 
-\layout {
-  indent = #0
-  \context {
-    \Lyrics
-      \override LyricSpace #'minimum-distance = #1.6
-  }
-}
-  
-  
-  \midi {
-	}
-}
 \markup {
-  \fill-line { \larger
+  \fill-line { \huge
     \hspace #0.1 
      \column {
 	  \hspace #0.3 
