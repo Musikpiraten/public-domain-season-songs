@@ -1,4 +1,6 @@
+\version "2.12.3"
 
+\include "default.ly"
 
 \header {
 	title = "Schneeflöckchen"
@@ -6,11 +8,6 @@
         poet = "Text: Hedwig Haberkern"
 }
 
-\version "2.12.3"
-
-\layout {
-  indent = #0
-}
 
 harmonies = \chordmode {
 	g1 d2. c2. d2. e2.:m c2. d2. g2.
@@ -45,52 +42,43 @@ harmonies = \chordmode {
 }>>
 
 \layout{ }
-\midi { }
+\midi {\context {  \Score  tempoWholesPerMinute = #(ly:make-moment 110 4)  } }
 
 
 }
+
 
 \markup {
+  \fill-line {
     \hspace #0.1 % Spalte vom linken Rand wegbewegen
-        % Kann entfernt werden, wenn wenig Platz auf der Seite ist
-     \column {
+    % Kann entfernt werden, wenn wenig Platz auf der Seite ist
+    \column {
       \line { \bold "2."
         \column {
-"Ach setz dich ans Fenster,"
-"du niedlicher Stern,"
-"gibst Blätter und Blumen,"
-"wir haben dich gern!"
+          "Ach setz dich ans Fenster,"
+          "du niedlicher Stern,"
+          "gibst Blätter und Blumen,"
+          "wir haben dich gern!"
         }
-    \hspace #0.5 % Spalte vom linken Rand wegbewegen
-      \bold "3."
+        \hspace #0.5 % Spalte vom linken Rand wegbewegen
+        \bold "3."
         \column {
-"Schneeflöckchen, ach decke"
-"die Saaten geschwind."
-"Sie frieren, du wärmst sie,"
-"so bittet das Kind."
-      }
-    \hspace #0.5 % Spalte vom linken Rand wegbewegen
-\bold "4."
+          "Schneeflöckchen, ach decke"
+          "die Saaten geschwind."
+          "Sie frieren, du wärmst sie,"
+          "so bittet das Kind."
+        }
+        \hspace #0.5 % Spalte vom linken Rand wegbewegen
+        \bold "4."
         \column {
-"Schneeflöckchen, Weißröckchen"
-"so kommet doch all’,"
-"dann wird bald ein Schneemann,"
-"dann werf’ ich den Ball."
+          "Schneeflöckchen, Weißröckchen"
+          "so kommet doch all’,"
+          "dann wird bald ein Schneemann,"
+          "dann werf’ ich den Ball."
         }
       }
     }
-  \hspace #0.1 % zusätzlichen Platz für den rechten Rand
-      % kann entfernt werden, wenn wenig Platz auf der Seite ist
-}
-
-
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt für http://www.kinder-wollen-singen.de
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
+    \hspace #0.1 % zusätzlichen Platz für den rechten Rand
+    % kann entfernt werden, wenn wenig Platz auf der Seite ist
   }
 }
