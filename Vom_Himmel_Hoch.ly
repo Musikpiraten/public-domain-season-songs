@@ -1,18 +1,11 @@
-% Copyright (C) 2010 Ingo van Lil <inguin@gmx.de>
-% This work is licensed under a Creative Commons Attribution 3.0 License.
-
 \version "2.12"
-
-#(set-default-paper-size "a4")
-#(set-global-staff-size 17)
+\include "default.ly"
+%#(set-global-staff-size 17)
 
 \header {
     title = "Vom Himmel hoch, da komm’ ich her"
     composer = "Text und Musik: Martin Luther (1535)"
-}
-
-\layout {
-  indent = #0
+    tagline = ""
 }
 
 melody = \relative c'' {
@@ -56,13 +49,14 @@ harmonies = \chordmode {
     \layout {
         \context {
             \Score
-            \remove "Bar_number_engraver"
+%            \remove "Bar_number_engraver"
         }
     }
     \midi {}
 }
 
 \markup {
+  \abs-fontsize #9
   \fill-line {
         \column {
             \hspace #0
@@ -154,16 +148,4 @@ harmonies = \chordmode {
             \line {     Und singen uns solch neues Jahr. }
         }
       }
-}
-
-
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Ingo van Lil
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
-  }
 }

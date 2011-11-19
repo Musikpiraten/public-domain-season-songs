@@ -11,11 +11,11 @@ Thomas Wesenigk
 Die 2010er-Version enthält teilweise die Namen des Setzers unter jedem Lied. Diese Informationen sollen entfernt werden, die Namen aller Beteiligten sollen jedoch auf einer extra Seite genannt werden, deshalb die Namen nicht einfach löschen sondern hier eintragen.
 
 
-Peter Crighton
-Bernd Krüger
-Sebastian Werk
-David Herrmann
 Matt Corks
-Christian Schramm
+Peter Crighton
+David Herrmann
+Bernd Krüger
+Ingo van Lil
 Beate Paland
-
+Christian Schramm
+Sebastian Werk
