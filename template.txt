@@ -16,6 +16,7 @@ Melodie=\relative c' {
 
 
 Akkorde= \chordmode {
+   \set chordChanges = ##t
   [Akkorde]
 }
 
