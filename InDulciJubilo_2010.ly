@@ -1,145 +1,146 @@
-\version "2.10.33"
+% ****************************************************************
+% *** Created on Thu Feb 03 22:24:02 CET 2011 by Wolfgang Pilz ***
+% ****************************************************************
 
-#(set-default-paper-size "a4")
-#(set-global-staff-size 16)
-
+% *** Vorspann                                                 ***
+\version "2.12.3"
+\include "deutsch.ly"
 
 \paper {
-  line-width    = 185\mm
-  left-margin   = 15\mm
-  right-margin   = 10\mm
-  top-margin    = 0\mm
-  bottom-margin = 5\mm
-  }
+  #(set-paper-size "a4")
+}
+
+%#(set-default-paper-size "a5")
+#(set-global-staff-size 16)
 
 \header {
-  title = "In dulci jubilo"
-  subtitle = "lateinisch-deutsche Fassung"
-  poet = "Text: Ursprungsfassung Heinrich Seuse zugeschrieben"
-  composer = "Musik: Weihnachtslied (14. Jhd.)"
-  %% http://de.wikipedia.org/wiki/In_dulci_jubilo
-
-  enteredby = "Sigrid Peuker"
-  maintainerEmail = "mail@sigridpeuker.de"
-  lastupdated = "2010/Dec/8"
+	title = "In dulci jubilo" 
+ 	composer = "Weihnachtslied, 14. Jhd." 	
+ 	poet = "traditionell" 
+ 	copyright = "Gemeinfrei. Kann beliebig vervielfältigt und weitergegeben werden."
+ 	tagline = ""
 }
 
-<<
 
-\relative c' {
-\set Staff.instrumentName = #"Sopran"
-\clef "treble"
- \key f \major
-  \time 6/4
-  \partial 4
-	f4
-	f2 f4 a2 bes4
-	c2( d4 c2) f,4
-	f2 f4 a2 bes4
-	c2( d4 c2.)
-	c2 d4 c2 bes4
-	a2. f2 f4
-	g2 g4 a2 g4
-	f2(g4 a2) c4
-	c2 d4 c2 bes4
-	a2. f2 f4
-	g2 g4 a2 g4
-	f2( g4 a2) r4
-	d,2 d4 e2 e4
-	f2.( c'2.)
-	a2 a4 g2 g4
-	f2.( f2) 
-	\cadenzaOff
-	\bar "|"
+% ****************************************************************
+% *** Text und Melodie                                         ***
+% ****************************************************************
+
+dulciVerse= \lyricmode {
+	\set stanza = "1." In dul -- ci ju -- bi -- lo, 
+        nun sin -- get und seid froh! 
+        Uns -- res Her -- zens Won -- ne 
+        leit in prae -- se -- pi -- o 
+        und leuch -- tet als die Son -- ne 
+        ma -- tris in gre -- mi -- o, 
+        Al -- pha es et O, Al -- pha es et O.
+}
+ 
+dulciVoice = \new Staff {
+	\time 6/4
+	\key f \major
+	\clef treble
+	\relative c'         
+  { 	
+		\context Voice = "dulciMelody" {
+			\dynamicUp		
+ % Type notes here 
+	\partial 4		
+        f4
+        f2 f4 a2 b4
+        c2( d4 c2) c4
+        f,2 f4 a2 b4
+        c2( d4 c2.)
+        \break  
+        c2 d4 c2 b4
+        a2. f2 f4
+        g2 g4 a2 g4
+        f2(g4 a2) a4
+        \break
+        c2 d4 c2 b4
+        a2. f2 f4
+        g2 g4 a2 g4
+        f2( g4 a2) r4
+        \break
+        d,2 d4 e2 e4
+        f2.( c'2.)
+        a2 a4 g2 g4
+        f2.( f2) 
+	\bar "|."
+	  } 
+	}
 }
 
-  \addlyrics {
-  \set stanza = "1." In dul -- ci ju -- bi -- lo, nun sin -- get und seid froh! Uns -- res Her -- zens Won -- ne leit in prae -- se -- pi -- o und leuch -- tet als die Son -- ne ma -- tris in gre -- mi -- o, Al -- pha es et O, Al -- pha es et O.
+dulciHarmonies = \chordmode { \germanChords 
+	f4 r2. d2:m g4:m f2 b4 c2 a4:m d2.:m b2. f2 g4 c2. 
+	f2 b4 f2 g4:m d2.:m r2. g2:m c4 f2 c4 d2:m c4 f2. r2 b4 c2 g4:m
+        a2. d2.:m g2:m c4 f2 c4 d2 g4:m a2.
+        b2 g4:m c2 a4:m d2.:m c2. f2. g2:m c4 f2. r4 r4
+	}
+
+% ****************************************************************
+% *** Generierung                                              ***
+% ****************************************************************
+
+\score {
+	<<
+		\context ChordNames { \dulciHarmonies }
+		\dulciVoice
+		\context Lyrics = "ddulciMelody" \lyricmode { \lyricsto "dulciMelody" \dulciVerse }
+		
+	>>	
+
+\layout {
+  indent = #0
+  \context {
+    \Lyrics
+      \override LyricSpace #'minimum-distance = #1.6
+  }
+}
+  
+  
+  \midi {
+	}
+}
+\markup {
+  \fill-line { \larger
+    \hspace #0.1 
+     \column {
+	  \hspace #0.3 
+      \line { \bold "2."
+        \column {
+   "O Jesu parvule, nach dir ist mir so weh!"
+   "Tröst mir mein Gemüte, o puer optime,"
+   "durch alle deine Güte, o princeps gloriae,"
+   "trahe me post te, trahe me post te."
+        }
+      }
+ 
+      \hspace #0.3 
+      \line { \bold "3."
+        \column {
+        "Ubi sunt gaudia? Nirgend mehr denn da,"
+        "wo die Engel singen nova cantica,"
+        "und die Schellen klingen in regis curia."
+        "Ei-a, wärn wir da, ei-a wärn wir da."
+        }
+      }
+      
+      %      \hspace #0.3 
+      % \italic \smaller
+      %\line { 
+      %"Gesetzt von Wolfgang Pilz"
+      %        \general-align #Y #DOWN {
+      %        \epsfile #X #3 #"publicdomain.eps"
+    %}
+  %}      
+         
+     }
+     
+  \hspace #0.1 
+  }
 }
 
-  \addlyrics {
-  \set stanza = "2." O Je -- su par -- vu -- le, nach dir ist mir so weh! Tröst mir mein Ge -- mü -- te, o pu -- er op -- ti -- me, durch al -- le dei -- ne Gü -- te, o prin -- ceps glo -- ri -- ae, tra -- he me post te, tra -- he me post te.
-}
 
-  \addlyrics {
-  \set stanza = "3." U -- bi sunt gau -- di -- a? _ Nir -- gend mehr denn da, wo die En -- gel sin -- gen _ no -- va can -- ti -- ca, _ und die Schel -- len klin -- gen in re -- gis cu -- ri -- a. Ei -- a, wärn wir da, ei -- a wärn wir da.
-}
 
-\relative c' {
-\set Staff.instrumentName = #"Alt"
-\clef "treble"
- \key f \major
-  \time 6/4
-  \partial 4
-	f4
-	f2 f4 f2 g4
-	a2( bes4 g2) f4
-	f2 f4 f2 g4
-	a2( bes4 g2.)
-	a2 f4 a2 g4
-	f2( e4) d2 d4
-	e2 e4 f2 e4
-	d2( e4 f2) a4
-	a2 f4 a2 g4
-	f2( e4) d2 d4
-	e2 e4 f2 e4
-	d2( e4 f2) r4
-	d2 d4 e2 e4
-	f2.( g2.)
-	f2 f4 f2 e4
-	f2.( f2)
-	\cadenzaOff
-	\bar "|"
-}
 
-  \addlyrics {
-  \set stanza = "1." In dul -- ci ju -- bi -- lo, nun sin -- get und seid froh! Uns -- res Her -- zens Won -- ne leit in prae -- se -- pi -- o und leuch -- tet als die Son -- ne ma -- tris in gre -- mi -- o, Al -- pha es et O, Al -- pha es et O.
-}
-
-  \addlyrics {
-  \set stanza = "2." O Je -- su par -- vu -- le, nach dir ist mir so weh! Tröst mir mein Ge -- mü -- te, o pu -- er op -- ti -- me, durch al -- le dei -- ne Gü -- te, o prin -- ceps glo -- ri -- ae, tra -- he me post te, tra -- he me post te.
-}
-
-  \addlyrics {
-  \set stanza = "3." U -- bi sunt gau -- di -- a? _ Nir -- gend mehr denn da, wo die En -- gel sin -- gen _ no -- va can -- ti -- ca, _ und die Schel -- len klin -- gen in re -- gis cu -- ri -- a. Ei -- a, wärn wir da, ei -- a wärn wir da.
-}
-
-\relative c' {
-\set Staff.instrumentName = #"Männer"
-\clef "treble"
- \key f \major
-  \time 6/4
-  \partial 4
-	f4
-	f2 f4 f2 f4
-	f2.( c2) f4
-	f2 f4 f2 f4
-	f2.( c2.)
-	f2 d4 f2 d4
-	d2( a4) d2 d4
-	c2 c4 a8( bes c4) c4
-	d2 (c4 f2) f4
-	f2 d4 f2 d4
-	d2( a4) d2 d4
-	c2 c4 a8( bes8 c4) c4
-	d2( c4 f2) r4
-	d2 d4 c2 c4
-	f2.( e2.)
-	f4( d) c bes2 c4
-	f2.( f2)
-	\cadenzaOff
-	\bar "|"
-}
-
-  \addlyrics {
-  \set stanza = "1." In dul -- ci ju -- bi -- lo, nun sin -- get und seid froh! Uns -- res Her -- zens Won -- ne leit in prae -- se -- pi -- o und leuch -- tet als die Son -- ne ma -- tris in gre -- mi -- o, Al -- pha es et O, Al -- pha es et O.
-}
-
-  \addlyrics {
-  \set stanza = "2." O Je -- su par -- vu -- le, nach dir ist mir so weh! Tröst mir mein Ge -- mü -- te, o pu -- er op -- ti -- me, durch al -- le dei -- ne Gü -- te, o prin -- ceps glo -- ri -- ae, tra -- he me post te, tra -- he me post te.
-}
-
-  \addlyrics {
-  \set stanza = "3." U -- bi sunt gau -- di -- a? _ Nir -- gend mehr denn da, wo die En -- gel sin -- gen _ no -- va can -- ti -- ca, _ und die Schel -- len klin -- gen in re -- gis cu -- ri -- a. Ei -- a, wärn wir da, ei -- a wärn wir da.
-}
->>
