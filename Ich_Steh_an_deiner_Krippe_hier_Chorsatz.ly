@@ -1,5 +1,6 @@
 \version "2.12.3"
 \include "deutsch.ly"
+\include "default.ly"
 
 
 snotes = \relative c'' {
@@ -137,9 +138,10 @@ spart = {
     composer = "Musik: Johann Sebastian Bach"
     poet = "Text: Paul Gerhardt"
     opus = "BWV 469"
+    tagline = ""
   }
   
-  #(set-global-staff-size 19)
+%  #(set-global-staff-size 19)
 
   \score {
     \new ChoirStaff <<

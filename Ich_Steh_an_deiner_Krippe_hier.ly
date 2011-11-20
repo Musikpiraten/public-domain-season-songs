@@ -2,12 +2,14 @@
 
 
 \include "deutsch.ly"
+\include "default.ly"
 
   \header {
     title = "Ich steh an deiner Krippe hier"
     composer = "Musik: Johann Sebastian Bach"
     poet = "Text: Paul Gerhardt"
     opus = "BWV 469"
+    tagline = ""
   }
 
 
@@ -66,6 +68,7 @@ choraltextnine = \lyricmode {
 }
 
 Akkorde= \chordmode {
+\set chordChanges = ##t
 g4 c1:m b2/d es
 c:m as
 g:sus4 g
@@ -77,7 +80,7 @@ f:m b:7 es2
 es as4 es/g
 f:m b:7 es c:m
 f g:7/f c:m/es f:m6
-g2 c
+g2 c4
 }
 
 
