@@ -6,22 +6,20 @@
   poet = "Text: Anton Reidinger"
 }
 
-\layout {
-  indent = #0
-}
+\include "default.ly"
 
 <<
   \new ChordNames {
   \chordmode {
-   r4 g2 d4 g2. 
+   s4 g2 d4 g2.
    g2 c4 g2
-   r4 g2 d4 g2. 
+   s4 g2 d4 g2.
    g2 c4 g2
-   r4 g2. d:7 g  
-   d2 r4
-   g2. g2. 
+   s4 g2. d:7 g
+   d2 s4
+   g2. g2.
    g2 d4:7  g2
-   r4 g2 d4 g2. 
+   s4 g2 d4 g2.
    g2 d4:7 g2
   }
 }  
@@ -83,14 +81,3 @@
   åft kånn i mi ruah -- li aufs Nie -- der -- legn gfrein.
 }
 >>
-
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Martin Thoma (http://www.thoma-stammler.at)
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
-  }
-}

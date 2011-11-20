@@ -89,7 +89,7 @@ Text=\lyricmode {
 \hspace #0.1 \column { \line { \bold "3." \column {
 "Klinget mit lieblichem Schalle"
 "über die Meere noch weit,"
-"daß sich erfreuen doch alle"
+"dass sich erfreuen doch alle"
 "seliger Weihnachtszeit."
 \line {
 	\epsfile #X #.6 #"musical_symbol_left_repeat_sign.eps"

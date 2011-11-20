@@ -132,7 +132,7 @@ lower =
      \column {
       \line { \bold "4."
         \column {
-          "O laß ihn ein, es ist kein Traum"
+          "O lass ihn ein, es ist kein Traum"
           "Er wählt dein Herz zum Garten"
           "will pflanzen in den engen Raum"
           "den allerschönsten Wunderbaum"

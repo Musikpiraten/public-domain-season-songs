@@ -18,4 +18,5 @@ Bernd Krüger
 Ingo van Lil
 Beate Paland
 Christian Schramm
+Martin Thoma (http://www.thoma-stammler.at)
 Sebastian Werk
