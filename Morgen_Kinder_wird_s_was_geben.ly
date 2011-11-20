@@ -77,10 +77,11 @@ Wdh = \lyricmode {
 
 
 \markup {
-  \fill-line { \larger
-    \hspace #0.1 
-     \column {
-	  \hspace #0.3 
+  \fill-line {
+    \larger
+    \hspace #0.1
+    \column {
+      \hspace #0.3
       \line { \bold "2."
         \column {
           "Wie wird dann die Stube glänzen"
@@ -91,20 +92,46 @@ Wdh = \lyricmode {
           "wie’s am Weihnachtsabend war?"
         }
       }
-
-      
-      %      \hspace #0.3 
-      % \italic \smaller
-      %\line { 
-      %"Gesetzt von Wolfgang Pilz"
-      %        \general-align #Y #DOWN {
-      %        \epsfile #X #3 #"publicdomain.eps"
-    %}
-  %}      
-         
-     }
-     
-  \hspace #0.1 
+      \hspace #0.3
+      \line {
+        \bold "4."
+        \column {
+          "Wisst ihr noch den großen Wagen"
+          "und die schöne Jagd von Blei?"
+          "Unsre Kleiderchen zum Tragen"
+          "und die viele Näscherei?"
+          "Meinen fleißgen Sägemann"
+          "mit der Kugel unten dran?"
+        }
+      }
+    }
+    \column {
+      \hspace #0.3
+      \line {
+        \bold "3."
+        \column {
+          "Wisst ihr noch mein Reiterpferdchen,"
+          "Malchens nette Schäferin?"
+          "Jettchens Küche mit dem Herdchen"
+          "und dem blank geputzten Zinn?"
+          "Heinrichs bunten Harlekin"
+          "mit der gelben Violin?"
+        }
+      }
+      \hspace #0.3
+      \line {
+        \bold "5."
+        \column {
+          "Welch ein schöner Tag ist morgen,"
+          "viele Freuden hoffen wir!"
+          "Unsre lieben Eltern sorgen"
+          "lange, lange schon dafür."
+          "O gewiss, wer sie nicht ehrt,"
+          "ist der ganzen Lust nicht wert!"
+        }
+      }
+    }
+    \hspace #0.1
   }
 }
 

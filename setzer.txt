@@ -1,4 +1,4 @@
-Hier die Namen aller Setzer sammeln.
+﻿Hier die Namen aller Setzer sammeln.
 
 2011:
 
@@ -7,6 +7,7 @@ Johann Markl
 Daniel Meyer
 Wolfgang Pilz
 Thomas Wesenigk
+Ingo Felger
 
 Die 2010er-Version enthält teilweise die Namen des Setzers unter jedem Lied. Diese Informationen sollen entfernt werden, die Namen aller Beteiligten sollen jedoch auf einer extra Seite genannt werden, deshalb die Namen nicht einfach löschen sondern hier eintragen.
 
