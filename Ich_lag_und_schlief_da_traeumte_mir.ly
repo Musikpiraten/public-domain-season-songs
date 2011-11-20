@@ -65,7 +65,7 @@ SongMelodyFour = \relative c {
 
 
 SongChords = \chordmode { \set chordChanges = ##t \germanChords
-f1 b8 f1*11/8 b8 f4. b1. f2. c4. c:7 f2
+s4 d1 a2.:7 d4 d1 a2 r4 a4 a1:7 d2. a4 a1:7 d2 r4
 }
 
 SongText = \lyricmode { \set stanza = "1."
@@ -76,9 +76,10 @@ SongText = \lyricmode { \set stanza = "1."
 }
 
 \score { 
+<<
+  \new ChordNames { \SongChords }
   \new GrandStaff
   << 
-%  \new ChordNames { \SongChords }
     \new Staff = "upper" {
       \clef treble
       \key d\major
@@ -119,6 +120,8 @@ SongText = \lyricmode { \set stanza = "1."
       r4 \bar "|."
     }
   >>
+>>
+
   \layout{
     \context {
       \GrandStaff
