@@ -56,11 +56,11 @@ SongMelodyFour = \relative c {
     d d d d
     a a a d
     d d d fis
-    a2 r4 a4
-    a4 a a a8 g8
-    fis4. d8 d4 a
-    a a a a
-    d2
+    a2 r4 a,4
+    a'4 a a a8 g8
+    fis4. d8 d4 a'
+    a, a a' a
+    d,2
 }
 
 
