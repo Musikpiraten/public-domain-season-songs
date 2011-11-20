@@ -8,9 +8,10 @@
   title = "Morgen kommt der Weihnachtsmann"
   poet = "Text: Hoffmann von Fallersleben (1798–1874)"
   composer = "Musik: Volksweise"
+  tagline = ""
 }
 
-\layout { indent = #0 } 
+\include "default.ly"
 
 <<
  \chords { g1 c2 g d:7 g d:7 g g d:7 g d:7 g d:7 g d:7 g1 c2 g d:7 g d:7 g }
@@ -30,7 +31,7 @@
     g4 g d' d 
     e e d2
     c4 c b b 
-    a2 g  
+    a2 g \bar "|."
   }
   \addlyrics { 
 	\set stanza = #"1. "
@@ -60,15 +61,6 @@
 	War -- ten dein mit Schmer -- zen.  
 } 
 >>
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Beate Paland
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
-  }
-}
+
 \version "2.12.3"  % necessary for upgrading to future LilyPond versions.
 

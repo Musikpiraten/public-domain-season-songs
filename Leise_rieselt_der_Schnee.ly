@@ -6,6 +6,7 @@
   title = "Leise rieselt der Schnee"
   poet = ""
   composer = "Text und Musik: Eduard Ebel"
+  tagline = ""
 }
 
 

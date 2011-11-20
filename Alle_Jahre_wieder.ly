@@ -7,6 +7,7 @@
   title = "Alle Jahre wieder"
   poet = "Text: Wilhelm Hey (1789–1854)"
   composer = "Musik: Friedrich Silcher (1789–1860)"
+  tagline = ""
 }
 
 AlleJahreWiederXaGlobal = {

@@ -1,8 +1,10 @@
 \version "2.10.33"
+\include "default.ly"
 
-#(set-default-paper-size "a4")
 #(set-global-staff-size 16)
-
+\layout {
+	indent = 15\mm
+}
 
 \paper {
   line-width    = 185\mm
@@ -16,6 +18,7 @@
   title = "En gardant ma bergerie"
   poet = "Text: Chanoine Toussaint Le Roy"
   composer = "Musik: franz. Weihnachtslied (16. Jhd.)"
+  tagline = ""
   %%  aus der Grafschaft Maine, heute in der Region Pays de la Loire
 
   enteredby = "Sigrid Peuker"
@@ -31,9 +34,9 @@
 \relative c'' {
 \set Staff.instrumentName = #"Sopran"
 \clef "treble"
-
+    \partial 2
     \time 4/4
-	r2 a4 c 
+	a4 c
 	b a g a 
 	b a a c 
 	b a g b 
@@ -48,6 +51,7 @@
 	  { a2 }
 	  { a2 }
 	}
+	\bar "|."
   }
   \addlyrics {
 	\set stanza = #"1. "
@@ -78,9 +82,9 @@
 \relative c' {
     \set Staff.instrumentName = #"Alt"
 \clef "treble"
-
+    \partial 2
     \time 4/4
-	r2 e4 e
+	e4 e
 	g4. f8 e4 c
 	e e e8( d) e( f)
 	g4. f8 e4 e
@@ -94,6 +98,7 @@
 	  { a2 }
 	  { a2 }
 	}
+	\bar "|."
   }
 
   \addlyrics {
@@ -124,9 +129,9 @@ Cet -- te voix plai -- sante e bel -- le que si doux j’oy -- ais chan -- tant,
 \relative c' {
     \set Staff.instrumentName = #"Männer"
 \clef "bass"
-
+    \partial 2
     \time 4/4
-	r2 a4 a
+	a4 a
 	g4 d e f
 	e a, a' a
 	g d e e
@@ -140,6 +145,7 @@ Cet -- te voix plai -- sante e bel -- le que si doux j’oy -- ais chan -- tant,
 	  { a4 c8 b }
 	  { <a a,>2 }
 	}
+	\bar "|."
   }
 
   \addlyrics {

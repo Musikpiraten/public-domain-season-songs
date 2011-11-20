@@ -1,12 +1,18 @@
-﻿\version "2.12.3"
+\version "2.12.3"
 
 \include "default.ly"
 
 \header {
-  title="Still, still, still"
-  poet=""
-  composer="Text und Musik: Volkslied aus dem Salzburger Land (19. Jh.)"
-  tagline = ""
+	title="Still, still, still"
+	poet=""
+	composer= \markup { \line {
+		"Text und Musik:"
+			\column{
+				"Volkslied aus dem"
+				"Salzburger Land (19. Jh.)"
+			}
+		}}
+	tagline = ""
 }
 
 
@@ -14,12 +20,10 @@ Melodie=\relative c'' {
 		\clef "treble"
 		\key f\major
 		\time 4/4
-		
 		c4( f4) a,4( c4) f,4 f8( a8) g4 g8( bes8)
 		e,4 e8( g8) f4 r8 f8 g4 g8( a8) bes4 g4 \break
 		a4 a8( bes8) c4 a4 g4 g8( a8) bes4 g4 a4 a8( bes8) c4 a4
-		c4( f4) a,4( c4) f,4 f8( a8) g4 g8( bes8) e,4 e8( g8) f4 r4
-		
+		c4( f4) a,4( c4) f,4 f8( a8) g4 g8( bes8) e,4 e8( g8) f4 r4 \bar "|."
 }
 
 
@@ -57,7 +61,7 @@ Text=\lyricmode {
       \line {
         \bold "2."
         \column {
-  "Still, still, still weil’s Kindlein schlafen will."
+"Still, still, still weil’s Kindlein schlafen will."
 "Die Englein tun schön jubilieren,"
 "bei dem Kripplein musizieren."
 "Still, still, still weil’s Kindlein schlafen will."
@@ -67,11 +71,10 @@ Text=\lyricmode {
       \line {
         \bold "4."
         \column {
-		
 "Wir, wir, wir, wir rufen all zu Dir."
 "Tu uns des Himmels Reich aufschließen,"
 "wenn wir einmal sterben müssen."
-"Wir, wir, wir, wir rufen all zu Dir."  
+"Wir, wir, wir, wir rufen all zu Dir."
         }
       }
     }
@@ -83,11 +86,9 @@ Text=\lyricmode {
 "Groß, groß, groß, die Lieb’ ist übergroß."
 "Gott hat den Himmelsthron verlassen"
 "und muss reisen auf den Straßen."
-"Groß, groß, groß, die Lieb’ ist übergroß." 
+"Groß, groß, groß, die Lieb’ ist übergroß."
         }
       }
     }
     \hspace #0.1
 }
-
- % some settings % vim: sw=2 et

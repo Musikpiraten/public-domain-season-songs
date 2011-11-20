@@ -6,6 +6,7 @@
 	title = "Schneeflöckchen"
 	composer = "Musik: W. A. Mozart"
         poet = "Text: Hedwig Haberkern"
+	tagline = ""
 }
 
 
