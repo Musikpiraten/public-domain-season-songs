@@ -76,7 +76,11 @@ Text=\lyricmode {
 "schnell sie das Christkindlein hört:"
 "Tut sich vom Himmel dann schwingen"
 "eilig hernieder zur Erd’."
-"|: Segnet den Vater, die Mutter, das Kind, :|"
+\line {
+       \char ##x1D106
+       "Segnet den Vater, die Mutter, das Kind,"
+       \char ##x1D107
+}
 "Glocken mit heiligem Klang,"
 "Klinget die Erde entlang!"
                 }
@@ -87,7 +91,11 @@ Text=\lyricmode {
 "über die Meere noch weit,"
 "dass sich erfreuen doch alle"
 "seliger Weihnachtszeit."
-"|: Alle aufjauchzen mit herrlichem Sang! :|"
+\line {
+       \char ##x1D106
+       "Alle aufjauchzen mit herrlichem Sang!"
+       \char ##x1D107
+}
 "Glocken mit heiligem Klang,"
 "Klinget die Erde entlang!"
 }}}

@@ -84,8 +84,15 @@ sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- ke
 "Freu dich, o Christenheit,"
 "Das in dem Stall geboren,"
 "Hat Himmel und Erd erfreut."
-"|: Freut euch von Herzen, ihr Christen all’,"
-"Kommt her zum Kindlein in dem Stall. :|"
+\line {
+       \char ##x1D106
+	"Freut euch von Herzen, ihr Christen all’,"
+}
+\line {
+	"Kommt her zum Kindlein in dem Stall."
+       \char ##x1D107
+}
+
       }
     }
     \hspace #0.1
@@ -96,7 +103,7 @@ sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- ke
 "Freu dich, du Christenheit!"
 "Verzeihung aller Sünden"
 "Ist uns im Stall bereit’t"
-\italic "Refrain"
+\bold "Refrain"
       }
     }
   }
@@ -109,7 +116,7 @@ sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- ke
 "Freu dich, du Christenheit,"
 "Tun gute Botschaft bringen,"
 "Verkündigen große Freud."
-\italic "Refrain"
+\bold "Refrain"
       }
     }
     \hspace #0.1
@@ -120,7 +127,7 @@ sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- ke
 "Freu dich, du Christenheit!"
 "Tut alle das Kindlein grüßen,"
 "Kommt her zu ihm mit Freud!"
-\italic "Refrain"          
+\bold "Refrain"
       }
     }
   }

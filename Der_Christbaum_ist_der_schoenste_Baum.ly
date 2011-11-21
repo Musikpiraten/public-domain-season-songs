@@ -113,7 +113,11 @@ lower =
           "ist einst der Herr geboren"
           "der Heiland, der uns selig macht"
           "hätt er den Himmel nicht gebracht"
-          "|: wär alle Welt verloren, :|"
+          \line {
+            \char ##x1D106
+            "wär alle Welt verloren,"
+            \char ##x1D107
+          }
           "verloren."
         }
       }
@@ -124,7 +128,11 @@ lower =
           "ist jede Nacht voll Kerzen"
           "Auch dir, mein Kind, ist das bereit"
           "dein Jesus schenkt dir alles heut"
-          "|: gern wohl es dir im Herzen, :|"
+          \line {
+            \char ##x1D106
+            "gern wohl es dir im Herzen,"
+            \char ##x1D107
+          }
           "im Herzen"
         }
      }}
@@ -136,7 +144,11 @@ lower =
           "Er wählt dein Herz zum Garten"
           "will pflanzen in den engen Raum"
           "den allerschönsten Wunderbaum"
-          "|: und seiner treulich warten, :|" 
+          \line {
+            \char ##x1D106
+            "und seiner treulich warten,"
+            \char ##x1D107
+          }
           "ja warten"
         }
       }

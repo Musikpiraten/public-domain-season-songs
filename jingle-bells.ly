@@ -95,7 +95,11 @@ Text=\lyricmode {
 	"And soon Miss Fannie Bright was seated by my side."
 	"The horse was lean and lank, misfortune seemed his lot,"
 	"He got into a drifted bank and we got upsot."
-        \bold |:Refrain:|
+	\line {
+	       \char ##x1D106
+	       \bold "Refrain"
+	       \char ##x1D107
+	}
         }
       }
       \hspace #0.1 
@@ -105,7 +109,11 @@ Text=\lyricmode {
 	"I went out on the snow, And on my back I fell;"
 	"A gent was riding by In a one-horse open sleigh,"
 	"He laughed as there I sprawling lie, But quickly drove away."
-	\bold "|:Refrain:|"
+	\line {
+	       \char ##x1D106
+	       \bold "Refrain"
+	       \char ##x1D107
+	}
         }
       }
     \hspace #0.1  
@@ -116,7 +124,11 @@ Text=\lyricmode {
 	"Take the girls tonight and sing this sleighing song."
 	"Just get a bobtailed bay, two-forty for his speed,"
 	"Then hitch him to an open sleigh, and crack! You’ll take the lead."
-	\bold "|:Refrain:|"
+	\line {
+	       \char ##x1D106
+	       \bold "Refrain"
+	       \char ##x1D107
+	}
         }
       }
     }
