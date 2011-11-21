@@ -1,5 +1,6 @@
 \version "2.15.14"
 \language "deutsch"
+\include "default.ly"
 
 \header {
 	title = "Tochter Zion, freue dich"

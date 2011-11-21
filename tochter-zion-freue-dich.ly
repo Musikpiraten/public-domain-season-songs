@@ -9,6 +9,17 @@
   tagline = ""
 }
 
+dcaf = {
+	\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+	\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+	\mark "D.C. al Fine"
+}
+
+fine = {
+	\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+	\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+	\mark "Fine"
+}
 
 Melodie=\relative c' {
     bes'2 g4.( aes8)      | % 1
@@ -18,7 +29,7 @@ Melodie=\relative c' {
     g8([ aes bes c]) bes4 bes      | % 5
     ees2 bes      | % 6
     aes4( g f4.) ees8      | % 7
-    ees1 ^\markup {\upright \bold  "fine"} \bar "||" | \break % 8
+    ees1 \fine \bar "|." | \break % 8
     g8([ f g aes] g4) g      | % 9
     f2 ees      | % 10
     aes4( g f) ees      | % 11
@@ -26,7 +37,7 @@ Melodie=\relative c' {
     ees8([ d ees f] ees4) ees      | % 13
     c'2 a      | % 14
     bes4( c8[ bes] a4.) bes8      | % 15
-    bes1 ^\markup {\upright \bold  "d. c. al fine"}
+    bes1 \dcaf \bar "||"
 }
 
 
@@ -53,7 +64,7 @@ Text=\lyricmode {
       \clef treble
       \key es \major
       \time 2/2
-      \Melodie \bar "|."
+      \Melodie
     }
     \new Lyrics = Strophe \lyricsto Melodie \Text
   >>
