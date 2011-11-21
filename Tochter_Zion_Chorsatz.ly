@@ -1,6 +1,4 @@
-\version "2.14.2"
-%war: \version "2.15.14"
-\include "default.ly"
+\version "2.15.14"
 \language "deutsch"
 
 \header {
@@ -17,15 +15,15 @@ global = \relative c {
 	
 }
 
-dcaf = {
+dcaf = { 
 	\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
 	\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-	\mark \markup {\upright \bold  "d. c. al fine"} }
+	\mark "D.C. al Fine" }
 
-fine = {
-%	\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+	fine = { 
+	%\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
 	\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-	\mark \markup {\upright \bold  "fine"} }
+	\mark "Fine" }
 	
 snotes = \relative c'' {
 	b2 g4.( as8)
@@ -36,7 +34,7 @@ snotes = \relative c'' {
 	es2 b
 	as4( g f4.) es8
 	es1
-	\fine \bar "||"
+	\bar "|." \fine
 	
 	g8[( f g as] g4) g
 	f2 es
@@ -44,7 +42,7 @@ snotes = \relative c'' {
 	d1
 	es8[( d es f] es4) es
 	c'2 a
-	b4( c8[ b] a4.) b8 b1 \dcaf \bar "|."
+	b4( c8[ b] a4.) b8 b1 \dcaf \bar "||"
 }
 
 anotes = \relative c' {
@@ -110,36 +108,48 @@ bnotes = \relative c {
 
 
 zionone = \lyricmode { \set stanza = "1. "
-	Toch2 -- ter2 Zi2 -- on,2 freu2. -- e4 Dich,1
-	jauch2. -- ze4 laut,2 Je2 -- ru1 * 7/8 -- sa8 -- lem!1
-	Sieh,2. dein4 Kö2 -- nig2 kommt2. zu4 dir,1
-	ja2. er4 kommt,2 der2 Frie1 * 7/8 -- de8 -- fürst.4
+	Toch -- ter Zi -- on, freu -- e Dich,
+	jauch -- ze laut, Je -- ru -- sa -- lem!
+	Sieh, dein Kö -- nig kommt zu dir,
+	ja er kommt, der Frie -- de -- fürst.
 }
 
 ziontwo = \lyricmode { \set stanza = "2. "
-	Ho2 -- si2 -- an2 -- na,2 Da2. -- vids4 Sohn,1
-	sei2. ge4 -- seg2 -- net2 dei1 * 7/8 -- nem8 Volk!1
-	Grün2. -- de4 nun2 dein2 e2. -- wig4 Reich,1
-	Ho2. -- si4 -- an2 -- na2 in1 * 7/8 der8 Höh!1
+	Ho -- si -- an -- na, Da -- vids Sohn,
+	sei ge -- seg -- net dei -- nem Volk!
+	Grün -- de nun dein e -- wig Reich,
+	Ho -- si -- an -- na in der Höh!
 }
 
 zionthree = \lyricmode { \set stanza = "3. "
-	Ho2 -- si2 -- an2 -- na,2 Da2. -- vids4 Sohn,1
-	sei2. ge4 -- grü2 -- ßet,2 Kö1 * 7/8 -- nig8 mild!1
-	E2. -- wig4 steht2 dein2 Frie2. -- dens4 -- thron,1
-	du2. des4 ew’2 -- gen2 Va1 * 7/8 -- ters8 Kind.1
+	Ho -- si -- an -- na, Da -- vids Sohn,
+	sei ge -- grü -- ßet, Kö -- nig mild!
+	E -- wig steht dein Frie -- dens -- thron,
+	du des ew’ -- gen Va -- ters Kind.
 }
 
 sapart = {
 	\new Staff <<
-		\key es \major
-		\autoBeamOff
-		\clef treble
-		\global
-		\partcombine \snotes \anotes
-		\new Lyrics \zionone
-		\new Lyrics \ziontwo
-		\new Lyrics \zionthree
+		\new Voice = "s" {
+			\voiceOne
+			\key es \major
+			\autoBeamOff
+			\clef treble
+			\global
+			\snotes
+		}
+		\new Lyrics \lyricsto "s" \zionone
+		\new Lyrics \lyricsto "s" \ziontwo
+		\new Lyrics \lyricsto "s" \zionthree
+		
+		\new Voice = "a" {
+			\voiceTwo
+			\key es \major
+			\autoBeamOff
+			\clef treble
+			\global
+			\anotes
+		}
 	>>
 }
 	
@@ -147,11 +157,23 @@ sapart = {
 	
 tbpart = {
 	\new Staff <<
-		\key es \major
-		\autoBeamOff
-		\clef bass
-		\global
-		\partcombine \tnotes \bnotes
+		\new Voice = "t" {
+			\voiceOne
+			\key es \major
+			\autoBeamOff
+			\clef "treble_8"
+			\global
+			\tnotes
+		}
+		
+		\new Voice = "b" {
+			\voiceTwo
+			\key es \major
+			\autoBeamOff
+			\clef bass
+			\global
+			\bnotes
+		}
 	>>
 }
 
