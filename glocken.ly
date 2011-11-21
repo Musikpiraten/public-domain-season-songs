@@ -76,11 +76,7 @@ Text=\lyricmode {
 "schnell sie das Christkindlein hört:"
 "Tut sich vom Himmel dann schwingen"
 "eilig hernieder zur Erd’."
-\line {
-	\epsfile #X #.6 #"musical_symbol_left_repeat_sign.eps"
-	"Segnet den Vater, die Mutter, das Kind,"
-	\epsfile #X #.6 #"musical_symbol_right_repeat_sign.eps"
-}
+"|: Segnet den Vater, die Mutter, das Kind, :|"
 "Glocken mit heiligem Klang,"
 "Klinget die Erde entlang!"
                 }
@@ -91,11 +87,7 @@ Text=\lyricmode {
 "über die Meere noch weit,"
 "dass sich erfreuen doch alle"
 "seliger Weihnachtszeit."
-\line {
-	\epsfile #X #.6 #"musical_symbol_left_repeat_sign.eps"
-	"Alle aufjauchzen mit herrlichem Sang!"
-	\epsfile #X #.6 #"musical_symbol_right_repeat_sign.eps"
-}
+"|: Alle aufjauchzen mit herrlichem Sang! :|"
 "Glocken mit heiligem Klang,"
 "Klinget die Erde entlang!"
 }}}
