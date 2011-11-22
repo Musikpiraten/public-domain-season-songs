@@ -8,7 +8,7 @@
 \include "default.ly"
 
 %#(set-default-paper-size "a5")
-#(set-global-staff-size 16)
+%#(set-global-staff-size 16)
 
 \header {
 	title = "In dulci jubilo" 
@@ -122,7 +122,3 @@ Text = \lyricmode {
   \hspace #0.1 
   }
 }
-
-
-
-

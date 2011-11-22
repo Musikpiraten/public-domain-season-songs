@@ -8,7 +8,7 @@
 \include "default.ly"
 
 %#(set-default-paper-size "a5")
-#(set-global-staff-size 16)
+%#(set-global-staff-size 16)
 
 \header {
 	title = "Morgen, Kinder, wird’s was geben"
@@ -37,7 +37,7 @@ Melodie = \relative c'
 }
 
 
-Akkorde = \chordmode {
+Akkorde = \chordmode { \germanChords
  g2 c4 d:7 c d:7 g2
  g1 c4 g4 d2:7
  c1 d2:7 g g c  g4 d:7 g2
@@ -77,7 +77,7 @@ Wdh = \lyricmode {
 \markup {
 	\fill-line{
 		\hspace #0.1
-		\column {
+		\column {\hspace #0.3
 			\line {
 				\bold "2."
 				\column {
@@ -103,7 +103,7 @@ Wdh = \lyricmode {
 			}
 		}
 		\hspace #0.1
-		\column {
+		\column {\hspace #0.3
 			\line {
 				\bold "3."
 				\column {

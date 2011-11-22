@@ -37,7 +37,7 @@ Melodie = \relative c'
   d h d
   d8(c) a4. c8
   h4 g h
-  a2  
+  a2 
  
   d,4 
   g g a
@@ -46,6 +46,7 @@ Melodie = \relative c'
   g2
 
   c8 (fis,) 
+   \break
   g2  
   a8 (d,) 
   g2 g8 (h)
@@ -54,7 +55,7 @@ Melodie = \relative c'
 }
 
 
-Akkorde = \chordmode {
+Akkorde = \chordmode { \germanChords
    r4 g2 d4 g2 s8 d8:7
    g2 d4:7 g2.
    
@@ -190,7 +191,3 @@ Wdhd = \lyricmode {
   \hspace #0.1 
   % }
 }
-
-
-
-
