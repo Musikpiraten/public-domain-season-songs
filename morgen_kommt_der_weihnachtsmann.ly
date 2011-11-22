@@ -1,23 +1,16 @@
-%{
-
-
-
-%}
-
-\header{
-  title = "Morgen kommt der Weihnachtsmann"
-  poet = "Text: Hoffmann von Fallersleben (1798–1874)"
-  composer = "Musik: Volksweise"
-  tagline = ""
-}
+\version "2.12.3"
 
 \include "default.ly"
 
-<<
- \chords { g1 c2 g d:7 g d:7 g g d:7 g d:7 g d:7 g d:7 g1 c2 g d:7 g d:7 g }
-  \relative c'' {
-    \key g \major
-    \time 4/4
+\header {
+  title="Morgen kommt der Weihnachtsmann"
+  composer="Musik: Frz. Volkslied"
+  poet="Text: Hoffmann von Fallersleben (um 1840)"
+  tagline = ""
+}
+
+
+Melodie=\relative c'' {
     g4 g d' d
     e e d2
     c4 c b b
@@ -31,36 +24,64 @@
     g4 g d' d 
     e e d2
     c4 c b b 
-    a2 g \bar "|."
-  }
-  \addlyrics { 
+    a2 g  
+	  \bar "|."
+}
+
+
+Akkorde= \chordmode {
+  g1 c2 g d:7 g d:7 g g d:7 g d:7 g d:7 g d:7 g1 c2 g d:7 g d:7 g
+}
+
+Text=\lyricmode {
 	\set stanza = #"1. "
  	Mor -- gen kommt der Weih -- nachts -- mann, 
-	Kommt mit sei -- nen Ga -- ben. 
+	kommt mit sei -- nen Ga -- ben. 
 	Trom- mel, Pfei- fe und Ge -- wehr, 
 	Fahn und Sä- bel und noch mehr, 
-	Ja ein gan -- zes Krie -- ges -- heer, 
-	Möcht ich ger -- ne ha -- ben. 
+	ja ein gan -- zes Krie -- ges -- heer, 
+	möcht ich ger -- ne ha -- ben. 
+}
+
+
+\score{
+  <<
+    \new ChordNames {\Akkorde}
+    \new Voice = "Melodie" {
+      \autoBeamOff
+      \clef violin
+      \key g \major
+      \time 4/4
+      \Melodie
+    }
+    \new Lyrics = Strophe \lyricsto Melodie \Text
+  >>
+  %\midi{}
+}
+
+\markup {
+    \column {
+      \line {
+	\bold "2."
+        \column {
+	"Bring' uns, lieber Weihnachtsmann,   "
+	"Bring' auch morgen, bringe"
+	"Musketier und Grenadier,"
+	"Zottelbär und Panthertier,"
+	"Ross und Esel, Schaf und Stier,"
+	"Lauter schöne Dinge."
+	}
+	\bold "3."
+        \column {
+	"Doch du weißt ja unsern Wunsch,"
+	"Kennest unsere Herzen."
+	"Kinder, Vater und Mama,"
+	"Auch sogar der Großpapa,"
+	"Alle, alle sind wir da,"
+	"Warten dein mit Schmerzen."
+        }
+      }
   }
-  \addlyrics { 
-	\set stanza = #"2. "
-	Bring’ uns, lie -- ber Weih -- nachts -- mann,
-	Bring’ auch mor -- gen, brin -- ge
-	Mus -- ke -- tier und Gre -- na -- dier,
-	Zot -- tel -- bär und Pan -- ther -- tier,
-	Ross und E -- sel, Schaf und Stier,
-	Lau -- ter schö -- ne Din -- ge. 
-  } 
-  \addlyrics { 
-	\set stanza = #"3. "
-	Doch du weißt ja un -- sern Wunsch,
-	Ken -- nest un -- sere Her -- zen.
-	Kin -- der, Va -- ter und Ma -- ma,
-	Auch so -- gar der Groß -- pa -- pa,
-	A -- lle, a -- lle sind wir da,
-	War -- ten dein mit Schmer -- zen.  
-} 
->>
+}
 
-\version "2.12.3"  % necessary for upgrading to future LilyPond versions.
-
+ % some settings % vim: sw=2 et
