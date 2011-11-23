@@ -3,7 +3,7 @@
 \include "default.ly"
 
 \header {
-  title="Am Weihnachtsbaume die Lichter brennen"
+  title = "Am Weihnachtsbaume die Lichter brennen"
   composer="Musik: Traditionell (19. Jhdt)"
   poet="Text: Hermann Kletke (1841)"
   tagline = ""

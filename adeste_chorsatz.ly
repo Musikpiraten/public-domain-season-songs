@@ -4,15 +4,7 @@
 
 \header {
     title = "Herbei, o ihr Gläub’gen – Adeste Fideles"
-	poet = \markup {
-		\line{
-			Text:
-			\column{
-				"Deutsch: Friedrich Heinrich Ranke"
-				"Latein: John Francis Wade"
-			}
-		}
-	}
+	poet = \markup {\line{ Text: \column{ "Deutsch: Friedrich Heinrich Ranke" "Latein: John Francis Wade" }}}
     composer = "Musik: John Francis Wade"
     tagline = ##f
 }
