@@ -42,7 +42,10 @@ AlleJahreWiederXa = \score {<<
   %\midi{}
 }
 
-AlleJahreWiederXaStrophen = 
+
+\score{\AlleJahreWiederXa} %################
+
+
 \markup {
   \hspace #0.1
   \column {
@@ -85,5 +88,4 @@ AlleJahreWiederXaStrophen =
 
 
 
-\score{\AlleJahreWiederXa} \AlleJahreWiederXaStrophen
 

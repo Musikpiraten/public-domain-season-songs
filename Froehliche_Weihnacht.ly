@@ -60,7 +60,24 @@ TextEins=\lyricmode {
 }
 
 
-Strophen = 
+
+
+\score{
+  <<
+    \new ChordNames {\Akkorde}
+    \new Voice = "Melodie" {
+      \autoBeamOff
+      \clef treble
+      \key g \major
+      \time 2/2
+      \Melodie \bar "|."
+    }
+    \new Lyrics = "Strophe1" \lyricsto Melodie \TextEins
+  >>
+  \layout{}
+  \midi {\context {  \Score  tempoWholesPerMinute = #(ly:make-moment 110 4)  } }
+}
+
 \markup {
   \hspace #0.1
   \column {
@@ -92,25 +109,8 @@ Strophen =
   "tönet durch die Lüfte froher Schall."
   "Was wir andern taten, sei getan für dich,"
   "dass bekennen jeder muss,"
-  "Christkind kam für mich."      
+  "Christkind kam für mich."
     }
   }
 }
 }
-
-\score{
-  <<
-    \new ChordNames {\Akkorde}
-    \new Voice = "Melodie" {
-      \autoBeamOff
-      \clef treble
-      \key g \major
-      \time 2/2
-      \Melodie \bar "|."
-    }
-    \new Lyrics = "Strophe1" \lyricsto Melodie \TextEins
-  >>
-  \layout{}
-  \midi {\context {  \Score  tempoWholesPerMinute = #(ly:make-moment 110 4)  } }
-}
-  \Strophen
