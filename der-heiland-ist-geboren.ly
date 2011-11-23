@@ -17,41 +17,48 @@
 
 
 SongMelodyOne = \relative c' {
-    \repeat volta 2 { 
+    \repeat volta 2 {     \partial 4
     f4     f( c) a' f( c) a'
     f( f' e8 d) c2 c4
+    \break
     b( g) b a( f) a
-    \partial 8*6
-    g2. }
+    %  \partial 8*6
+    g2. (g2) }
   \break
     \partial 4
     c4 
     c( g) c c a c
     c( b) a g2 c4
+    \break
     c4( g) c c( a) c
-    c( b) a g2 f4
+    c( b) a g2  f4
+       \break
     f( c) a' f c a'
     f( f') e8( d) c2 c4
+    \break
     b( g) c a( f) c'8( d)
     c4( b) g f2 
 }
 
-SongChords = \chordmode { \set chordChanges = ##t \germanChords
-f1 b8 f1*11/8 b8 f4. b1. f2. c4. c:7 f2
+SongChords = \chordmode { \set chordChanges = ##t
+  \germanChords
+s4 f1. f1. c2.:7 f2. c2 g4:7 c2
+c4 c2. f2. c2 f4 c2. c2.:7 f2.
+c2 f4 c2. f2. f2.:7 b2 c4 f2. c2. f2. c2. f2
 }
 
 SongTextA = \lyricmode { \set stanza = "1."
-Der4 Hei2 -- land4 ist2 ge4 -- bo2. -- ren,2 freu4 dich,2 o4 Chri2 -- sten4 -- heit,2.
+Der4 Hei2 -- land4 ist2 ge4 -- bo2. -- ren,2 freu4 dich,2 o4 Chri2 -- sten4 -- heit,4*5
 Freut4 euch2 von4 Her -- zen, ihr Chri2 -- sten4 all’,2 kommt4 her2 zum4 Kind2 -- lein4 in2 dem4 Stall,2
 freut4 euch2 von4 Her -- zen, ihr Chri2 -- sten4 all’,2  kommt4 her2 zum4 Kind2 -- lein4 in2 dem4 Stall.2
 }
 SongTextB = \lyricmode {
-sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- keit.2.
+sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- keit.4*5
 }
 
 \score {
   <<
-%  \new ChordNames { \SongChords }
+  \new ChordNames { \SongChords }
     \new Staff = "upper" {
       \clef treble
       \key f\major
