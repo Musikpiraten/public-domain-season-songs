@@ -59,33 +59,44 @@ TextEins=\lyricmode {
   von des Va -- ters Thron.
 }
 
-TextZwei=\lyricmode {
-  \set stanza = #"2. "
-  Fröh -- li -- che Weih -- nacht ü -- ber -- all!
-  tö -- net durch die Lüf -- te fro -- her Schall.
-  Weih -- nachts -- ton, Weih -- nachts -- baum,
-  Weih -- nachts -- duft in je -- dem Raum!
-  Fröh -- li -- che Weih -- nacht ü -- ber -- all!
-  tö -- net durch die Lüf -- te fro -- her Schall.
-  Licht auf dunk -- lem We -- ge, un -- ser Licht bist du;
-  denn du führst, die dir ver -- trau’n,
-  ein zu sel’ -- ger Ruh’.
+
+Strophen = 
+\markup {
+  \hspace #0.1
+  \column {
+    \line {
+      \bold "2."
+      \column {
+  "Fröhliche Weihnacht überall!"
+  "tönet durch die Lüfte froher Schall."
+  "Weihnachtston, Weihnachtsbaum,"
+  "Weihnachtsduft in jedem Raum!"
+  "Fröhliche Weihnacht überall!"
+  "tönet durch die Lüfte froher Schall."
+  "Licht auf dunklem Wege, unser Licht bist du;"
+  "denn du führst, die dir vertrau’n,"
+  "ein zu sel’ger Ruh’."
+      }
+    }
+  }
+  \hspace #0.1
+  \column {
+    \line {
+      \bold "3."
+      \column {
+  "Fröhliche Weihnacht überall!"
+  "tönet durch die Lüfte froher Schall."
+  "Weihnachtston, Weihnachtsbaum,"
+  "Weihnachtsduft in jedem Raum!"
+  "Fröhliche Weihnacht überall!"
+  "tönet durch die Lüfte froher Schall."
+  "Was wir andern taten, sei getan für dich,"
+  "dass bekennen jeder muss,"
+  "Christkind kam für mich."      
+    }
+  }
 }
-
-TextDrei=\lyricmode {
-  \set stanza = #"3. "
-  Fröh -- li -- che Weih -- nacht ü -- ber -- all!
-  tö -- net durch die Lüf -- te fro -- her Schall.
-  Weih -- nachts -- ton, Weih -- nachts -- baum,
-  Weih -- nachts -- duft in je -- dem Raum!
-  Fröh -- li -- che Weih -- nacht ü -- ber -- all!
-  tö -- net durch die Lüf -- te fro -- her Schall.
-  Was wir an -- dern ta -- ten, sei ge -- tan für dich,
-  dass be -- ken -- nen je -- der muss,
-  Christ -- kind kam für mich.
 }
-
-
 
 \score{
   <<
@@ -98,10 +109,8 @@ TextDrei=\lyricmode {
       \Melodie \bar "|."
     }
     \new Lyrics = "Strophe1" \lyricsto Melodie \TextEins
-    \new Lyrics = "Strophe2" \lyricsto Melodie \TextZwei
-    \new Lyrics = "Strophe3" \lyricsto Melodie \TextDrei
   >>
   \layout{}
   \midi {\context {  \Score  tempoWholesPerMinute = #(ly:make-moment 110 4)  } }
 }
-
+  \Strophen
