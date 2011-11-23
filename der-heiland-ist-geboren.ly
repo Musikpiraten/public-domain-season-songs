@@ -20,7 +20,7 @@ SongMelodyOne = \relative c' {
     \repeat volta 2 {     \partial 4
     f4     f( c) a' f( c) a'
     f( f' e8 d) c2 c4
-    \break
+    %\break
     b( g) b a( f) a
     %  \partial 8*6
     g2. (g2) }
@@ -29,13 +29,13 @@ SongMelodyOne = \relative c' {
     c4 
     c( g) c c a c
     c( b) a g2 c4
-    \break
+    %\break
     c4( g) c c( a) c
     c( b) a g2  f4
-       \break
+       %\break
     f( c) a' f c a'
     f( f') e8( d) c2 c4
-    \break
+    %\break
     b( g) c a( f) c'8( d)
     c4( b) g f2 
 }
