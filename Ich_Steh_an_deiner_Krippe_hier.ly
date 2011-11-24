@@ -128,7 +128,7 @@ g2 c4
     \line {
       \bold "9."
       \column {
-        " Eins aber hoff ich, wirst du mir,"
+        "Eins aber hoff ich, wirst du mir,"
   "mein Heiland nicht versagen:"
   "dass ich dich möge für und für"
   "in, bei und an mir tragen."

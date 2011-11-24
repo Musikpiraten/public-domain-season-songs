@@ -31,7 +31,7 @@ Melodie=\relative c' {
 
 Akkorde= \chordmode {
   
-  s4 f1. c2. f1. c1. f1. f2. c2. f2. 
+  s4 f1. c2. f1. c1. f1. f2. c2. f2
 }
 
 Text=\lyricmode {
