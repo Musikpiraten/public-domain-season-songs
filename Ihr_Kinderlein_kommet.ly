@@ -23,7 +23,7 @@ Melodie=\relative c'' {
 
 
 Akkorde= \chordmode {
-  r8  d1 a2:7 d1. a2:7 d2
+  s8  d1 a2:7 d1. a2:7 d2
   % Takt 9
   a2 a2:7 d g a2 d2 a2:7 d
 }

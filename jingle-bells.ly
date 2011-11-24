@@ -51,7 +51,7 @@ Akkorde= \chordmode {
 	g8 g g g g4. g16 g g8 g g g c2 %sleigh
 	a8:m a:m a:m a:m d2:7 d8:7 d:7 d:7 d:7 g2 %way
 	g8 g g g g2 g8 g g g c4. %bright
-	e8:7/b a8:m a:m a:m a:m g g g g a:m a:m d:7 d:7 g4 r %night
+	e8:7/b a8:m a:m a:m a:m g g g g a:m a:m d:7 d:7 g4 s %night
 	g8 g g4 g8 g g4 g8 g c8. c16 g2 %way
 	a8:m a:m d8.:7 d16:7 g8 g e:m e16:m e:m a8:7 a:7 a:7 a:7 a4:m7 d:7 %sleigh
 	g8 g g4 g8 g g4 g8 g c8. c16 g2 %way

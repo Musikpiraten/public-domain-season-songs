@@ -12,7 +12,7 @@
 
 
 Akkorde = \chordmode {
-  r4 es1. as2. bes
+  s4 es1. as2. bes
   as es bes es
   bes es c:m bes
   es c:m f bes

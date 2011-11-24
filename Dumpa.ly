@@ -56,7 +56,7 @@ Melodie = \relative c'
 
 
 Akkorde = \chordmode { \germanChords
-   r4 g2 d4 g2 s8 d8:7
+   s4 g2 d4 g2 s8 d8:7
    g2 d4:7 g2.
    
    g2. d:7 g d g2 d4

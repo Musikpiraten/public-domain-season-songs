@@ -65,7 +65,7 @@ SongMelodyFour = \relative c {
 
 
 SongChords = \chordmode { \set chordChanges = ##t \germanChords
-s4 d1 a2.:7 d4 d1 a2 r4 a4 a1:7 d2. a4 a1:7 d2 r4
+s4 d1 a2.:7 d4 d1 a2 s4 a4 a1:7 d2. a4 a1:7 d2 s4
 }
 
 SongText = \lyricmode { \set stanza = "1."

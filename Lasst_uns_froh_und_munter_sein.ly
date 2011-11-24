@@ -27,8 +27,8 @@ Melodie=\relative c' {
 
 Akkorde= \chordmode {
 	\set chordChanges = ##t
-	c4 c c8 c c c c4 c c r
-	g:7 g:7 g8:7 g:7 g:7 g:7 g4:7 g:7 g:7 r
+	c4 c c8 c c c c4 c c s
+	g:7 g:7 g8:7 g:7 g:7 g:7 g4:7 g:7 g:7 s
 	c4 g c c c8. c16 c8 c c2 c4 c c8 c c c
 	c4 c g2:7 c4 c g8 g g g c4 g c2
 }
