@@ -3,43 +3,43 @@
 \include "default.ly"
 
 \header {
-	title = "Schneeflöckchen"
-	composer = "Musik: W. A. Mozart"
+        title = "Schneeflöckchen"
+        composer = "Musik: W. A. Mozart"
         poet = "Text: Hedwig Haberkern"
-	tagline = ""
+        tagline = ""
 }
 
 
 harmonies = \chordmode {
-	g1 d2. c2. d2. e2.:m c2. d2. g2.
+        g1 d2. c2. d2. e2.:m c2. d2. g2.
 }
 
 \score{
 
-	<<
-	\new ChordNames {
+        <<
+        \new ChordNames {
       \set chordChanges = ##t
       \harmonies
-	}
+        }
 
-	\new Voice {
+        \new Voice {
 
-		<<{
-			\key g \major
-			\time 3/4
-			\partial 4
-			g'4 g'4  b'4 c''4 a'4 a'4 b'8 (c''8)
-			d''4 d''4 e''4 d''4 r4. g'8 d''4 b'4 g'4
-			e'4 g'4 r8 a'8 fis'4 fis'4 a'4 g'4. r4.
-			\bar "|."
-		}
+                <<{
+                        \key g \major
+                        \time 3/4
+                        \partial 4
+                        g'4 g'4  b'4 c''4 a'4 a'4 b'8 (c''8)
+                        d''4 d''4 e''4 d''4 r4. g'8 d''4 b'4 g'4
+                        e'4 g'4 r8 a'8 fis'4 fis'4 a'4 g'4. r4 r8
+                        \bar "|."
+                }
 
-	\addlyrics{
-		Schnee -- flöck -- chen, vom Him -- mel,
-		da kommst du ge -- schneit,
-		du warst in der Wol -- ke,
-		dein Weg ist gar weit.
-	}>>
+        \addlyrics{
+                Schnee -- flöck -- chen, vom Him -- mel,
+                da kommst du ge -- schneit,
+                du warst in der Wol -- ke,
+                dein Weg ist gar weit.
+        }>>
 }>>
 
 \layout{ }

@@ -1,4 +1,4 @@
-﻿\version "2.12.3"
+\version "2.12.3"
 
 \include "default.ly"
 
@@ -11,7 +11,7 @@
 
 
 Melodie=\relative c' {
-    c8 c8 e8 | g4( e8) g c a | % 1
+    c8 c8 e8 | g4 e8 g c a | % 1
     g4 e8 g a g \break | % 2
     f4 d g8 g | % 3
     e4 r8 e e g | % 4
@@ -27,7 +27,7 @@ Akkorde= \chordmode {
 }
 
 Text=\lyricmode {
-    \set stanza = " 1. " Am Weih -- nachts -- baume  die Lich -- ter  bren -- nen,  wie glänzt er fest -- lich,  lieb und mild,
+    \set stanza = " 1. " Am Weih -- nachts -- bau -- me  die Lich -- ter  bren -- nen,  wie glänzt er fest -- lich,  lieb und mild,
     als spräch’ er: „Wollt ihr in mir er -- ken -- nen  ge -- treu -- er  Hoff -- nung  stil -- les  Bild!“
 }
 
