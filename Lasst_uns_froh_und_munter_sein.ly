@@ -27,10 +27,10 @@ Melodie=\relative c' {
 
 Akkorde= \chordmode {
 	\set chordChanges = ##t
-	c4 c c8 c c c c4 c c s
-	g:7 g:7 g8:7 g:7 g:7 g:7 g4:7 g:7 g:7 s
-	c4 g c c c8. c16 c8 c c2 c4 c c8 c c c
-	c4 c g2:7 c4 c g8 g g g c4 g c2
+	d4 d d8 d d d d4 d d s
+	a:7 a:7 a8:7 a:7 a:7 a:7 a4:7 a:7 a:7 s
+	d4 a d d d8. d16 d8 d d2 d4 d d8 d d d
+	d4 d a2:7 d4 d a8 a a a d4 a d2
 }
 
 Text=\lyricmode {
