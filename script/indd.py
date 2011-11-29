@@ -13,6 +13,9 @@ import time
 import sys
 
 
+color_multi_page_pdf = False
+
+
 f = open("list.txt", "rb")
 
 print "los geht es!"
@@ -50,7 +53,7 @@ o_style_name = filter(lambda x: x.name.get() == 'name', ui.all_object_styles.get
 o_style_info = filter(lambda x: x.name.get() == 'infos', ui.all_object_styles.get())[0]
 o_text_info = filter(lambda x: x.name.get() == 'text', ui.all_object_styles.get())[0]
 
-## delete all info and name objs
+# delete all info and name objs
 print "deleting ...",
 for tpage in ui.pages.get():
     for pg in tpage.page_items.get():
@@ -76,59 +79,64 @@ for num, tpage in enumerate(ui.pages.get()):
                 # do not touch! der rahmen wird vorgegeben, der rest entsprechend angeordnet!
                 pdf_rahmen_top = pg.visible_bounds.get()[0]
 
-                pdf.horizontal_scale.set(87)
-                pdf.vertical_scale.set(87)
 
-                # position und größe vom inhatl
-                top, left, bottom, right = pdf.visible_bounds.get()
-                width = right-left
-                height = bottom-top
-                print filename, "\t", height
-                pdf.visible_bounds.set((pdf_rahmen_top, 22.5, pdf_rahmen_top+height, 22.5+width))
+                for text in tpage.text_frames.get():
+                    if text.applied_object_style.name.get() == 'text':
+                        print "{0}\t{1}".format(filename, text.visible_bounds.get()[2]-15)
 
-                # create textfields for names
-                textfield = inD.make(new=k.text_frame, at=tpage)
-                textfield.applied_object_style.set(o_style_name)
 
-                textfield.text.set(data[filename.decode("utf-8")]['name'])
+                if True:
+                    pdf.horizontal_scale.set(87)
+                    pdf.vertical_scale.set(87)
 
-                textfield.visible_bounds.set((pdf_rahmen_top - 10,25,pdf_rahmen_top - 6,195))
+                    # position und größe vom inhatl
+                    top, left, bottom, right = pdf.visible_bounds.get()
+                    width = right-left
+                    height = bottom-top
+                    print filename, "\t", height
+                    pdf.visible_bounds.set((pdf_rahmen_top, 22.5, pdf_rahmen_top+height, 22.5+width))
 
-                if data[filename.decode("utf-8")]['pagenum'] > 1:
-                    textfield.fill_color.set("ggg")
-                else:
-                    textfield.fill_color.set("fff")
+                    # create textfields for names
+                    textfield = inD.make(new=k.text_frame, at=tpage)
+                    textfield.applied_object_style.set(o_style_name)
 
-                # create textfields for infos
-                poet = data[filename.decode("utf-8")]['poet'].strip()
-                composer = data[filename.decode("utf-8")]['composer'].strip()
-                infotext = []
-                if poet:
-                    infotext.append(poet)
-                if composer:
-                    infotext.append(composer)
-                infotext = "\n".join(infotext)
+                    textfield.text.set(data[filename.decode("utf-8")]['name'])
 
-                dy = -2
+                    textfield.visible_bounds.set((pdf_rahmen_top - 10,25,pdf_rahmen_top - 6,195))
 
-               # if side == k.right_hand:
-               #     textbounds = (dy+185,20,dy+195,138)
-               # else:
-               #     textbounds = (dy+185,-138,dy+195,-20)
-                textbounds = (pdf_rahmen_top - 5,25,pdf_rahmen_top + 5,195)
+                    if data[filename.decode("utf-8")]['pagenum'] > 1 and color_multi_page_pdf:
+                        textfield.fill_color.set("ggg")
 
-                textfield = inD.make(new=k.text_frame, at=tpage)
-                textfield.applied_object_style.set(o_style_info)
-                textfield.visible_bounds.set(textbounds)
-                textfield.text.set(infotext)
+                    # create textfields for infos
+                    poet = data[filename.decode("utf-8")]['poet'].strip()
+                    composer = data[filename.decode("utf-8")]['composer'].strip()
+                    infotext = []
+                    if poet:
+                        infotext.append(poet)
+                    if composer:
+                        infotext.append(composer)
+                    infotext = "\n".join(infotext)
 
-                #textfeld für den text:
-                f = open("texts/{0}.txt".format(".".join(filename.split(".")[:-1])), "rb")
-                texxt = f.read().decode("utf-8").strip(); f.close();
-                textfield = inD.make(new=k.text_frame, at=tpage)
-                textfield.applied_object_style.set(o_text_info)
-                textfield.visible_bounds.set((pdf_rahmen_top + 20, 25, pdf_rahmen_top + 100, 195))
-                textfield.text.set(texxt)
+                    dy = -2
+
+                   # if side == k.right_hand:
+                   #     textbounds = (dy+185,20,dy+195,138)
+                   # else:
+                   #     textbounds = (dy+185,-138,dy+195,-20)
+                    textbounds = (pdf_rahmen_top - 5,25,pdf_rahmen_top + 5,195)
+
+                    textfield = inD.make(new=k.text_frame, at=tpage)
+                    textfield.applied_object_style.set(o_style_info)
+                    textfield.visible_bounds.set(textbounds)
+                    textfield.text.set(infotext)
+
+                    #textfeld für den text:
+                    f = open("texts/{0}.txt".format(".".join(filename.split(".")[:-1])), "rb")
+                    texxt = f.read().decode("utf-8").strip(); f.close();
+                    textfield = inD.make(new=k.text_frame, at=tpage)
+                    textfield.applied_object_style.set(o_text_info)
+                    textfield.visible_bounds.set((pdf_rahmen_top + 20, 25, pdf_rahmen_top + 100, 195))
+                    textfield.text.set(texxt)
 
 
     

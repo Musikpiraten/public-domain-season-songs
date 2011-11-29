@@ -53,6 +53,8 @@ if options.filter:
     print "# files now:", len(files)
     print "#" * 80
 
+fail = []
+
 for ly in files:
     infile = os.path.join(inFolder, ly)
     print "-" * 80
@@ -115,7 +117,6 @@ for ly in files:
                 markupc -= 1
             if markupc == 0:
                 markup = False
-
             if r"\bold" in line:
                 num = re.findall(r'"\s*(\d+)\s*\.?\s*"', line);
                 if num:
@@ -126,8 +127,7 @@ for ly in files:
                 m = re.match(r'\s*"([^"]*)"\s*', line)
                 if m:
                     texxt += m.groups()[0] + "\n"
-
-            outp.write(line + "\n")
+            #outp.write(line + "\n")
         elif r and len(r.groups()) == 1:
             filename = r.groups()[0]
             name = filename.decode("utf-8")
@@ -184,14 +184,23 @@ for ly in files:
 
     if (not options.dryrun):
         print "LILYPOND:"
-        cl = ["lilypond", "-I", os.path.abspath("../"), "-o", outfile, "temp.ly"]
+        cl = ["lilypond", "-I", os.path.abspath("../"), "-d", "point-and-click=#f" ,"-o", outfile, "temp.ly"]
         status = subprocess.call(cl)
         if os.path.exists(outfile + ".ps"):
             os.remove(outfile + ".ps")
         if os.path.exists(outfile + ".midi"):
             os.remove(outfile + ".midi")
         print (str(status) + " ") * 40
+        if status == 1:
+            fail.append(filename)
         print "END LILYPOND"
+
+if fail:
+    print "\n" * 3
+    print "#" * 80
+    print "FAIL:"
+    print "\n".join(fail)
+    print "#" * 80
 
 if not options.filter:
     print "liste"
