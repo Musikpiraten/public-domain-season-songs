@@ -1,0 +1,45 @@
+\version "2.12.3"
+
+\include "default.ly"
+
+\header {
+  title="[Liedtitel]"
+  composer="Musik: [Komponist] ([Jahr])"
+  poet="Text: [Dichter] ([Jahr])"
+  tagline = ""
+}
+
+
+Melodie=\relative c' {
+  [Melodie]
+}
+
+
+Akkorde= \chordmode {
+   \set chordChanges = ##t
+  [Akkorde]
+}
+
+Text=\lyricmode {
+  [Text]
+}
+
+
+\score{
+  <<
+    \new ChordNames {\Akkorde}
+    \new Voice = "Melodie" {
+      \autoBeamOff
+      \clef violin
+      \key [Tonart]
+      \time [Takt]
+      \Melodie \bar "|."
+    }
+    \new Lyrics = Strophe \lyricsto Melodie \Text
+  >>
+   \layout{}
+   \midi{}
+}
+
+
+ % some settings % vim: sw=2 et
