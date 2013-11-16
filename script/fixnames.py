@@ -52,8 +52,9 @@ if __name__ == '__main__':
                         new_filename,
                     ], cwd="../")
         new_filenames.append(new_filename)
-        print(u"{: >50} -> {}".format(filename, new_filename))
-    print "already {} files are named corretly".format(len(ok))
+        print(u"{: >53} -> {}".format(filename, new_filename))
+    print("\nalready {} files are named corretly, "
+          "{} files should be renamed".format(len(ok), len(filenames)-len(ok)))
     print "duplicated filenamse:", [
         name for name, count
         in Counter(new_filenames).iteritems()
