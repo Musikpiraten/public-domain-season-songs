@@ -139,6 +139,12 @@ def process_file(ly, dryrun):
 
     outfile = os.path.join(outFolder, filename)
 
+    to_return = {
+        "removed_lines": removed_lines,
+        "data": {"name": name, "poet": poet, "composer": composer},
+        "lilypond": -1,
+    }
+
     if (not dryrun):
         cl = [
             "lilypond",
@@ -159,14 +165,18 @@ def process_file(ly, dryrun):
         if os.path.exists(outfile + ".midi"):
             os.remove(outfile + ".midi")
 
-    return {
-        "lilypond": status,
-        "removed_lines": removed_lines,
-        "lilypond_stdout": sub.stdout.read(),
-        "lilypond_stderr": sub.stderr.read(),
-        "file_content": file_content,
-        "data": {"name": name, "poet": poet, "composer": composer}}
+        to_return.update({
+            "lilypond": status,
+            "lilypond_stdout": sub.stdout.read(),
+            "lilypond_stderr": sub.stderr.read(),
+            })
+    return to_return
 
+
+def get_files():
+    files = filter(lambda x: re.match(".*\.ly$", x), os.listdir(inFolder))
+    files = filter(lambda x: x not in no_songs, files)
+    return files
 
 if __name__ == '__main__':
     parser = OptionParser()
@@ -195,8 +205,7 @@ if __name__ == '__main__':
     if not os.path.exists(outFolderText):
         os.mkdir(outFolderText)
 
-    files = filter(lambda x: re.match(".*\.ly$", x), os.listdir(inFolder))
-    files = filter(lambda x: x not in no_songs, files)
+    files = get_files()
 
     if options.filter:
         print "#" * 80
