@@ -1,7 +1,9 @@
 *.swap
-*.indd
-*.idlk
+doc.txt
 pdfs
-texts
-temp.ly
+temp
 list.txt
+data.json
+sizes.json
+scribus
+front_matter.*
