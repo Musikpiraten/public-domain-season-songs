@@ -18,16 +18,15 @@ from optparse import OptionParser
 
 inFolder = "../"
 outFolder = "pdfs"
-outFolderText = "texts" # TODO: remove me
 FOLDER_TEMP = "temp"
 FILENAME_TEMP = "temp.ly"
 DATA = "data.json"
-filenames = []  # TODO: remove me
 
 no_songs = ['default.ly']
 
 
 def process_file(ly, dryrun):
+    filename = ly.rsplit(".", 2)[0]
     infile = os.path.join(inFolder, ly)
     inp = open(infile, 'rb')
     with open(os.path.join(FOLDER_TEMP, FILENAME_TEMP), 'wb') as outp:
@@ -45,9 +44,9 @@ def process_file(ly, dryrun):
       %}}
 
       #(define fonts
-        (make-pango-font-tree "DejaVu Sans"
-                              "DejaVu Sans"
-                              "DejaVu Sans Mono"
+        (make-pango-font-tree "Linux Libertine"
+                              "Linux Libertine"
+                              "Linux Libertine Mono"
         (/ myStaffSize 20)))
         %system-system-spacing #'stretchability = #0
         %ragged-last-bottom = ##t
@@ -61,7 +60,6 @@ def process_file(ly, dryrun):
         tw = tw.decode("utf-8")
         tw = tw.replace(u"\ufeff", "")
         inpaper = False
-        filename = None
         name = None
         removed_lines = []
         markup = False
@@ -88,7 +86,6 @@ def process_file(ly, dryrun):
                     num = re.findall(r'"\s*(\d+)\s*\.?\s*"', line)
                     if num:
                         song_text.append(num[0])
-                        #texxt = texxt[:-1] + "\r" + num[0] + ".\t"
                     else:
                         line = re.sub(
                             '["{}]',
@@ -96,23 +93,14 @@ def process_file(ly, dryrun):
                             re.sub(r"\\.*?[{ ]", "", line)
                         )
                         song_text.append(line)
-                        #texxt += line
-                        #removed_lines.append(line)
                 else:
                     m = re.match(r'\s*"([^"]*)"\s*', line)
                     if m:
                         song_text.append(m.groups()[0])
-                        #texxt += m.groups()[0] + "\n"
                     else:
                         removed_lines.append(line)
             elif r and len(r.groups()) == 1:
-                filename = r.groups()[0]
-                name = filename
-                #filename = filename
-                #filename = filename.replace(u"’", "_").replace(u"…", "_")
-                filename = ly.rsplit(".", 2)[0]
-                while filename in [a[0] for a in filenames]:
-                    filename = filename + "-"
+                name = r.groups()[0]
                 removed_lines.append(line)
             elif rcomposer and len(rcomposer.groups()) == 1:
                 composer = rcomposer.groups()[0]
@@ -134,9 +122,6 @@ def process_file(ly, dryrun):
                 removed_lines.append(line)
             elif "subtitle" in line and "=" in line:
                 removed_lines.append(line)
-            #elif "\hspace #0.1" in line:
-            #    print "- - ", line
-            #    outp.write("\hspace #5")
             elif "poet" in line and komplizierter_poet:
                 #print komplizierter_poet
                 komplizierter_poet = map(lambda x: x, komplizierter_poet)
@@ -146,9 +131,6 @@ def process_file(ly, dryrun):
             else:
                 outp.write(line.encode("utf-8"))
                 outp.write("\n")
-        #with open(os.path.join(outFolderText, filename + ".txt"), "wb") as textf:
-        #    textf.write(texxt[:-1])
-        #filenames.append((filename, name, poet.replace("\n", "\\n"), composer.replace("\n", "\\n")))
 
         inp.seek(0)
         file_content = inp.read()
@@ -198,7 +180,7 @@ def process_file(ly, dryrun):
             "name": name,
             "poet": poet,
             "composer": composer,
-            "text": song_text,  # texxt[:-1],  # TODO: [:-1] O.o
+            "text": song_text,
         },
         "lilypond": -1,
     })
@@ -231,8 +213,7 @@ if __name__ == '__main__':
     if options.remove:
         shutil.rmtree(outFolder)
 
-    shutil.rmtree(FOLDER_TEMP)
-    for folder in (outFolder, outFolderText, FOLDER_TEMP):
+    for folder in (outFolder, FOLDER_TEMP):
         if not os.path.exists(folder):
             os.mkdir(folder)
 
