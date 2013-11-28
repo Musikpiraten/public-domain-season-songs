@@ -16,6 +16,7 @@ EFFECTIVE_PAGE_HEIGHT = 250
 SPACING_SONGS = 10
 SPACING_HEADLINE_SONG = 20
 SPACING_SONG_TEXT = 5
+PAGE_NUM_HEIGHT = 5
 
 
 def init():
@@ -55,7 +56,6 @@ def fit_height(textbox):
     overflows = False
     counter = 0
     while step > 0.05 or overflows:
-        print "."
         counter += 1
         width, old_height = scribus.getSize(textbox)
         if scribus.textOverflows(textbox):
@@ -64,18 +64,36 @@ def fit_height(textbox):
             scribus.sizeObject(width, old_height - step, textbox)
             step = step * 0.5
         overflows = scribus.textOverflows(textbox)
-    print "needed {} steps".format(counter)
 
 
 def new_page():
     scribus.newPage(-1)
     scribus.gotoPage(scribus.pageCount())
+    add_page_number()
 
+def add_page_number():
+    page_num = scribus.pageCount()
+    page_width, page_height, margin_top, margin_left, margin_right, margin_bottom = page_size_margin(page_num)
+    textbox = scribus.createText(margin_left, page_height-margin_bottom, page_width-margin_left-margin_right, PAGE_NUM_HEIGHT)
+    scribus.setStyle("pagenumber_{}".format(get_style_suffix()), textbox)
+    scribus.insertText(str(page_num), 0, textbox)
+    scribus.deselectAll()
+
+def page_size_margin(page_num):
+    size = scribus.getPageNSize(page_num)
+    margin = scribus.getPageNMargins(page_num)
+    return size + margin
+
+def get_style_suffix():
+    page_num = scribus.pageCount()
+    style_suffix = "r" # is this really the right way? is there no shortcut provided by scribus?
+    if page_num % 2 == 0:
+        style_suffix = "l"
+    return style_suffix
 
 def load_song(data, offset, settings):
     page_num = scribus.pageCount()
-    page_width, page_height = scribus.getPageNSize(page_num)
-    margin_top, margin_left, margin_right, margin_bottom = scribus.getPageNMargins(page_num)
+    page_width, page_height, margin_top, margin_left, margin_right, margin_bottom = page_size_margin(page_num)
     start_point = margin_top + offset
 
     new_width = page_width - margin_left - margin_right
@@ -93,9 +111,7 @@ def load_song(data, offset, settings):
     scribus.deselectAll()
     textbox = scribus.createText(margin_left, start_point, new_width, 20)
 
-    style_suffix = "r" # is this really the right way? is there no shortcut provided by scribus?
-    if page_num % 2 == 0:
-        style_suffix = "l"
+    style_suffix = get_style_suffix()
 
     scribus.deselectAll()
     scribus.insertText(u"{}\n".format(data["composer"]), 0, textbox)
@@ -175,6 +191,7 @@ if __name__ == "__main__":
 
     init()
     front_matter()
+    add_page_number()
 
     # trying to get the best sorting
     # setting all songs to the max height

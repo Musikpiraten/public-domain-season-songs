@@ -21,7 +21,7 @@
         <COLOR NAME="White" CMYK="#00000000"/>
         <COLOR NAME="Yellow" CMYK="#0000ff00"/>
         <HYPHEN/>
-        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" ParagraphEffectOffset="0" DROP="0" DROPLIN="2" Bullet="0" Numeration="0"/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" ParagraphEffectOffset="0" DROP="0" DROPLIN="2" Bullet="0" Numeration="0" CPARENT="Default Character Style"/>
         <STYLE NAME="text" LINESPMode="2" INDENT="14.1732283464567" FIRST="-14.1732283464567" VOR="7" FONT="Linux Libertine O Regular" LANGUAGE="">
             <Tabs Type="0" Pos="14.1732283464567" Fill=""/>
         </STYLE>
@@ -29,7 +29,9 @@
         <STYLE NAME="headline_r" PARENT="headline_l" ALIGN="2"/>
         <STYLE NAME="subline_l" FONT="Linux Libertine O Italic" LANGUAGE=""/>
         <STYLE NAME="subline_r" PARENT="subline_l" ALIGN="2"/>
-        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Bitstream Charter Bold" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>
+        <STYLE NAME="pagenumber_l" LANGUAGE="en_GB"/>
+        <STYLE NAME="pagenumber_r" PARENT="pagenumber_l" ALIGN="2"/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Linux Libertine O Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>
         <TableStyle NAME="Default Table Style" DefaultStyle="1" FillColor="None" FillShade="100">
             <TableBorderLeft>
                 <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
