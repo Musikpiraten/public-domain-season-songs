@@ -4,6 +4,6 @@ pdfs
 temp
 list.txt
 data.json
-sizes.json
+cache.json
 scribus
 front_matter.*

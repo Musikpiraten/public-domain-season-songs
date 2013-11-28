@@ -6,9 +6,10 @@ import json
 import os
 import scribus
 import simplebin
+from collections import defaultdict
 
 DATA_FILE = "data.json"
-SIZES_FILE = "sizes.json"
+CACHE_FILE = "cache.json"
 MANUEL_PROCESSING_FILE = "manual_processing.json"
 FILES = "pdfs/"
 FAST = False  # use this to debug
@@ -172,10 +173,10 @@ def load_song(data, offset, settings):
     return text_top + text_height - start_point + SPACING_SONGS # margin
 
 if __name__ == "__main__":
-    sizes = {}
+    cache = defaultdict(dict)
     try:
-        with open(SIZES_FILE, "rb") as sizes_file:
-            sizes = json.load(sizes_file)
+        with open(CACHE_FILE, "rb") as cache_file:
+            cache = defaultdict(dict, json.load(cache_file))
     except:
         pass
 
@@ -197,8 +198,8 @@ if __name__ == "__main__":
     # setting all songs to the max height
     all_songs = dict(zip(songs_data.keys(), [EFFECTIVE_PAGE_HEIGHT] * len(songs_data)))
     # update according to cache
-    for song_name, height in sizes.iteritems():
-        all_songs[song_name] = min(height, EFFECTIVE_PAGE_HEIGHT)
+    for song_name, data in cache.iteritems():
+        all_songs[song_name] = min(data["height"], EFFECTIVE_PAGE_HEIGHT)
     # let's get the best sorting
     songs_combined = simplebin.best_fit(all_songs, EFFECTIVE_PAGE_HEIGHT)
     # sorting the songs alphabetic
@@ -213,7 +214,7 @@ if __name__ == "__main__":
             data = songs_data[filename]
             height = load_song(data, current_pos, manual)
             current_pos += height
-            sizes[filename] = height
+            cache[filename]["height"] = height
             scribus.progressSet(1)
         if current_pos != 0:
             new_page()
@@ -223,8 +224,8 @@ if __name__ == "__main__":
         scribus.statusMessage("")
         scribus.progressReset()
 
-    with open(SIZES_FILE, "wb") as sizes_file:
-        json.dump(sizes, sizes_file, indent=2)
+    with open(CACHE_FILE, "wb") as cache_file:
+        json.dump(cache, cache_file, indent=2)
 
 #scribus.createCharStyle("headline", "Linux Libertine O Regular", 20)
 #scribus.createParagraphStyle("pt", 0, 25, 0, charstyle="testing")
