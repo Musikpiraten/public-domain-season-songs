@@ -73,8 +73,9 @@ def new_page():
 
 
 def load_song(data, offset, settings):
-    page_width, page_height = scribus.getPageSize()
-    margin_top, margin_left, margin_right, margin_bottom = scribus.getPageMargins()
+    page_num = scribus.pageCount()
+    page_width, page_height = scribus.getPageNSize(page_num)
+    margin_top, margin_left, margin_right, margin_bottom = scribus.getPageNMargins(page_num)
     start_point = margin_top + offset
 
     new_width = page_width - margin_left - margin_right
@@ -92,20 +93,24 @@ def load_song(data, offset, settings):
     scribus.deselectAll()
     textbox = scribus.createText(margin_left, start_point, new_width, 20)
 
+    style_suffix = "r" # is this really the right way? is there no shortcut provided by scribus?
+    if page_num % 2 == 0:
+        style_suffix = "l"
+
     scribus.deselectAll()
     scribus.insertText(u"{}\n".format(data["composer"]), 0, textbox)
     scribus.selectText(0, 1, textbox)
-    scribus.setStyle("subline", textbox)
+    scribus.setStyle("subline_{}".format(style_suffix), textbox)
 
     scribus.deselectAll()
     scribus.insertText(u"{}\n".format(data["poet"]), 0, textbox)
     scribus.selectText(0, 1, textbox)
-    scribus.setStyle("subline", textbox)
+    scribus.setStyle("subline_{}".format(style_suffix), textbox)
 
     scribus.deselectAll()
     scribus.insertText(u"{}\n".format(data["name"]), 0, textbox)
     scribus.selectText(0, 1, textbox)
-    scribus.setStyle("headline", textbox)
+    scribus.setStyle("headline_{}".format(style_suffix), textbox)
 
     textbox = scribus.createText(margin_left, start_point + eps_height + SPACING_HEADLINE_SONG + SPACING_SONG_TEXT, new_width, 50)
     scribus.setStyle("text", textbox)
@@ -193,7 +198,8 @@ if __name__ == "__main__":
             current_pos += height
             sizes[filename] = height
             scribus.progressSet(1)
-        new_page()
+        if current_pos != 0:
+            new_page()
 
     if scribus.haveDoc():
         scribus.setRedraw(True)
