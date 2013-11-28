@@ -213,13 +213,33 @@ if __name__ == "__main__":
     # update according to cache
     for song_name, data in cache.iteritems():
         all_songs[song_name] = min(data.get("height", EFFECTIVE_PAGE_HEIGHT), EFFECTIVE_PAGE_HEIGHT)
+    # let's see which songs should be set on a double sided page:
+    songs_double_page = filter(lambda x: manual_processing[x].get("double_page", False), manual_processing)
+    for double_page in songs_double_page:
+        all_songs[double_page] = EFFECTIVE_PAGE_HEIGHT # all double page songs should get a whole page despite their height
+
     # let's get the best sorting
     songs_combined = simplebin.best_fit(all_songs, EFFECTIVE_PAGE_HEIGHT)
     # sorting the songs alphabetic
     songs_sorted = sorted(songs_combined, key=lambda x: x[0])
 
+    # make sure the will be added on the left side
+    page_num = scribus.pageCount()
+    for double_page in songs_double_page:
+        offset = songs_sorted.index([double_page])
+        if (page_num + offset) % 2 != 0: # wrong side
+            songs_sorted.insert(offset, songs_sorted.pop(offset+1)) # move the next page one before this song
+            # TODO: what if double sided song is last song?
+            songs_sorted.insert(offset+2, None) # add a empty page after the song
+        else:
+            songs_sorted.insert(offset+1, None) # add a empty page after the song
+
+
     for songs in songs_sorted:
         current_pos = 0
+        if songs == None: # we added this for a song that should be set on double page
+            new_page()
+            continue
         for filename in songs:
             if not manual_processing[filename].get("show", True):
                 continue

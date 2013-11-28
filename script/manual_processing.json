@@ -11,7 +11,7 @@
   "der_heiland_ist_geboren.ly":                          {},
   "ein_sehr_harter_winter_ist.ly":                       {},
   "empor_zu_gott_mein_lobgesang.ly":                     {},
-  "en_gardant_ma_bergerie.ly":                           {},
+  "en_gardant_ma_bergerie.ly":                           { "double_page": true },
   "es_ist_ein_ros_entsprungen-einstimmig.ly":            { "show": false },
   "es_ist_ein_ros_entsprungen.ly":                       { "columns": 1 },
   "es_ist_fuer_uns_eine_zeit_angekommen.ly":             {},
