@@ -12,7 +12,9 @@ SIZES_FILE = "sizes.json"
 FILES = "pdfs/"
 FAST = False  # use this to debug
 EFFECTIVE_PAGE_HEIGHT = 250
-SPACING = 10
+SPACING_SONGS = 10
+SPACING_HEADLINE_SONG = 20
+SPACING_SONG_TEXT = 5
 
 
 def init():
@@ -81,7 +83,7 @@ def load_song(data, offset):
         eps_width, eps_height = scribus.getSize(eps)
         #scribus.scaleGroup(new_width/eps_width)
         scribus.sizeObject(new_width, eps_height * (new_width/eps_width))
-        scribus.moveObjectAbs(margin_left, start_point+10, eps)
+        scribus.moveObjectAbs(margin_left, start_point+SPACING_HEADLINE_SONG, eps)
         eps_width, eps_height = scribus.getSize(eps)
     else:
         eps_height = 0
@@ -104,24 +106,35 @@ def load_song(data, offset):
     scribus.selectText(0, 1, textbox)
     scribus.setStyle("headline", textbox)
 
-    textbox = scribus.createText(margin_left, start_point + eps_height + 20, new_width, 50)
+    textbox = scribus.createText(margin_left, start_point + eps_height + SPACING_HEADLINE_SONG + SPACING_SONG_TEXT, new_width, 50)
     scribus.setStyle("text", textbox)
     text = data["text"]
     text = [t.strip() for t in text if t.strip() != ""]
     num_chars = 0
     num_line_total = len(text)
+    no_new_line = False
     for num_line, line in enumerate(text):
         if line.isdigit():
-            line = u"{}\t".format(line)
+            first_char = "\n"
+            if num_line == 0:
+                first_char = ""
+            no_new_line = True
+            line = u"{}{}.\t".format(first_char, line)
             scribus.insertText(line, -1, textbox)
             scribus.deselectAll()
             scribus.selectText(num_chars, len(line), textbox)
-            #scribus.setStyle("num", textbox)
+            #scribus.setStyle("num", textbox) # no character styles available
             #scribus.setFontSize(5, textbox)  # TODO: testing only # BUG?
+            scribus.setFont("Linux Libertine O Bold", textbox)
             num_chars += len(line)
         else:
+            if no_new_line:
+                first_char = ""
+            else:
+                first_char = chr(28)
+            no_new_line = False
             if num_line_total != num_line + 1:
-                line = u"{}\n".format(line)
+                line = u"{}{}".format(first_char, line)
             scribus.insertText(line, -1, textbox)
             scribus.deselectAll()
             scribus.selectText(num_chars, len(line), textbox)
@@ -133,7 +146,7 @@ def load_song(data, offset):
     fit_height(textbox)
     text_width, text_height = scribus.getSize(textbox)
     text_left, text_top = scribus.getPosition(textbox)
-    return text_top + text_height - start_point + 10 # margin
+    return text_top + text_height - start_point + SPACING_SONGS # margin
 
 if __name__ == "__main__":
     sizes = {}
