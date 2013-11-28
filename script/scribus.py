@@ -170,7 +170,20 @@ def load_song(data, offset, settings):
     fit_height(textbox)
     text_width, text_height = scribus.getSize(textbox)
     text_left, text_top = scribus.getPosition(textbox)
-    return text_top + text_height - start_point + SPACING_SONGS # margin
+    return text_top + text_height - start_point + SPACING_SONGS, page_num
+
+
+def create_toc(data):
+    if not scribus.objectExists("TOC"):
+        new_page()
+        page_width, page_height, margin_top, margin_left, margin_right, margin_bottom = page_size_margin(page_num)
+        toc = scribus.createText(margin_left, margin_top, page_width-margin_right-margin_left, page_height-margin_top-margin_bottom)
+        scribus.setNewName("TOC", toc)
+        scribus.insertText("provide a textframe with name 'TOC' in front_matter.sla and i will not create the toc at the end of the document", 0, "TOC")
+    print data
+
+    text = "\n".join(("{}\t{}".format(title, pagenum) for (title, pagenum) in data))
+    scribus.insertText(text, -1, "TOC")
 
 if __name__ == "__main__":
     cache = defaultdict(dict)
@@ -184,7 +197,7 @@ if __name__ == "__main__":
         songs_data = json.load(data_file)
 
     with open(MANUEL_PROCESSING_FILE, "rb") as manual_file:
-        manual_processing = json.load(manual_file)
+        manual_processing = defaultdict(dict, json.load(manual_file))
 
     scribus.statusMessage("Running script...")
     scribus.progressReset()
@@ -199,7 +212,7 @@ if __name__ == "__main__":
     all_songs = dict(zip(songs_data.keys(), [EFFECTIVE_PAGE_HEIGHT] * len(songs_data)))
     # update according to cache
     for song_name, data in cache.iteritems():
-        all_songs[song_name] = min(data["height"], EFFECTIVE_PAGE_HEIGHT)
+        all_songs[song_name] = min(data.get("height", EFFECTIVE_PAGE_HEIGHT), EFFECTIVE_PAGE_HEIGHT)
     # let's get the best sorting
     songs_combined = simplebin.best_fit(all_songs, EFFECTIVE_PAGE_HEIGHT)
     # sorting the songs alphabetic
@@ -208,16 +221,22 @@ if __name__ == "__main__":
     for songs in songs_sorted:
         current_pos = 0
         for filename in songs:
-            manual = manual_processing.get(filename, {})
-            if not manual.get("show", True):
+            if not manual_processing[filename].get("show", True):
                 continue
             data = songs_data[filename]
-            height = load_song(data, current_pos, manual)
+            height, page_num = load_song(data, current_pos, manual_processing[filename])
             current_pos += height
             cache[filename]["height"] = height
+            cache[filename]["page"] = page_num
             scribus.progressSet(1)
         if current_pos != 0:
             new_page()
+
+    toc = []
+    for filename in filter(lambda s: manual_processing[s].get("show", True), all_songs.keys()):
+        toc.append((songs_data[filename]["name"], cache[filename].get("page", "XX")))
+    toc.sort(key=lambda (x,y): x)
+    create_toc(toc)
 
     if scribus.haveDoc():
         scribus.setRedraw(True)
