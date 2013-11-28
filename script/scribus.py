@@ -9,6 +9,7 @@ import simplebin
 
 DATA_FILE = "data.json"
 SIZES_FILE = "sizes.json"
+MANUEL_PROCESSING_FILE = "manual_processing.json"
 FILES = "pdfs/"
 FAST = False  # use this to debug
 EFFECTIVE_PAGE_HEIGHT = 250
@@ -71,7 +72,7 @@ def new_page():
     scribus.gotoPage(scribus.pageCount())
 
 
-def load_song(data, offset):
+def load_song(data, offset, settings):
     page_width, page_height = scribus.getPageSize()
     margin_top, margin_left, margin_right, margin_bottom = scribus.getPageMargins()
     start_point = margin_top + offset
@@ -142,7 +143,8 @@ def load_song(data, offset):
             num_chars += len(line)
 
     scribus.setColumnGap(5, textbox)
-    scribus.setColumns(2, textbox)
+    columns = settings.get("columns", 2)
+    scribus.setColumns(columns, textbox)
     fit_height(textbox)
     text_width, text_height = scribus.getSize(textbox)
     text_left, text_top = scribus.getPosition(textbox)
@@ -158,6 +160,9 @@ if __name__ == "__main__":
 
     with open(DATA_FILE, "rb") as data_file:
         songs_data = json.load(data_file)
+
+    with open(MANUEL_PROCESSING_FILE, "rb") as manual_file:
+        manual_processing = json.load(manual_file)
 
     scribus.statusMessage("Running script...")
     scribus.progressReset()
@@ -180,8 +185,11 @@ if __name__ == "__main__":
     for songs in songs_sorted:
         current_pos = 0
         for filename in songs:
+            manual = manual_processing.get(filename, {})
+            if not manual.get("show", True):
+                continue
             data = songs_data[filename]
-            height = load_song(data, current_pos)
+            height = load_song(data, current_pos, manual)
             current_pos += height
             sizes[filename] = height
             scribus.progressSet(1)
