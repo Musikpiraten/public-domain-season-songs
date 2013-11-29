@@ -5,12 +5,7 @@
 
 \header {
   title = "Es ziehn aus weiter Ferne"		  % Die Überschrift der Noten wird zentriert gesetzt.
-  subtitle = " "		                  % weitere zentrierte Überschrift.
-%  poet = "Text: "				  % Name des Dichters, linksbündig unter dem Unteruntertitel.
-  meter = ""                                      % Metrum, linksbündig unter dem Dichter.
-%  composer = "Melodie: "			  % Name des Komponisten, rechtsbüngig unter dem Unteruntertitel.
-  composer = "Sternsingerlied"
-  arranger = ""                                   % Name des Bearbeiters/Arrangeurs, rechtsbündig unter dem Komponisten.
+  poet = "Sternsingerlied aus der Steiermark"				  % Name des Dichters, linksbündig unter dem Unteruntertitel.
   tagline = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"
                                                   % Zentriert unten auf der letzten Seite.
 %  copyright = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"

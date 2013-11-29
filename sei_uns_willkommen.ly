@@ -4,11 +4,7 @@
 \version "2.14.2"
 \header {
   title = "Sei uns willkommen"                % Die Überschrift der Noten wird zentriert gesetzt. 
-  subtitle = "ältestes deutsches Weihnachtslied" % weitere zentrierte Überschrift.
-%  poet = "Text: "       		      % Name des Dichters, linksbündig unter dem Unteruntertitel. 
-  meter = "" 				      % Metrum, linksbündig unter dem Dichter. 
-  composer = "Volkslied"   % Name des Komponisten, rechtsbüngig unter dem Unteruntertitel. 
-  arranger = "" 			      % Name des Bearbeiters/Arrangeurs, rechtsbündig unter dem Komponisten. 
+  poet = "Deutsches Volkslied"       		      % Name des Dichters, linksbündig unter dem Unteruntertitel. 
   tagline = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de" 
 	    				      % Zentriert unten auf der letzten Seite.
 %  copyright = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"
