@@ -4,10 +4,10 @@ Scripting
 
 If you want to build your own pdf you will need:
 
-* `lilypond <http://lilypond.org/>`
-* `scribus <http://scribus.net/>` (1.5.0)
-* `python <http://python.org/``
-* `linux libertine <http://www.linuxlibertine.org/>`
+* `lilypond <http://lilypond.org/>`_
+* `scribus <http://scribus.net/>`_ (1.5.0)
+* `python <http://python.org/>`_
+* `linux libertine <http://www.linuxlibertine.org/>`_
 
 Run ``run_lily_run.py`` first. This will create eps files from the lilypond
 source code and place them in the folder ``lily_output``. After this you will
