@@ -76,28 +76,6 @@ Akkorde = \chordmode {
       }
       \hspace #0.1
       \line {
-        \bold "4."
-        \column {
-          "Zu Bethlehem geboren"
-          "im Stall ein Kindelein,"
-          "gibt sich für uns verloren;"
-          "gelobet muss es sein."
-        }
-      }
-      \hspace #0.1
-      \line {
-        \bold "6."
-        \column {
-          "Danach mit ihm auch sterben"
-          "und geistlich auferstehn,"
-          "Ewigs Leben zu erben,"
-          "wie an ihm ist geschehn. "
-        }
-      }
-    }
-    \hspace #0.1
-    \column {
-      \line {
         \bold "3."
         \column {
           "Der Anker haft’ auf Erden,"
@@ -108,12 +86,34 @@ Akkorde = \chordmode {
       }
       \hspace #0.1
       \line {
+        \bold "4."
+        \column {
+          "Zu Bethlehem geboren"
+          "im Stall ein Kindelein,"
+          "gibt sich für uns verloren;"
+          "gelobet muss es sein."
+        }
+      }
+    }
+    \hspace #0.1
+    \column {
+      \line {
         \bold "5."
         \column {
           "Und wer dies Kind mit Freuden"
           "umfangen, küssen will,"
           "muss vorher mit ihm leiden"
           "groß Pein und Marter viel."
+        }
+      }
+      \hspace #0.1
+      \line {
+        \bold "6."
+        \column {
+          "Danach mit ihm auch sterben"
+          "und geistlich auferstehn,"
+          "Ewigs Leben zu erben,"
+          "wie an ihm ist geschehn. "
         }
       }
     }

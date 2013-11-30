@@ -60,12 +60,12 @@ AlleJahreWiederXa = \score {<<
     }
     \hspace #0.1
     \line {
-      \bold "4."
+      \bold "3."
       \column {
-        "Steht auch mir zur Seite"
-        "still und unerkannt,"
-        "dass es treu mich leite"
-        "an der lieben Hand."
+        "Sagt den Menschen allen,"
+        "dass ein Vater ist,"
+        "dem sie wohlgefallen,"
+        "der sie nicht vergisst."
       }
     }
   }
@@ -73,12 +73,12 @@ AlleJahreWiederXa = \score {<<
   \hspace #0.1
   \column {
     \line {
-      \bold "3."
+      \bold "4."
       \column {
-        "Sagt den Menschen allen,"
-        "dass ein Vater ist,"
-        "dem sie wohlgefallen,"
-        "der sie nicht vergisst."
+        "Steht auch mir zur Seite"
+        "still und unerkannt,"
+        "dass es treu mich leite"
+        "an der lieben Hand."
       }
     }
   }

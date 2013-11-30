@@ -104,12 +104,12 @@ sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- ke
     }
     \hspace #0.1
     \line {
-      \bold "4."
+      \bold "3."
       \column {
-          "Den Frieden sie verkünden!"
-"Freu dich, du Christenheit!"
-"Verzeihung aller Sünden"
-"Ist uns im Stall bereit’t"
+"Die Engel lieblich singen,"
+"Freu dich, du Christenheit,"
+"Tun gute Botschaft bringen,"
+"Verkündigen große Freud."
 \bold "Refrain"
       }
     }
@@ -117,12 +117,12 @@ sonst4 wär’n2 wir4 gar2 ver4 -- lor2. -- ren2 in4 al2 -- le4 E2 -- wig4 -- ke
   \hspace #0.1
   \column {
     \line {
-      \bold "3."
+      \bold "4."
       \column {
-"Die Engel lieblich singen,"
-"Freu dich, du Christenheit,"
-"Tun gute Botschaft bringen,"
-"Verkündigen große Freud."
+          "Den Frieden sie verkünden!"
+"Freu dich, du Christenheit!"
+"Verzeihung aller Sünden"
+"Ist uns im Stall bereit’t"
 \bold "Refrain"
       }
     }

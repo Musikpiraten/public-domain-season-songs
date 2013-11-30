@@ -62,24 +62,24 @@ Text=\lyricmode {
       }
       \hspace #0.1
       \line {
-        \bold "4."
-        \column {
-"Wir, wir, wir, wir rufen all zu Dir."
-"Tu uns des Himmels Reich aufschließen,"
-"wenn wir einmal sterben müssen."
-"Wir, wir, wir, wir rufen all zu Dir."
-        }
-      }
-    }
-    \hspace #0.1
-    \column {
-      \line {
         \bold "3."
         \column {
 "Groß, groß, groß, die Lieb’ ist übergroß."
 "Gott hat den Himmelsthron verlassen"
 "und muss reisen auf den Straßen."
 "Groß, groß, groß, die Lieb’ ist übergroß."
+        }
+      }
+    }
+    \hspace #0.1
+    \column {
+      \line {
+        \bold "4."
+        \column {
+"Wir, wir, wir, wir rufen all zu Dir."
+"Tu uns des Himmels Reich aufschließen,"
+"wenn wir einmal sterben müssen."
+"Wir, wir, wir, wir rufen all zu Dir."
         }
       }
     }

@@ -84,22 +84,6 @@ Text=\lyricmode {
      }
      \hspace #0.1
      \line {
-       \bold "4."
-       \column {
-         "And we won’t go until we get some"
-         "And we won’t go until we get some"
-         "And we won’t go until we get some"
-         "So bring some out here!"
-         "Glad tidings we bring"
-         "To you and your kin;"
-         "We wish you a merry Christmas"
-         "And a happy New Year!"
-       }
-     }
-   }
-   \hspace #0.1
-   \column {
-     \line {
        \bold "3."
        \column {
          "For we all like figgy pudding"
@@ -111,6 +95,22 @@ Text=\lyricmode {
          "We wish you a merry Christmas"
          "And a happy New Year!"
        }
+     }
+   }
+   \hspace #0.1
+   \column {
+     \line {
+       \bold "4."
+       \column {
+         "And we won’t go until we get some"
+         "And we won’t go until we get some"
+         "And we won’t go until we get some"
+         "So bring some out here!"
+         "Glad tidings we bring"
+         "To you and your kin;"
+         "We wish you a merry Christmas"
+         "And a happy New Year!"
+     }
      }
      \hspace #0.1
      \line {

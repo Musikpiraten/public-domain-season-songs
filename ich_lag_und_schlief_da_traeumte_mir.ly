@@ -150,28 +150,6 @@ SongText = \lyricmode { \set stanza = "1."
     }
     \hspace #0.1
     \line {
-      \bold "4."
-      \column {
-          "Und als ich nach dem Baume sah"
-          "Und ganz verwundert stand,"
-          "Nach einem Apfel griff ich da,"
-          "Und alles, alles schwand."
-      }
-    }
-    \hspace #0.1 
-    \line {
-      \bold "6."
-      \column {
-          "Da war es just, als rief er mir:"
-          "„Du darfst nur artig sein,"
-          "Dann steh ich wiederum vor dir —"
-          "Jetzt aber schlaf nur ein!“"
-      }
-    }
-  }
-  \hspace #0.1
-  \column {
-    \line {
       \bold "3."
       \column {
           "Und Zuckerpuppen hingen dran;"
@@ -180,7 +158,19 @@ SongText = \lyricmode { \set stanza = "1."
           "Und was mir Freude macht."
       }
     }
-    \hspace #0.1
+    \hspace #0.1 
+    \line {
+      \bold "4."
+      \column {
+          "Und als ich nach dem Baume sah"
+          "Und ganz verwundert stand,"
+          "Nach einem Apfel griff ich da,"
+          "Und alles, alles schwand."
+      }
+    }
+  }
+  \hspace #0.1
+  \column {
     \line {
       \bold "5."
       \column {
@@ -188,6 +178,16 @@ SongText = \lyricmode { \set stanza = "1."
           "Und dunkel wars um mich:"
           "Du lieber, schöner Weihnachtsbaum,"
           "Sag an, wo find ich dich?"
+      }
+    }
+    \hspace #0.1
+    \line {
+      \bold "6."
+      \column {
+          "Da war es just, als rief er mir:"
+          "„Du darfst nur artig sein,"
+          "Dann steh ich wiederum vor dir —"
+          "Jetzt aber schlaf nur ein!“"
       }
     }
     \hspace #0.1 

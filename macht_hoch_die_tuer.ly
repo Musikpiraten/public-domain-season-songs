@@ -79,22 +79,6 @@ Text = \lyricmode {
       }
       \hspace #0.1
       \line {
-        \bold "4."
-        \column {
-          "Macht hoch die Tür, die Tor macht weit,"
-          "eu’r Herz zum Tempel zubereit’."
-          "Die Zweiglein der Gottseligkeit"
-          "steckt auf mit Andacht, Lust und Freud;"
-          "so kommt der König auch zu euch,"
-          "ja, Heil und Leben mit zugleich."
-          "Gelobet sei mein Gott,"
-          "voll Rat, voll Tat, voll Gnad."
-        }
-      }
-    }
-    \hspace #0.1
-    \column {
-      \line {
         \bold "3."
         \column {
           "O wohl dem Land, o wohl der Stadt,"
@@ -105,6 +89,22 @@ Text = \lyricmode {
           "bringt mit sich lauter Freud und Wonn."
           "Gelobet sei mein Gott,"
           "mein Tröster früh und spat."
+        }
+      }
+    }
+    \hspace #0.1
+    \column {
+      \line {
+        \bold "4."
+        \column {
+          "Macht hoch die Tür, die Tor macht weit,"
+          "eu’r Herz zum Tempel zubereit’."
+          "Die Zweiglein der Gottseligkeit"
+          "steckt auf mit Andacht, Lust und Freud;"
+          "so kommt der König auch zu euch,"
+          "ja, Heil und Leben mit zugleich."
+          "Gelobet sei mein Gott,"
+          "voll Rat, voll Tat, voll Gnad."
         }
       }
       \hspace #0.1

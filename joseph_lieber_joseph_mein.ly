@@ -66,24 +66,24 @@ Gott, der wird dein Loh -- ner  sein im Him -- mel -- reich,  der Jung -- frau  
     }
     \hspace #0.1
     \line {
-      \bold "4."
-      \column {
-"Freu dich nun, o Christenschar,"
-"der himmlische König klar"
-"nahm die Menschheit offenbar,"
-"den uns gebar die reine Magd Maria."
-      }
-    }
-  }
-  \hspace #0.1
-  \column {
-    \line {
       \bold "3."
       \column {
 "Gerne, lieb’ Maria mein,"
 "helf ich dir wieg’n das Kindelein."
 "dass Gott müss’ mein Lohner sein"
 "im Himmelreich, der Jungfrau Sohn Maria."
+      }
+    }
+  }
+  \hspace #0.1
+  \column {
+    \line {
+      \bold "4."
+      \column {
+"Freu dich nun, o Christenschar,"
+"der himmlische König klar"
+"nahm die Menschheit offenbar,"
+"den uns gebar die reine Magd Maria."
       }
     }
     \hspace #0.1

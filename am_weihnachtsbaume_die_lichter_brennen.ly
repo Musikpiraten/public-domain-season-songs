@@ -66,28 +66,6 @@ Text=\lyricmode {
       }
       \hspace #0.1
       \line {
-        \bold "4."
-        \column {
-"Gesegnet seid, ihr alten Leute,"
-"gesegnet sei, du kleine Schar!"
-"Wir bringen Gottes Segen heute"
-"dem braunen wie dem weißen Haar."
-        }
-      }
-      \hspace #0.1
-      \line {
-        \bold "6."
-        \column {
-"Kein Ohr hat ihren Spruch vernommen,"
-"unsichtbar jedes Menschen Blick"
-"sind sie gegangen wie gekommen,"
-"doch Gottes Segen blieb zurück."
-        }
-      }
-    }
-    \hspace #0.1
-    \column {
-      \line {
         \bold "3."
         \column {
 "Zwei Engel sind hereingetreten,"
@@ -98,12 +76,34 @@ Text=\lyricmode {
       }
       \hspace #0.1
       \line {
+        \bold "4."
+        \column {
+"Gesegnet seid, ihr alten Leute,"
+"gesegnet sei, du kleine Schar!"
+"Wir bringen Gottes Segen heute"
+"dem braunen wie dem weißen Haar."
+        }
+      }
+    }
+    \hspace #0.1
+    \column {
+      \line {
         \bold "5."
         \column {
 "Zu guten Menschen, die sich lieben,"
 "schickt uns der Herr als Boten aus,"
 "und seid ihr treu und fromm geblieben,"
 "wir treten wieder in dies Haus."
+        }
+      }
+      \hspace #0.1
+      \line {
+        \bold "6."
+        \column {
+"Kein Ohr hat ihren Spruch vernommen,"
+"unsichtbar jedes Menschen Blick"
+"sind sie gegangen wie gekommen,"
+"doch Gottes Segen blieb zurück."
         }
       }
     }

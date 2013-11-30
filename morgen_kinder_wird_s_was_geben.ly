@@ -91,20 +91,6 @@ Wdh = \lyricmode {
 			}
 			\hspace #0.1
 			\line {
-				\bold "4."
-				\column {
-					"Wisst ihr noch den großen Wagen"
-					"und die schöne Jagd von Blei?"
-					"Unsre Kleiderchen zum Tragen"
-					"und die viele Näscherei?"
-					"Meinen fleißgen Sägemann"
-					"mit der Kugel unten dran?"
-				}
-			}
-		}
-		\hspace #0.1
-		\column {\hspace #0.3
-			\line {
 				\bold "3."
 				\column {
 					"Wisst ihr noch mein Reiterpferdchen,"
@@ -113,6 +99,20 @@ Wdh = \lyricmode {
 					"und dem blank geputzten Zinn?"
 					"Heinrichs bunten Harlekin"
 					"mit der gelben Violin?"
+				}
+			}
+		}
+		\hspace #0.1
+		\column {\hspace #0.3
+			\line {
+				\bold "4."
+				\column {
+					"Wisst ihr noch den großen Wagen"
+					"und die schöne Jagd von Blei?"
+					"Unsre Kleiderchen zum Tragen"
+					"und die viele Näscherei?"
+					"Meinen fleißgen Sägemann"
+					"mit der Kugel unten dran?"
 				}
 			}
 			\hspace #0.1

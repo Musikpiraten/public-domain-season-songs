@@ -66,24 +66,24 @@ Score = \score {<<
       }
       \hspace #0.1
       \line {
-        \bold "4."
-        \column {
-"Er, der jetzt bei dem Vater thront,"
-"hat unter uns ein Mensch gewohnt,"
-"damit auch wir ihm werden gleich"
-"auf Erden und im Himmelreich."
-        }
-      }
-    }
-    \hspace #0.1
-    \column {
-      \line {
         \bold "3."
         \column {
 "Er kam, des Vaters Ebenbild,"
 "von schlichtem Pilgerkleid umhüllt,"
 "und führet uns mit sanfter Hand,"
 "ein treuer Hirt, ins Vaterland."
+        }
+      }
+    }
+    \hspace #0.1
+    \column {
+      \line {
+        \bold "4."
+        \column {
+"Er, der jetzt bei dem Vater thront,"
+"hat unter uns ein Mensch gewohnt,"
+"damit auch wir ihm werden gleich"
+"auf Erden und im Himmelreich."
         }
       }
       \hspace #0.1
