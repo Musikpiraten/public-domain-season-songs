@@ -44,12 +44,12 @@
   "stille_nacht_heilige_nacht.ly":                       {},
   "still_still_still.ly":                                {},
   "suesser_die_glocken_nie_klingen.ly":                  {},
-  "tochter_zion_freue_dich-einstimmig.ly":               {},
+  "tochter_zion_freue_dich-einstimmig.ly":               { "columns": 1 },
   "tochter_zion_freue_dich.ly":                          { "appendix": true},
   "vom_himmel_hoch_da_komm_ich_her.ly":                  {},
   "vom_himmel_hoch_ihr_englein_kommt.ly":                {},
   "was_soll_das_bedeuten.ly":                            { "columns": 1 },
   "we_wish_you_a_merry_christmas.ly":                    {},
   "winter_ade.ly":                                       {},
-  "zu_bethlehem_geboren.ly":                             {}
+  "zu_bethlehem_geboren.ly":                             { "columns": 1 }
 }
