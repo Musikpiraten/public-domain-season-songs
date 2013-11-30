@@ -201,11 +201,9 @@ def add_songs(all_songs, songs_double_page, manual_processing, songs_data, cache
         if not double_page in all_songs:
             continue
         offset = songs_sorted.index([double_page])
+        songs_sorted.insert(offset+1, None) # add a empty page after the song
         if (page_num + offset) % 2 != 0: # song is on right side, empty side on the left side.
-            #songs_sorted.insert(offset, songs_sorted.pop(offset+1)) # move the next page one before this song
-            songs_sorted.insert(offset, None) # add a empty page before the song
-        else:
-            songs_sorted.insert(offset+1, None) # add a empty page after the song
+            songs_sorted.insert(offset, songs_sorted.pop(offset+2)) # move next song before the double page
             # TODO: what if double sided song is last song?
 
     for songs in songs_sorted:
