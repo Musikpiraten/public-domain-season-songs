@@ -4,6 +4,7 @@
 import time
 import json
 import os
+import math
 import scribus
 import simplebin
 from collections import defaultdict
@@ -18,6 +19,7 @@ SPACING_SONGS = 10
 SPACING_HEADLINE_SONG = 20
 SPACING_SONG_TEXT = 5
 PAGE_NUM_HEIGHT = 5
+BASELINE_GRID = 5
 
 
 def init():
@@ -41,7 +43,6 @@ def front_matter():
         0,  # where to insert
     )
     scribus.gotoPage(pages+1)
-    print scribus.getAllStyles()
 
 
 def fit_height(textbox):
@@ -137,6 +138,8 @@ def load_song(data, offset, settings):
     num_line_total = len(text)
     no_new_line = False
     for num_line, line in enumerate(text):
+        if line.strip == "":
+            continue
         if line.isdigit():
             first_char = "\n"
             if num_line == 0:
@@ -156,8 +159,7 @@ def load_song(data, offset, settings):
             else:
                 first_char = chr(28)
             no_new_line = False
-            if num_line_total != num_line + 1:
-                line = u"{}{}".format(first_char, line)
+            line = u"{}{}".format(first_char, line)
             scribus.insertText(line, -1, textbox)
             scribus.deselectAll()
             scribus.selectText(num_chars, len(line), textbox)
@@ -180,7 +182,6 @@ def create_toc(data):
         toc = scribus.createText(margin_left, margin_top, page_width-margin_right-margin_left, page_height-margin_top-margin_bottom)
         scribus.setNewName("TOC", toc)
         scribus.insertText("provide a textframe with name 'TOC' in front_matter.sla and i will not create the toc at the end of the document", 0, "TOC")
-    print data
 
     text = "\n".join(("{}\t{}".format(title, pagenum) for (title, pagenum) in data))
     scribus.insertText(text, -1, "TOC")
@@ -223,17 +224,14 @@ if __name__ == "__main__":
     # sorting the songs alphabetic
     songs_sorted = sorted(songs_combined, key=lambda x: x[0])
 
-    # make sure the will be added on the left side
+    # make sure the double page will be added on the left side
     page_num = scribus.pageCount()
     for double_page in songs_double_page:
         offset = songs_sorted.index([double_page])
-        if (page_num + offset) % 2 != 0: # wrong side
-            songs_sorted.insert(offset, songs_sorted.pop(offset+1)) # move the next page one before this song
+        songs_sorted.insert(offset+1, None) # add a empty page after the song
+        if (page_num + offset) % 2 == 0: # song is on right side, empty side on the left side.
+            songs_sorted.insert(offset, songs_sorted.pop(offset+2)) # move the next page one before this song
             # TODO: what if double sided song is last song?
-            songs_sorted.insert(offset+2, None) # add a empty page after the song
-        else:
-            songs_sorted.insert(offset+1, None) # add a empty page after the song
-
 
     for songs in songs_sorted:
         current_pos = 0
@@ -245,8 +243,8 @@ if __name__ == "__main__":
                 continue
             data = songs_data[filename]
             height, page_num = load_song(data, current_pos, manual_processing[filename])
-            current_pos += height
-            cache[filename]["height"] = height
+            current_pos += math.ceil(height/BASELINE_GRID) * BASELINE_GRID
+            cache[filename]["height"] = round(height, 2)
             cache[filename]["page"] = page_num
             scribus.progressSet(1)
         if current_pos != 0:
