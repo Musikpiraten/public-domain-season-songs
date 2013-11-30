@@ -186,7 +186,44 @@ def create_toc(data):
     text = "\n".join(("{}\t{}".format(title, pagenum) for (title, pagenum) in data))
     scribus.insertText(text, -1, "TOC")
 
-if __name__ == "__main__":
+
+def add_songs(all_songs, songs_double_page, manual_processing, songs_data, cache):
+    # let's get the best sorting
+    songs_combined = simplebin.best_fit(all_songs, EFFECTIVE_PAGE_HEIGHT)
+    # sorting the songs alphabetic
+    songs_sorted = sorted(songs_combined, key=lambda x: x[0])
+
+    # make sure the double page will be added on the left side
+    page_num = scribus.pageCount()
+    for double_page in songs_double_page:
+        if not double_page in all_songs:
+            continue
+        offset = songs_sorted.index([double_page])
+        if (page_num + offset) % 2 != 0: # song is on right side, empty side on the left side.
+            #songs_sorted.insert(offset, songs_sorted.pop(offset+1)) # move the next page one before this song
+            songs_sorted.insert(offset, None) # add a empty page before the song
+        else:
+            songs_sorted.insert(offset+1, None) # add a empty page after the song
+            # TODO: what if double sided song is last song?
+
+    for songs in songs_sorted:
+        current_pos = 0
+        if songs == None: # we added this for a song that should be set on double page
+            new_page()
+            continue
+        for filename in songs:
+            if not manual_processing[filename].get("show", True):
+                continue
+            data = songs_data[filename]
+            height, page_num = load_song(data, current_pos, manual_processing[filename])
+            current_pos += math.ceil(height/BASELINE_GRID) * BASELINE_GRID
+            cache[filename]["height"] = round(height, 2)
+            cache[filename]["page"] = page_num
+            scribus.progressSet(1)
+        if current_pos != 0:
+            new_page()
+
+def main():
     cache = defaultdict(dict)
     try:
         with open(CACHE_FILE, "rb") as cache_file:
@@ -219,36 +256,14 @@ if __name__ == "__main__":
     for double_page in songs_double_page:
         all_songs[double_page] = EFFECTIVE_PAGE_HEIGHT # all double page songs should get a whole page despite their height
 
-    # let's get the best sorting
-    songs_combined = simplebin.best_fit(all_songs, EFFECTIVE_PAGE_HEIGHT)
-    # sorting the songs alphabetic
-    songs_sorted = sorted(songs_combined, key=lambda x: x[0])
+    appendix_filter = lambda a_s, boolean : {k:v for k,v in a_s.iteritems() if manual_processing[k].get("appendix", False) == boolean}
 
-    # make sure the double page will be added on the left side
-    page_num = scribus.pageCount()
-    for double_page in songs_double_page:
-        offset = songs_sorted.index([double_page])
-        songs_sorted.insert(offset+1, None) # add a empty page after the song
-        if (page_num + offset) % 2 == 0: # song is on right side, empty side on the left side.
-            songs_sorted.insert(offset, songs_sorted.pop(offset+2)) # move the next page one before this song
-            # TODO: what if double sided song is last song?
+    main_songs = appendix_filter(all_songs, False)
+    add_songs(main_songs, songs_double_page, manual_processing, songs_data, cache)
 
-    for songs in songs_sorted:
-        current_pos = 0
-        if songs == None: # we added this for a song that should be set on double page
-            new_page()
-            continue
-        for filename in songs:
-            if not manual_processing[filename].get("show", True):
-                continue
-            data = songs_data[filename]
-            height, page_num = load_song(data, current_pos, manual_processing[filename])
-            current_pos += math.ceil(height/BASELINE_GRID) * BASELINE_GRID
-            cache[filename]["height"] = round(height, 2)
-            cache[filename]["page"] = page_num
-            scribus.progressSet(1)
-        if current_pos != 0:
-            new_page()
+    appendix_songs = appendix_filter(all_songs, True)
+    add_songs(appendix_songs, songs_double_page, manual_processing, songs_data, cache)
+
 
     toc = []
     for filename in filter(lambda s: manual_processing[s].get("show", True), all_songs.keys()):
@@ -264,5 +279,5 @@ if __name__ == "__main__":
     with open(CACHE_FILE, "wb") as cache_file:
         json.dump(cache, cache_file, indent=2)
 
-#scribus.createCharStyle("headline", "Linux Libertine O Regular", 20)
-#scribus.createParagraphStyle("pt", 0, 25, 0, charstyle="testing")
+if __name__ == "__main__":
+    main()
