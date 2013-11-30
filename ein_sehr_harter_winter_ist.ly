@@ -6,10 +6,7 @@
 \header {
   title = "Ein sehr harter Winter ist"        % Die Überschrift der Noten wird zentriert gesetzt.
   subtitle = "4-stimmiger Kanon "             % weitere zentrierte Überschrift.
-%  poet = "Text: Karl G. Hering (1766 - 1853)" % Name des Dichters, linksbündig unter dem Unteruntertitel.
-  meter = ""                                  % Metrum, linksbündig unter dem Dichter.
   composer = "Text u. Melodie: Karl G. Hering (1766 - 1853)" % Name des Komponisten, rechtsbüngig unter dem Unteruntertitel.
-  arranger = ""                               % Name des Bearbeiters/Arrangeurs, rechtsbündig unter dem Komponisten.
   tagline = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"
                                               % Zentriert unten auf der letzten Seite.
 %  copyright = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"

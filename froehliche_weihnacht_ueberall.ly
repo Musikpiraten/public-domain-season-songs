@@ -5,7 +5,7 @@
 \header{
   title = "Fröhliche Weihnacht überall"
   poet = "Text: A. H. Hoffmann von Fallersleben"
-  composer = "Musik: Aus England"
+  composer = "Melodie: Aus England"
   tagline = ##f
 }
 

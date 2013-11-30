@@ -4,7 +4,7 @@
 
 \header {
         title = "Schneeflöckchen"
-        composer = "Musik: W. A. Mozart"
+        composer = "Melodie: W. A. Mozart"
         poet = "Text: Hedwig Haberkern"
         tagline = ""
 }

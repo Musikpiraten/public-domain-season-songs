@@ -5,7 +5,7 @@
 \header {
   title="Jingle Bells"
   subtitle = "Or the one horse open sleigh"
-  composer="Text und Musik: James Lord Pierpont (1850)"
+  composer="Text und Melodie: James Lord Pierpont (1850)"
 %  poet="Text: James Lord Pierpont (1850)"
   tagline = ""
 }

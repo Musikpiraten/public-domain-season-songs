@@ -6,7 +6,7 @@
 
   \header {
     title = "Ich steh an deiner Krippe hier"
-    composer = "Musik: Johann Sebastian Bach"
+    composer = "Melodie: Johann Sebastian Bach"
     poet = "Text: Paul Gerhardt"
     opus = "BWV 469"
     tagline = ""

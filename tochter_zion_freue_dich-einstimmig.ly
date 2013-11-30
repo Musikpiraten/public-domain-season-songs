@@ -4,7 +4,7 @@
 
 \header {
   title="Tochter Zion, freue dich"
-  composer="Musik: Georg Friedrich Händel"
+  composer="Melodie: Georg Friedrich Händel"
   poet="Text: Friedrich Heinrich Ranke"
   tagline = ""
 }

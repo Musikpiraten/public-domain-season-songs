@@ -4,8 +4,7 @@
 
 \header {
 	title="Still, still, still"
-	composer=""
-	poet= \markup { \line { "Text und Musik:" \column{ "Volkslied aus dem" "Salzburger Land (19. Jh.)"}}}
+	poet="Text und Melodie: Volkslied aus dem" "Salzburger Land (19. Jh.)"
 	tagline = ""
 }
 

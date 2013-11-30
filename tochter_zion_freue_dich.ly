@@ -3,12 +3,9 @@
 \include "default.ly"
 
 \header {
-	title = "Tochter Zion, freue dich"
-	composer="Musik: Georg Friedrich Händel (1747)"
+	title = "Tochter Zion, freue dich (Mehrstimmig)"
+	composer="Melodie: Georg Friedrich Händel (1747)"
 	poet="Text: Friedrich Heinrich Ranke (1823)"
-	tagline=""
-	%opus =
-	% arranger =
 	}
 
 global = \relative c {

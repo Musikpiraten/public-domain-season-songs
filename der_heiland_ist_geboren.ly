@@ -10,7 +10,7 @@
 
 \header {
     title = "Der Heiland ist geboren"
-    composer = "Musik: Traditionell (Innsbruck 19. Jhdt.)"
+    composer = "Melodie: Traditionell (Innsbruck 19. Jhdt.)"
     poet = "Text: Traditionell"
     tagline = ""
 }

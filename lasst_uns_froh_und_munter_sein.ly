@@ -4,7 +4,7 @@
 
 \header {
   title="Lasst uns froh und munter sein"
-  composer="Musik: Volksweise"
+  composer="Melodie: Volksweise"
   poet="Text: Aus dem Hunsrück (19. Jh.)"
   tagline = ""
 }

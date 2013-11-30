@@ -5,7 +5,7 @@
 \header {
   title = "Freut euch, ihr lieben Christen"
   poet = "Text: Traditionell"
-  composer = "Musik: Leonhart Schröter"
+  composer = "Melodie: Leonhart Schröter"
   tagline = ##f
 }
 

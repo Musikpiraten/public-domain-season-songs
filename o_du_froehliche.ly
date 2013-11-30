@@ -4,7 +4,7 @@
 
 \header {
   title="O du fröhliche"
-  composer="Musik: Sizilien (vor 1788)"
+  composer="Melodie: Sizilien (vor 1788)"
   poet=\markup { \column { "Text: " } \column { "Str. 1 Johannes Daniel Falk (1816)""Str. 2 u. 3 Heinrich Holzschuher (1829)" } }
   tagline = ""
 }

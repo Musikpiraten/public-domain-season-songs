@@ -4,7 +4,7 @@
 
 \header {
         title="Zu Bethlehem geboren"
-        composer="Musik: Volksweise"
+        composer="Melodie: Volksweise"
         poet="Text: Friedrich Spee (1637)"
         tagline = ""
 }

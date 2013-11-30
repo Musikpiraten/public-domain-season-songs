@@ -3,8 +3,8 @@
 \include "default.ly"
 
 \header {
-  title = "Es ist ein Ros’ entsprungen"
-  composer = "Text und Musik: Michael Praetorius / Friedrich Layriz"
+  title = "Es ist ein Ros’ entsprungen (Mehrstimmig)"
+  composer = "Text und Melodie: Michael Praetorius / Friedrich Layriz"
   poet = ""
   tagline = ##f
 }

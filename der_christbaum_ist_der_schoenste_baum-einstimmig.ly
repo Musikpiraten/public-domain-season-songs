@@ -12,7 +12,7 @@
     lastupdated = "2011/Nov/30"
     title = "Der Christbaum ist der schönste Baum"
     poet = "Text: Norddeutsches Volkslied"
-    composer = "Musik: Volksweise"
+    composer = "Melodie: Volksweise"
     footer = ""
     tagline = ""
 }

@@ -5,7 +5,7 @@
 \header {
   title = "Kommet, ihr Hirten"
   poet = "Text: Karl Riedel"
-  composer = "Musik: Olmütz"
+  composer = "Melodie: Olmütz"
   tagline = ##f
 }
 

@@ -17,7 +17,7 @@
 \header {
   title = "En gardant ma bergerie"
   poet = "Text: Chanoine Toussaint Le Roy"
-  composer = "Musik: franz. Weihnachtslied (16. Jhd.)"
+  composer = "Melodie: franz. Weihnachtslied (16. Jhd.)"
   tagline = ""
   %%  aus der Grafschaft Maine, heute in der Region Pays de la Loire
 

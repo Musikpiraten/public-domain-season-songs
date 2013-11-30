@@ -4,11 +4,8 @@
 \version "2.14.2"
 \header {
   title = "Winter ade"			 	  % Die Überschrift der Noten wird zentriert gesetzt.
-  subtitle = " "                                  % weitere zentrierte Überschrift.
   poet = "Text: Hoffmann von Fallersleben"        % Name des Dichters, linksbündig unter dem Unteruntertitel.
-  meter = ""                                      % Metrum, linksbündig unter dem Dichter.
   composer = "Melodie: fränkisches Volkslied" % Name des Komponisten, rechtsbüngig unter dem Unteruntertitel.
-  arranger = ""                                   % Name des Bearbeiters/Arrangeurs, rechtsbündig unter dem Komponisten.
   tagline = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"
                                                   % Zentriert unten auf der letzten Seite.
 %  copyright = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"

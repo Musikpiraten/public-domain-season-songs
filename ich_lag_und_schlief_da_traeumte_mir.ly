@@ -12,7 +12,7 @@
 \header {
     title = "Ich lag und schlief, da träumte mir"
     poet = "Text: Hoffmann von Fallersleben (1798-1872)"
-    composer = "Musik: Volksweise"
+    composer = "Melodie: Volksweise"
     source = "Das Buch der Weihnachtslieder. Bremen, 1´896"
     tagline = ""
 }

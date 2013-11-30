@@ -4,7 +4,7 @@
 
 \header {
     title = "Vom Himmel hoch, da komm’ ich her"
-    composer = "Text und Musik: Martin Luther (1535)"
+    composer = "Text und Melodie: Martin Luther (1535)"
     tagline = ""
 }
 

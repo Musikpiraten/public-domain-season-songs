@@ -4,7 +4,7 @@
 
 \header {
   title="O Tannenbaum"
-  composer="Musik: Volkslied (16. Jh.)"
+  composer="Melodie: Volkslied (16. Jh.)"
   poet=\markup { \column { "Text: " } \column { "Str. 1 Joachim August Zarnack (1819)""Str. 2 u. 3 Ernst Anschütz (1824)" } }
   tagline = ""
 }

@@ -5,7 +5,7 @@
 \header {
   title = "Empor zu Gott, mein Lobgesang"
   poet = "Text: Friedrich Adolf Krummacher (1811)"
-  composer = "Musik: Jacob Praetorius (1604)"
+  composer = "Melodie: Jacob Praetorius (1604)"
   tagline = ##f
 }
 

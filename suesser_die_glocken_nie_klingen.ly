@@ -4,7 +4,7 @@
 
 \header {
   title="Süßer die Glocken nie klingen"
-  composer="Musik: Volksweise (1826)"
+  composer="Melodie: Volksweise (1826)"
   poet="Text: Friedrich Wilhelm Kritzinger"
   tagline = ""
 }

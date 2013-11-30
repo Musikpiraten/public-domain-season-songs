@@ -4,7 +4,7 @@
 
 \header {
   title="Morgen kommt der Weihnachtsmann"
-  composer="Musik: Frz. Volkslied"
+  composer="Melodie: Frz. Volkslied"
   poet="Text: Hoffmann von Fallersleben (um 1840)"
   tagline = ""
 }

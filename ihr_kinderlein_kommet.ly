@@ -3,7 +3,7 @@
 \include "default.ly"
 \header {
   title="Ihr Kinderlein kommet"
-  composer="Musik: Johann Abraham Peter Schulz (1794)"
+  composer="Melodie: Johann Abraham Peter Schulz (1794)"
   poet="Text: Christoph von Schmid (1798)"
   tagline = ""
 }

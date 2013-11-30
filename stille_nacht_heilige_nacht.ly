@@ -4,7 +4,7 @@
 
 \header {
   title="Stille Nacht, heilige Nacht"
-  composer="Musik: Franz Xaver Gruber (1818)"
+  composer="Melodie: Franz Xaver Gruber (1818)"
   poet="Text: Joseph Mohr (1816)"
   tagline = ""
 }

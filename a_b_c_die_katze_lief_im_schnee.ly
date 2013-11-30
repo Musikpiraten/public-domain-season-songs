@@ -5,8 +5,7 @@
 \header {
   title = "A B C, die Katze lief im Schnee"
   subtitle = " "
-  poet = ""
-  composer = "Volkslied"
+  poet = "Volkslied"
   tagline = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"
 }
 

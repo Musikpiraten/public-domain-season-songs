@@ -4,10 +4,7 @@
 \version "2.14.2"
 \header {
   title = "Als ich bei meinen Schafen wacht'"	  % Die Überschrift der Noten wird zentriert gesetzt.
-  subtitle = " "                                  % weitere zentrierte Überschrift.
-%  poet = "Text: " 			          % Name des Dichters, linksbündig unter dem Unteruntertitel.
-  meter = ""                                      % Metrum, linksbündig unter dem Dichter.
-  composer = "Volkslied aus dem 17. Jahrhundert"  % Name des Komponisten, rechtsbüngig unter dem Unteruntertitel.
+  poet = "Volkslied aus dem 17. Jahrhundert"  % Name des Komponisten, rechtsbüngig unter dem Unteruntertitel.
   arranger = ""                                   % Name des Bearbeiters/Arrangeurs, rechtsbündig unter dem Komponisten.
   tagline = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"
                                                   % Zentriert unten auf der letzten Seite.

@@ -12,7 +12,7 @@
 
 \header {
 	title = "Es wird scho glei dumpa"
- 	composer = "Musik: Franz Friedrich Kohl und Josef Reiter"
+ 	composer = "Melodie: Franz Friedrich Kohl und Josef Reiter"
  	poet = "Text: Anton Reidinger"
   	tagline = ""
 }

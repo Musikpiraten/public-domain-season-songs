@@ -4,8 +4,7 @@
 
 \header {
   title="We Wish You A Merry Christmas"
-  poet=""
-  composer="Text und Musik: Traditionell aus England"
+  composer="Text und Melodie: Traditionell aus England"
   tagline = ""
 }
 

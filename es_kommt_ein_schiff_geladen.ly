@@ -5,7 +5,7 @@
 
 \header {
   title = "Es kommt ein Schiff geladen"
-  composer = "Musik: Traditionell"
+  composer = "Melodie: Traditionell"
   poet = "Text: Johannes Tauler und Daniel Sudermann"
   tagline = ""
 }

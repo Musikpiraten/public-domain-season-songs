@@ -5,11 +5,8 @@
 
 \header {
   title = "Vom Himmel hoch, ihr Englein kommt"	  % Die Überschrift der Noten wird zentriert gesetzt.
-  subtitle = " "		                  % weitere zentrierte Überschrift.
   poet = "Text: geistl. Wiegenlied (um 1700)"	  % Name des Dichters, linksbündig unter dem Unteruntertitel.
-  meter = ""                                      % Metrum, linksbündig unter dem Dichter.
   composer = "Melodie: Kölner Gesangbuch (1625)"	  % Name des Komponisten, rechtsbüngig unter dem Unteruntertitel.
-  arranger = ""                                   % Name des Bearbeiters/Arrangeurs, rechtsbündig unter dem Komponisten.
   tagline = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"
                                                   % Zentriert unten auf der letzten Seite.
 %  copyright = "Diese Noten sind frei kopierbar für jedermann – erstellt für www.ebersberger-liedersammlung.de"

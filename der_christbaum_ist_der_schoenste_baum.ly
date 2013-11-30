@@ -10,9 +10,9 @@
     maintainer = "David Herrmann"
     maintainerEmail = "hedavid@arcor.de"
     lastupdated = "2011/Nov/30"
-    title = "Der Christbaum ist der schönste Baum"
+    title = "Der Christbaum ist der schönste Baum (Mehrstimmig)"
     poet = "Text: Norddeutsches Volkslied"
-    composer = "Musik: Volksweise"
+    composer = "Melodie: Volksweise"
     footer = ""
     tagline = ""
 }

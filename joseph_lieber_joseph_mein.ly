@@ -9,9 +9,7 @@
 
 \header {
     title = "Joseph, lieber Joseph mein"
-    composer = "Text und Musik: Traditionell"
-    poet = ""
-    tagline = ""
+    composer = "Text und Melodie: Traditionell"
 }
 
 

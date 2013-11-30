@@ -4,7 +4,7 @@
 
 \header {
   title="Kling, Glöckchen, klingelingeling"
-  composer="Musik: Benedikt Widman (1884) / Volkslied"
+  composer="Melodie: Benedikt Widman (1884) / Volkslied"
   poet="Text: Karl Enslin (ca. 1850)"
   tagline = ""
 }

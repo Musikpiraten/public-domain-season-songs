@@ -6,7 +6,7 @@
 \header {
   title = "Macht hoch die Tür"
   poet = "Text: Georg Weissel (1623)"
-  composer = "Musik: Freylinghausensches Gesangbuch (1704)"
+  composer = "Melodie: Freylinghausensches Gesangbuch (1704)"
   tagline = ""
 }
 

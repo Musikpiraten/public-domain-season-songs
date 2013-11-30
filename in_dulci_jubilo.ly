@@ -12,8 +12,7 @@
 
 \header {
 	title = "In dulci jubilo" 
- 	composer = "Weihnachtslied, 14. Jhd." 	
- 	poet = "traditionell" 
+ 	poet = "Weihnachtslied 14. Jhd." 	
   	tagline = ""
 }
 
