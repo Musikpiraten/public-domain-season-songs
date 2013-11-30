@@ -25,3 +25,13 @@ Peter Crighton
 Sebastian Werk
 Thomas Wesenigk
 Wolfgang Pilz
+
+
+The guys behind ebersberger-liedersammlung.de are
+=================================================
+David Göhler
+Michael Nausch
+
+Some more scores have been set by:
+=================================
+Christian Hufgard
