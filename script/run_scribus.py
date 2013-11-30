@@ -93,6 +93,7 @@ def get_style_suffix():
         style_suffix = "l"
     return style_suffix
 
+
 def load_song(data, offset, settings):
     page_num = scribus.pageCount()
     page_width, page_height, margin_top, margin_left, margin_right, margin_bottom = page_size_margin(page_num)
@@ -103,8 +104,8 @@ def load_song(data, offset, settings):
         scribus.placeEPS(os.path.join(FILES, data["filename"]), 0, 0)
         eps = scribus.getSelectedObject()
         eps_width, eps_height = scribus.getSize(eps)
-        #scribus.scaleGroup(new_width/eps_width)
-        scribus.sizeObject(new_width, eps_height * (new_width/eps_width))
+        #scribus.scaleGroup(new_width/eps_width) # slow on scribus 1.4; does something else on scribus 1.5
+        scribus.sizeObject(eps_width*0.86, eps_height*0.86, eps)
         scribus.moveObjectAbs(margin_left, start_point+SPACING_HEADLINE_SONG, eps)
         eps_width, eps_height = scribus.getSize(eps)
     else:
