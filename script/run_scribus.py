@@ -115,15 +115,17 @@ def load_song(data, offset, settings):
 
     style_suffix = get_style_suffix()
 
-    scribus.deselectAll()
-    scribus.insertText(u"{}\n".format(data["composer"]), 0, textbox)
-    scribus.selectText(0, 1, textbox)
-    scribus.setStyle("subline_{}".format(style_suffix), textbox)
+    if data["composer"]:
+        scribus.deselectAll()
+        scribus.insertText(u"{}\n".format(data["composer"]), 0, textbox)
+        scribus.selectText(0, 1, textbox)
+        scribus.setStyle("subline_{}".format(style_suffix), textbox)
 
-    scribus.deselectAll()
-    scribus.insertText(u"{}\n".format(data["poet"]), 0, textbox)
-    scribus.selectText(0, 1, textbox)
-    scribus.setStyle("subline_{}".format(style_suffix), textbox)
+    if data["poet"]:
+        scribus.deselectAll()
+        scribus.insertText(u"{}\n".format(data["poet"]), 0, textbox)
+        scribus.selectText(0, 1, textbox)
+        scribus.setStyle("subline_{}".format(style_suffix), textbox)
 
     scribus.deselectAll()
     scribus.insertText(u"{}\n".format(data["name"]), 0, textbox)
