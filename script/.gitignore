@@ -1,6 +1,6 @@
 *.swap
 doc.txt
-pdfs
+lily_output
 temp
 list.txt
 data.json

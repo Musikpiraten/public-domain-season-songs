@@ -17,7 +17,7 @@ from optparse import OptionParser
 ######################
 
 inFolder = "../"
-outFolder = "pdfs"
+outFolder = "lily_output"
 FOLDER_TEMP = "temp"
 FILENAME_TEMP = "temp.ly"
 DATA = "data.json"
@@ -199,7 +199,7 @@ if __name__ == '__main__':
         help="increment verbose level")
     parser.add_option(
         "-r", "--remove", dest="remove", action="store_true", default=False,
-        help="remove old pdfs")
+        help="remove old output")
     parser.add_option(
         "-f", "--filter", dest="filter",
         help="only renders files that contain FILTER", metavar="FILTER")

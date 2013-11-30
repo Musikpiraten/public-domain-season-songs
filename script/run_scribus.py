@@ -12,7 +12,7 @@ from collections import defaultdict
 DATA_FILE = "data.json"
 CACHE_FILE = "cache.json"
 MANUEL_PROCESSING_FILE = "manual_processing.json"
-FILES = "pdfs/"
+FILES = "lily_output/"
 FAST = False  # use this to debug
 EFFECTIVE_PAGE_HEIGHT = 250
 SPACING_SONGS = 10
