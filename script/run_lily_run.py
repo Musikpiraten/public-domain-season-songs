@@ -118,6 +118,8 @@ def process_file(ly, dryrun):
                 removed_lines.append(line)
             elif r"\tempo" in line:
                 removed_lines.append(line)
+            elif any((x in line for x in ("top-margin", "bottom-margin", "left-margin", "right-margin", "line-width"))):
+                removed_lines.append(line)
             elif "copyright" in line and "=" in line and "\"" in line:
                 removed_lines.append(line)
             elif "subtitle" in line and "=" in line:
