@@ -4,7 +4,7 @@
 
 \header {
 	title="Still, still, still"
-	poet="Text und Melodie: Volkslied aus dem" "Salzburger Land (19. Jh.)"
+	poet="Text und Melodie: Volkslied aus dem Salzburger Land (19. Jh.)"
 	tagline = ""
 }
 
