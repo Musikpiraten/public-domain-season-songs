@@ -133,17 +133,32 @@ def load_song(data, offset, settings):
     scribus.selectText(0, 1, textbox)
     scribus.setStyle("headline_{}".format(style_suffix), textbox)
 
-    textbox = scribus.createText(margin_left, start_point + eps_height + SPACING_HEADLINE_SONG + SPACING_SONG_TEXT, new_width, 50)
-    scribus.setStyle("text", textbox)
     text = data["text"]
     text = [t.strip() for t in text if t.strip() != ""]
+
+    # TODO: exit if text == []
+
+    textbox = scribus.createText(margin_left, start_point + eps_height + SPACING_HEADLINE_SONG + SPACING_SONG_TEXT, new_width, 50)
+    scribus.setStyle("text", textbox)
+    # let's see how many digits are in there:
+    num_verses = len([l for l in text if l.isdigit()])
     num_chars = 0
     num_line_total = len(text)
+    num_line_actually = 0
     no_new_line = False
+    verse_counter = 0
+    text_columns_height = 0 # TODO: should be None
     for num_line, line in enumerate(text):
         if line.strip == "":
             continue
+        num_line_actually += 1
         if line.isdigit():
+
+            print "#", verse_counter, math.ceil(num_verses * 0.5), num_verses, data["filename"]
+            if verse_counter == math.ceil(num_verses*0.5): # this is the first verse that should be in the new column, so let's see what's the height
+                print text_columns_height, num_line_actually
+                text_columns_height = BASELINE_GRID * (num_line_actually -1)
+
             first_char = "\n"
             if num_line == 0:
                 first_char = ""
@@ -156,6 +171,7 @@ def load_song(data, offset, settings):
             #scribus.setFontSize(5, textbox)  # TODO: testing only # BUG?
             scribus.setFont("Linux Libertine O Bold", textbox)
             num_chars += len(line)
+            verse_counter += 1
         else:
             if no_new_line:
                 first_char = ""
@@ -164,15 +180,22 @@ def load_song(data, offset, settings):
             no_new_line = False
             line = u"{}{}".format(first_char, line)
             scribus.insertText(line, -1, textbox)
-            scribus.deselectAll()
-            scribus.selectText(num_chars, len(line), textbox)
+            #scribus.deselectAll()
+            #scribus.selectText(num_chars, len(line), textbox)
             #scribus.setStyle("text", textbox)
             num_chars += len(line)
 
     scribus.setColumnGap(5, textbox)
     columns = settings.get("columns", 2)
     scribus.setColumns(columns, textbox)
-    fit_height(textbox)
+    if columns != 2:
+        fit_height(textbox)
+    else:
+        scribus.sizeObject(new_width, text_columns_height, textbox)
+        l, t = scribus.getPosition(textbox)
+        scribus.moveObjectAbs(l, round(t/BASELINE_GRID)*BASELINE_GRID, textbox)
+        if scribus.textOverflows(textbox):
+            fit_height(textbox) # there are some cases,.. 
     text_width, text_height = scribus.getSize(textbox)
     text_left, text_top = scribus.getPosition(textbox)
     return text_top + text_height - start_point + SPACING_SONGS, page_num
