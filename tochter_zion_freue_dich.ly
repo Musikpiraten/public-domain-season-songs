@@ -13,6 +13,10 @@ global = \relative c {
 	
 }
 
+\paper {   
+	system-system-spacing #'basic-distance = #18 
+}
+
 dcaf = { 
 	\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
 	\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT

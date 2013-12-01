@@ -1,7 +1,10 @@
-\version "2.12.3"
+\version "2.14.2"
 \include "deutsch.ly"
 \include "default.ly"
 
+\paper {
+  system-system-spacing #'basic-distance = #18
+}
 
 snotes = \relative c'' {
   \partial 4
@@ -142,7 +145,6 @@ spart = {
   }
   
 %  #(set-global-staff-size 19)
-
   \score {
     \new ChoirStaff <<
       \new Staff <<
@@ -182,7 +184,3 @@ spart = {
     >>
   }
 }
-          
-  
-
-  
