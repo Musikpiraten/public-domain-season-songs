@@ -89,60 +89,8 @@ wdh = \lyricmode {
 		   " "
           }
         }
-%{      \hspace #0.1  % vertikaler Abstand zwischen den Strophen 
-        \line { \bold "  3. "
-          \column {
-			"Das Brünnlein rinnt und rauscht"
-			"wohl dort am Holderstrauch,"
-			"wo wir gesessen."
-			"Wie manchen Glockenschlag,"
-			"da Herz bei Herzen lag,"
-			"das hast du vergessen."
-		  }
-		}%}
       }
-%{ ab hier auskommentieren, wenn es nur eine Spalte sein soll
-      \hspace #0.1    % horizontaler Abstand zwischen den Spalten
-	  \column {       % zweite Spalte rechts
-        \line {
-          \bold "  4. "
-          \column {
-			"Die Mädchen in der Welt"
-			"sind falscher als das Geld"
-			"mit ihren Lieben."
-			"Ade zur guten Nacht"
-			"jetzt wird der Schluss gemacht,"
-			"dass ich muss scheiden."
-          }
-        }
-        \hspace #0.1
-        \line {
-          \bold "  5. "
-          \column {
-			"Ade zur guten Nacht,"
-			"jetzt ist der Schluss gemacht,"
-			"von dir zu scheiden."
-			"Von dir, o Herzallerliebster mein,"
-			"es muss halt doch geschieden sein."
-			"Das macht mir Leiden."
-          }
-        }
-      }
-%} % bis hier auskommentieren, wenn es nur eine Spalte sein soll
       \hspace #0.1  % Spalte vom linken Rand
 	}
   }
 }
-%}
-%{
-\markuplines {
-  \italic {
-    \line {
-      Gesetzt von Michael Nausch aka Django
-      \general-align #Y #DOWN {
-        \epsfile #X #3 #"publicdomain.eps"
-      }
-    }
-  }
-}
-%}
