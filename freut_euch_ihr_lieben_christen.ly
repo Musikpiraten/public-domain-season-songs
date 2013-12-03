@@ -52,7 +52,7 @@ StropheEins = \lyricmode {
 Freut euch, ihr lie- ben Chris- ten
 Freut euch von Her- zen sehr,
 Euch ist ge- bo- ren Chri- stus,
-Recht gu- te, neu- e Mähr.
+Recht gu- te, neu- e Mär.
 Es sin- gen uns die Eng- el
 Aus Got- tes ho- hem Thron,
 Gar lieb- lich tun sie sin- gen
