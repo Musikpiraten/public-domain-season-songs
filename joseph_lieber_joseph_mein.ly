@@ -28,7 +28,7 @@ SongMelody = \relative c' {
 }
 
 SongChords = \chordmode { \set chordChanges = ##t \germanChords
-f1 b8 f1*11/8 b8 f4. b1. f2. c4. c:7 f2
+f1 b8 f1*11/8 b8 f4. c1.:7 f2. c4. c:7 f2
 }
 
 SongText = \lyricmode { \set stanza = " 1. "

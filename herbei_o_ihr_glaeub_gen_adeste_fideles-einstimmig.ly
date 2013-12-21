@@ -20,7 +20,7 @@ Melodie = \relative c'' {
 
 
 Akkorde= \chordmode {
-  s4 | a1 | e1 | a4 e a d | a2 e4 a1*3/4 e1*5/4  a4 | e1*2 |
+  s4 | a1 | e1 | a4 e a d | a2 e4 a1*3/4 e4 b | e a e a | e2 b e1 |
   a1 | d2 a2 | e4 a2 e1 a2  e4 a e | a1*5/4 e4 a d | a2 e4 a |
   d a e a | e2 a4 d | a2 e2 | a1*3/4
 }

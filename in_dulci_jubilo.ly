@@ -50,9 +50,9 @@ Melodie = \relative c'
 
 Akkorde = \chordmode { \germanChords
 	\set chordChanges = ##t
-	f4 f2 f4 d2:m g4:m f2 b4 c2 a4:m d2.:m b2. f2 g4 c2.
+    f4 f2 f4 d2:m g4:m f2 b4 c2 a4:m d2.:m a2:m b4 f2 g4 c2.
 	f2 b4 f2 g4:m d2.:m d2:m d4:m g2:m c4 f2 c4 d2:m c4 f2. f2 b4 c2 g4:m
-        a2. d2.:m g2:m c4 f2 c4 d2 g4:m a2.
+        a2. d2.:m g2:m c4 f2 c4 d2:m g4:m a2.
         b2 g4:m c2 a4:m d2.:m c2. f2. g2:m c4 f2. f2
 	}
 

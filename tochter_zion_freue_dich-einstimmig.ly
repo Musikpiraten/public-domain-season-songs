@@ -43,10 +43,10 @@ Melodie=\relative c' {
 
 Akkorde= \chordmode {
   \set chordChanges = ##t
-    es1 es1 g1:m7
-    bes es es1 aes es
-    g1 bes2 es2 aes1 d
-    es1 c2 a2 bes f es
+    es1 es1 bes2 es
+    bes1 es c2:m g:m aes bes es1
+    c1:m g2:7 c:m f1:m7 g
+    c1:m f2/a f g4:m es f2 bes1
 }
 
 Text=\lyricmode {

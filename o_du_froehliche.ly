@@ -27,7 +27,7 @@ Melodie=\relative c' {
 
 Akkorde= \chordmode {
 	\germanChords
-  d2 g d1 d2 g d1 d2 a b1:m fis2:m e a1
+  d2 g d1 d2 g d1 d2 a g a4 d a2 e a1
   a a:7 d1*2 b1:m g2 a d a d1
 }
 

@@ -34,7 +34,7 @@ akkorde = \transpose g a \chordmode {
   \germanChords
 	s4 g4.:m f8 ees4 d c2:m d g:m c:m
 	d1 g2:m bes c:m f
-	ees g:m f d ees4. f8 g4:m d:m g2.:m
+    g:m ees c:m d g4.:m f8 ees4 d:m g2.:m
 }
 
 

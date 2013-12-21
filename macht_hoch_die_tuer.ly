@@ -14,7 +14,7 @@
 Akkorde = \chordmode {
   s4 es1. as2. bes
   as es bes es
-  bes es c:m bes
+  bes es c2:m f4 bes2.
   es c:m f bes
   as2 es4 as2 es4 as2. es
   c2:m bes4 c2:m g4:m as2. es
