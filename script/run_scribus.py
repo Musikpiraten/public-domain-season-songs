@@ -53,7 +53,7 @@ def front_matter():
 def fit_height(textbox):
     # come to a state that the text box does not overflow:
     width, height = scribus.getSize(textbox)
-    to_add = height
+    to_add = height + 1
     while scribus.textOverflows(textbox):
         scribus.sizeObject(width, height + to_add, textbox)
         to_add = to_add * 2
