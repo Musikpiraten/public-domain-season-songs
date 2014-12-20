@@ -209,7 +209,7 @@ def load_song(data, offset, settings):
 def create_toc(data):
     if not scribus.objectExists("TOC"):
         new_page()
-        page_width, page_height, margin_top, margin_left, margin_right, margin_bottom = page_size_margin(page_num)
+        page_width, page_height, margin_top, margin_left, margin_right, margin_bottom = page_size_margin(1)
         toc = scribus.createText(margin_left, margin_top, page_width-margin_right-margin_left, page_height-margin_top-margin_bottom)
         scribus.setNewName("TOC", toc)
         scribus.insertText("provide a textframe with name 'TOC' in front_matter.sla and i will not create the toc at the end of the document", 0, "TOC")
